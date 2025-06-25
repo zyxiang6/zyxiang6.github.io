@@ -17,6 +17,7 @@ Berkeley, CA
 **GitHub**: [github.com/zyxiang6](https://github.com/zyxiang6)  
 **Google Scholar**: [scholar.google.com](https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en)  
 **LinkedIn**: [linkedin.com/in/ziyu-xiang](https://www.linkedin.com/in/ziyu-xiang-8481292b3/)  
+**ORCID**: [orcid.org/0000-0002-3954-7631](https://orcid.org/0000-0002-3954-7631)  
 
 ## Education
 

@@ -44,6 +44,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-3954-7631"
 
 # Site Footer
 footer:
@@ -57,6 +60,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-3954-7631"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:zyxiang@berkeley.edu"

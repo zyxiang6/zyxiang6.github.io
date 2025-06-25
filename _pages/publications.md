@@ -11,39 +11,81 @@ author_profile: true
 
 ### 2025 Publications
 
-**Xiang, Z.***\*, Li, H.*\*, Xiao, J.*\*, Naik, M. H., Ge, Z., He, Z., ... & Wang, F. (2025).  
-**Imaging quantum melting in a disordered 2D Wigner solid.**  
-*Science* **388**(6748), 736-740.  
-[DOI: 10.1126/science.ado7136](https://www.science.org/doi/full/10.1126/science.ado7136)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/quantum-melting-placeholder.jpg" alt="Quantum melting publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Imaging quantum melting in a disordered 2D Wigner solid</h4>
+    <p class="journal-info"><em>Science</em> <strong>388</strong>(6748), 736-740.</p>
+    <p class="authors">Xiang, Z.*, Li, H.*, Xiao, J.*, Naik, M. H., Ge, Z., He, Z., ... & Wang, F. (2025).</p>
+    <p class="doi-link"><a href="https://www.science.org/doi/full/10.1126/science.ado7136">DOI: 10.1126/science.ado7136</a></p>
+  </div>
+</div>
 
 ### 2024 Publications
 
-**Li, H.***\*, **Xiang, Z.***\*, Wang, T. et al. (2024).  
-**Imaging tunable Luttinger liquid systems in van der Waals heterostructures.**  
-*Nature* **631**(8022), 765–770.  
-[DOI: 10.1038/s41586-024-07596-6](https://www.nature.com/articles/s41586-024-07596-6)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/luttinger-liquid-placeholder.jpg" alt="Luttinger liquid publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Imaging tunable Luttinger liquid systems in van der Waals heterostructures</h4>
+    <p class="journal-info"><em>Nature</em> <strong>631</strong>(8022), 765–770.</p>
+    <p class="authors">Li, H.*, Xiang, Z.*, Wang, T. et al. (2024).</p>
+    <p class="doi-link"><a href="https://www.nature.com/articles/s41586-024-07596-6">DOI: 10.1038/s41586-024-07596-6</a></p>
+  </div>
+</div>
 
-**Li, H.***\*, **Xiang, Z.***\*, Wang, T. et al. (2024).  
-**Wigner molecular crystals from multielectron moiré artificial atoms.**  
-*Science* **385**(6704), 86-91.  
-[DOI: 10.1126/science.adk1348](https://www.science.org/doi/full/10.1126/science.adk1348)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/wigner-molecular-placeholder.jpg" alt="Wigner molecular crystals publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Wigner molecular crystals from multielectron moiré artificial atoms</h4>
+    <p class="journal-info"><em>Science</em> <strong>385</strong>(6704), 86-91.</p>
+    <p class="authors">Li, H.*, Xiang, Z.*, Wang, T. et al. (2024).</p>
+    <p class="doi-link"><a href="https://www.science.org/doi/full/10.1126/science.adk1348">DOI: 10.1126/science.adk1348</a></p>
+  </div>
+</div>
 
-**Li, H.***\*, **Xiang, Z.***\*, Naik, M.H.*\* et al. (2024).  
-**Imaging moiré excited states with photocurrent tunnelling microscopy.**  
-*Nature Materials* **23**(5), 633–638.  
-[DOI: 10.1038/s41563-023-01753-4](https://www.nature.com/articles/s41563-023-01753-4)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/moire-excited-states-placeholder.jpg" alt="Moiré excited states publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Imaging moiré excited states with photocurrent tunnelling microscopy</h4>
+    <p class="journal-info"><em>Nature Materials</em> <strong>23</strong>(5), 633–638.</p>
+    <p class="authors">Li, H.*, Xiang, Z.*, Naik, M.H.* et al. (2024).</p>
+    <p class="doi-link"><a href="https://www.nature.com/articles/s41563-023-01753-4">DOI: 10.1038/s41563-023-01753-4</a></p>
+  </div>
+</div>
 
-**Li, H.***\*, **Xiang, Z.***\*, Regan, E. et al. (2024).  
-**Mapping charge excitations in generalized Wigner crystals.**  
-*Nature Nanotechnology* **19**(5), 618–623.  
-[DOI: 10.1038/s41565-023-01594-x](https://www.nature.com/articles/s41565-023-01594-x)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/charge-excitations-placeholder.jpg" alt="Charge excitations publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Mapping charge excitations in generalized Wigner crystals</h4>
+    <p class="journal-info"><em>Nature Nanotechnology</em> <strong>19</strong>(5), 618–623.</p>
+    <p class="authors">Li, H.*, Xiang, Z.*, Regan, E. et al. (2024).</p>
+    <p class="doi-link"><a href="https://www.nature.com/articles/s41565-023-01594-x">DOI: 10.1038/s41565-023-01594-x</a></p>
+  </div>
+</div>
 
 ### 2021 Publications
 
-**Stansbury, C., M Iqbal Bakti Utama, Fatuzzo, C., Regan, E., Wang, D., Xiang, Z.** et al. (2021).  
-**Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space.**  
-*Science Advances* **7**(37), eabf4387.  
-[DOI: 10.1126/sciadv.abf4387](https://www.science.org/doi/full/10.1126/sciadv.abf4387)
+<div class="publication-item">
+  <div class="publication-image">
+    <img src="/assets/images/publications/electron-localization-placeholder.jpg" alt="Electron localization publication" />
+  </div>
+  <div class="publication-content">
+    <h4>Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space</h4>
+    <p class="journal-info"><em>Science Advances</em> <strong>7</strong>(37), eabf4387.</p>
+    <p class="authors">Stansbury, C., M Iqbal Bakti Utama, Fatuzzo, C., Regan, E., Wang, D., Xiang, Z. et al. (2021).</p>
+    <p class="doi-link"><a href="https://www.science.org/doi/full/10.1126/sciadv.abf4387">DOI: 10.1126/sciadv.abf4387</a></p>
+  </div>
+</div>
 
 ## Awards & Recognition
 
@@ -68,4 +110,4 @@ Kavli Energy NanoScience Institute (ENSI)
 
 ---
 
-*For the most up-to-date publication list, please check my [Google Scholar profile](https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en).*
+*For the most up-to-date publication list, please check my [Google Scholar profile](https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en) or [ORCID profile](https://orcid.org/0000-0002-3954-7631).*
