@@ -7,22 +7,22 @@
 
 // Custom CSS adjustments
 
-// Slightly increase navigation header text size
+// Header navigation text size
 .masthead {
   .site-title {
-    font-size: 1em; // Slightly bigger site title
+    font-size: 1em; // Site title
   }
   
   .masthead__menu {
     .masthead__menu-item {
-      font-size: 0.9em; // Slightly bigger navigation menu items
+      font-size: 0.9em; // Navigation menu items
     }
   }
 }
 
 // Increase sidebar text size
 .author__bio {
-  font-size: 1em; // Bigger bio text (was 0.85em)
+  font-size: 1em; // Bigger bio text
 }
 
 .author__name {
@@ -36,7 +36,7 @@
 // Decrease content text size for pages (not homepage)
 .page__content {
   p, li, ul, ol {
-    font-size: 0.85em; // Smaller content text (was 0.9em)
+    font-size: 0.85em; // Smaller content text
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -44,20 +44,22 @@
   }
 }
 
-// Homepage specific styling
+// Homepage specific styling - IMPORTANT: Force these styles
 .layout--home {
   // Make intro section wider and left-aligned, not centered
   .feature__wrapper {
-    max-width: 85%;
-    margin: 0;
-    text-align: left;
+    max-width: 85% !important;
+    margin: 0 !important;
+    text-align: left !important;
     
     .feature__item {
-      text-align: left;
+      text-align: left !important;
+      width: 100% !important;
       
       .archive__item-excerpt {
-        font-size: 1em; // Reference size for intro text
-        text-align: left;
+        font-size: 1em !important; // Reference size for intro text
+        text-align: left !important;
+        margin: 0 !important;
       }
     }
   }
@@ -65,38 +67,50 @@
   .page__content {
     // Keep homepage intro text at normal size (not smaller)
     p, li {
-      font-size: 1em; // Normal size for homepage intro
+      font-size: 1em !important; // Normal size for homepage intro
     }
   }
   
   // Latest News section same size as intro
   .news-section {
-    font-size: 1em;
-    max-width: 85%;
-    margin: 0;
+    font-size: 1em !important;
+    max-width: 85% !important;
+    margin: 0 !important;
     
     .news-item {
       h3 {
-        font-size: 1.1em; // Slightly bigger for headings
+        font-size: 1.1em !important; // Slightly bigger for headings
       }
       
       p {
-        font-size: 1em; // Same size as homepage intro
+        font-size: 1em !important; // Same size as homepage intro
       }
     }
   }
   
   // Main content area posts (if any)
   .entries-list {
-    font-size: 1em;
-    max-width: 85%;
-    margin: 0;
+    font-size: 1em !important;
+    max-width: 85% !important;
+    margin: 0 !important;
+  }
+}
+
+// Additional homepage layout fixes
+.home .page__content {
+  max-width: none !important;
+}
+
+.home .feature__item--left {
+  .archive__item-excerpt {
+    text-align: left !important;
+    margin-left: 0 !important;
   }
 }
 
 // Page titles
 .page__title {
-  font-size: 1.6em; // Slightly smaller page titles (was 1.8em)
+  font-size: 1.6em; // Smaller page titles
 }
 
 .archive__subtitle {
@@ -105,12 +119,12 @@
 
 // Search and toggle elements
 .search__toggle {
-  font-size: 1.1em; // Bigger search toggle
+  font-size: 1.1em; // Search toggle
 }
 
-// Make sure navigation items are bigger
+// Navigation items consistent
 .visible-links {
   a {
-    font-size: 1.05em; // Slightly bigger navigation links
+    font-size: 0.9em; // Match navigation menu items
   }
 }
