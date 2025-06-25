@@ -5,38 +5,86 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Custom CSS to reduce text size globally
-html {
-  font-size: 14px; // Default is 16px, reducing to 14px
+// Custom CSS adjustments
 
-  @include breakpoint($medium) {
-    font-size: 16px; // Default is 18px, reducing to 16px
+// Increase navigation header text size
+.masthead {
+  .site-title {
+    font-size: 1.2em; // Bigger site title
   }
-
-  @include breakpoint($large) {
-    font-size: 18px; // Default is 20px, reducing to 18px
-  }
-
-  @include breakpoint($x-large) {
-    font-size: 20px; // Default is 22px, reducing to 20px
+  
+  .masthead__menu {
+    .masthead__menu-item {
+      font-size: 1.1em; // Bigger navigation menu items
+    }
   }
 }
 
-// Additional text size adjustments
+// Increase sidebar text size
+.author__bio {
+  font-size: 1em; // Bigger bio text (was 0.85em)
+}
+
+.author__name {
+  font-size: 1.1em; // Bigger author name
+}
+
+.author__urls {
+  font-size: 1em; // Bigger contact links
+}
+
+// Decrease content text size for pages (not homepage)
 .page__content {
-  p, li {
-    font-size: 0.9em; // Reduce paragraph and list text by 10%
+  p, li, ul, ol {
+    font-size: 0.85em; // Smaller content text (was 0.9em)
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.9em; // Smaller headings in content
   }
 }
 
+// Homepage specific styling - wider content
+.layout--home {
+  .page__content {
+    max-width: 90%; // Make homepage content wider
+    margin: 0 auto;
+    
+    // Keep homepage intro text at normal size (not smaller)
+    p, li {
+      font-size: 1em; // Normal size for homepage intro
+    }
+  }
+  
+  // Latest News section same size as intro
+  .news-section {
+    font-size: 1em;
+    
+    .news-item {
+      p {
+        font-size: 1em; // Same size as homepage intro
+      }
+    }
+  }
+}
+
+// Page titles
 .page__title {
-  font-size: 1.8em; // Reduce title size slightly
+  font-size: 1.6em; // Slightly smaller page titles (was 1.8em)
 }
 
 .archive__subtitle {
-  font-size: 0.9em;
+  font-size: 0.85em; // Smaller subtitles
 }
 
-.author__bio {
-  font-size: 0.85em; // Smaller bio text
+// Search and toggle elements
+.search__toggle {
+  font-size: 1.1em; // Bigger search toggle
+}
+
+// Make sure navigation items are bigger
+.visible-links {
+  a {
+    font-size: 1.1em; // Bigger navigation links
+  }
 }
