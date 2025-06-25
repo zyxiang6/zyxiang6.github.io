@@ -20,18 +20,7 @@
   }
 }
 
-// Increase sidebar text size
-.author__bio {
-  font-size: 1em; // Bigger bio text
-}
-
-.author__name {
-  font-size: 1.1em; // Bigger author name
-}
-
-.author__urls {
-  font-size: 1em; // Bigger contact links
-}
+// Sidebar text sizing moved to bottom of file for better organization
 
 // Decrease content text size for pages (not homepage)
 .page__content {
@@ -360,27 +349,35 @@
   }
 }
 
-// Make sidebar text smaller
-.sidebar {
-  font-size: 0.85em !important; // Slightly smaller sidebar text
-  
-  .author__bio {
-    font-size: 0.9em !important; // Just a bit smaller bio text
-    line-height: 1.3;
-  }
-  
-  .author__urls {
-    font-size: 0.85em !important; // Just a bit smaller social links
-  }
-  
-  .author__name {
-    font-size: 1.1em !important; // Keep name size the same
-  }
-  
-  .author__avatar {
-    img {
-      width: 110px !important; // Keep avatar size
-      height: 110px !important;
-    }
-  }
+// Make sidebar text smaller - use specific selectors to override theme
+.sidebar .author__profile,
+.page__sidebar .author__profile {
+  font-size: 0.85em !important; // Base smaller sidebar text
+}
+
+.sidebar .author__bio,
+.page__sidebar .author__bio {
+  font-size: 0.9em !important; // Just a bit smaller bio text
+  line-height: 1.3 !important;
+}
+
+.sidebar .author__urls,
+.page__sidebar .author__urls {
+  font-size: 0.85em !important; // Just a bit smaller social links
+}
+
+.sidebar .author__urls a,
+.page__sidebar .author__urls a {
+  font-size: 0.85em !important; // Ensure link text is also smaller
+}
+
+.sidebar .author__name,
+.page__sidebar .author__name {
+  font-size: 1.1em !important; // Keep name size reasonable
+}
+
+.sidebar .author__avatar img,
+.page__sidebar .author__avatar img {
+  width: 110px !important; // Keep avatar size
+  height: 110px !important;
 }
