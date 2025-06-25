@@ -22,109 +22,73 @@ html {
   }
 }
 
-// Global text size reductions for ALL pages
-body {
-  font-size: 0.8rem !important;
-}
-
-// Much more aggressive text size reductions for all content
+// Much more aggressive text size reductions
 .page__content {
-  p, li, div, span {
-    font-size: 0.75rem !important; // Reduce paragraph and list text significantly
+  p, li {
+    font-size: 0.8em !important; // Reduce paragraph and list text by 20%
   }
   
-  h1 {
-    font-size: 1.4rem !important; // Reduce heading sizes
-  }
-  
-  h2 {
-    font-size: 1.2rem !important;
-  }
-  
-  h3 {
-    font-size: 1.0rem !important;
-  }
-  
-  h4, h5, h6 {
-    font-size: 0.9rem !important;
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.85em !important; // Reduce heading sizes
   }
 }
 
 .page__title {
-  font-size: 1.3rem !important; // Reduce title size more
+  font-size: 1.5em !important; // Reduce title size more
 }
 
 .archive__subtitle {
-  font-size: 0.7rem !important;
+  font-size: 0.8em !important;
 }
 
 .author__bio {
-  font-size: 0.65rem !important; // Much smaller bio text
+  font-size: 0.75em !important; // Much smaller bio text
 }
 
 // Reduce sidebar text sizes
 .sidebar {
-  font-size: 0.7rem !important;
+  font-size: 0.8em !important;
 }
 
 .author__name {
-  font-size: 0.9rem !important;
+  font-size: 1.1em !important;
 }
 
-// Reduce navigation bar text significantly
+// Reduce navigation text - make it much smaller
 .masthead {
-  font-size: 0.65rem !important;
+  font-size: 0.7em !important;
 }
 
-.masthead__inner-wrap {
-  font-size: 0.65rem !important;
-}
-
+// Specifically target navigation links
 .masthead__menu {
-  font-size: 0.65rem !important;
+  font-size: 0.7em !important;
 }
 
 .masthead__menu-item {
-  font-size: 0.65rem !important;
+  font-size: 0.8em !important;
 }
 
-.greedy-nav a {
-  font-size: 0.65rem !important;
-}
-
-.greedy-nav__toggle {
-  font-size: 0.65rem !important;
-}
-
-.site-title {
-  font-size: 0.8rem !important;
-}
-
-// Search button
+// Reduce search toggle and other nav elements
 .search__toggle {
-  font-size: 0.65rem !important;
+  font-size: 0.7em !important;
+}
+
+// Apply the same small text size to all page content (not just home)
+.page__content, 
+.archive__item-title,
+.archive__item-excerpt,
+.list__item .archive__item-title,
+.list__item .archive__item-excerpt {
+  p, li, div, span {
+    font-size: 0.8em !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.85em !important;
+  }
 }
 
 // Reduce footer text
 .page__footer {
-  font-size: 0.6rem !important;
-}
-
-// Additional selectors to catch all text elements
-article, section, aside, main {
-  font-size: 0.75rem !important;
-}
-
-// CV specific elements
-.archive__item-title {
-  font-size: 0.9rem !important;
-}
-
-.archive__item-excerpt {
-  font-size: 0.7rem !important;
-}
-
-// Table content
-table, th, td {
-  font-size: 0.7rem !important;
+  font-size: 0.75em !important;
 }
