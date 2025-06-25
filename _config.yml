@@ -1,0 +1,136 @@
+# Site Settings
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default"
+
+# Site Information
+locale                   : "en-US"
+title                    : "Ziyu Xiang"
+title_separator          : "-"
+subtitle                 : "PhD Student in Physics"
+name                     : "Ziyu Xiang"
+description              : "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy"
+url                      : "https://zyxiang6.github.io"
+baseurl                  : 
+repository               : "zyxiang6/zyxiang6.github.io"
+breadcrumbs              : false
+words_per_minute         : 200
+enable_copy_code_button  : true
+
+# Site Search
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+
+# Site Author
+author:
+  name             : "Ziyu Xiang"
+  avatar           : "/assets/images/profile.jpg"
+  bio              : "PhD Student in Physics at UC Berkeley<br>Studying strongly correlated 2D electron systems"
+  location         : "Berkeley, CA"
+  email            : "zyxiang@berkeley.edu"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:zyxiang@berkeley.edu"
+    - label: "Phone"
+      icon: "fas fa-fw fa-phone-square"
+      url: "tel:+13413338253"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zyxiang6"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zyxiang6"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:zyxiang@berkeley.edu"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Gemfile
+  - node_modules
+  - package.json
+  - tmp
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/Los_Angeles
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
