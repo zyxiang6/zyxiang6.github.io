@@ -188,11 +188,11 @@
   border-bottom: 1px solid #e8e8e8;
   
   .publication-image {
-    flex: 0 0 180px; // Wider frame for 3:2 aspect ratio
+    flex: 0 0 210px; // Bigger frame for 3:2 aspect ratio
     margin-right: 1.2em;
-    height: 120px; // 3:2 aspect ratio (180:120)
+    height: 140px; // 3:2 aspect ratio (210:140)
     overflow: hidden;
-    margin-top: 0.2em; // Slight adjustment to align with title
+    margin-top: -0.1em; // Negative margin to align better with title baseline
     
     img {
       width: 100%;
@@ -206,10 +206,13 @@
   
   .publication-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     
     h4 {
       font-size: 0.85em !important; // Smaller title size
-      margin-top: 0; // Remove top margin for better alignment
+      margin: 0; // Reset all margins
       margin-bottom: 0.3em;
       font-weight: 600;
       line-height: 1.3;
@@ -259,8 +262,8 @@
       margin-right: 0;
       margin-bottom: 1em;
       margin-top: 0; // Reset margin on mobile
-      width: 210px; // Maintain 3:2 ratio on mobile
-      height: 140px; // 3:2 aspect ratio
+      width: 240px; // Bigger on mobile maintaining 3:2 ratio
+      height: 160px; // 3:2 aspect ratio
       max-width: none;
     }
     
