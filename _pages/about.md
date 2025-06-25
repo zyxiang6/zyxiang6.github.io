@@ -63,6 +63,8 @@ Bachelor of Science in Physics
 - **Phone**: (341) 333-8253
 - **Location**: Berkeley, CA
 - **GitHub**: [github.com/zyxiang6](https://github.com/zyxiang6)
+- **Google Scholar**: [scholar.google.com](https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en)
+- **LinkedIn**: [linkedin.com/in/ziyu-xiang](https://www.linkedin.com/in/ziyu-xiang-8481292b3/)
 
 ### Research Philosophy
 

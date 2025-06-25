@@ -3,7 +3,6 @@ permalink: /cv/
 title: "Curriculum Vitae"
 layout: single
 author_profile: true
-toc: true
 ---
 
 ## Contact Information
@@ -16,6 +15,8 @@ Berkeley, CA
 **Email**: zyxiang@berkeley.edu  
 **Phone**: (341) 333-8253  
 **GitHub**: [github.com/zyxiang6](https://github.com/zyxiang6)  
+**Google Scholar**: [scholar.google.com](https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en)  
+**LinkedIn**: [linkedin.com/in/ziyu-xiang](https://www.linkedin.com/in/ziyu-xiang-8481292b3/)  
 
 ## Education
 
@@ -55,8 +56,9 @@ Berkeley, CA
 
 ## Awards & Honors
 
-### Kavli Fellow
-**Kavli Energy NanoScience Institute, UC Berkeley** | *Sep 2024 - Sep 2025*
+### Kavli Graduate Student Fellow
+**Kavli Energy NanoScience Institute, UC Berkeley** | *Sep 2024 - Sep 2025*  
+[Kavli ENSI Fellowship](https://kavli.berkeley.edu/ziyu-xiang)
 
 ### Lixin Tang's Scholarship
 **University of Chinese Academy of Sciences** | *Nov 2018*
@@ -67,20 +69,20 @@ Berkeley, CA
 
 ## Publications
 
-### Preprints & Under Review
-1. **Xiang, Z.***\*, Li, H.*\*, Xiao, J.*\*, Naik, M. H., Ge, Z., He, Z., ... & Wang, F. (2024). Quantum melting of a disordered Wigner solid. *arXiv preprint* arXiv:2402.05456. **Science accepted.**
+### 2025 Publications
+1. **Xiang, Z.***\*, Li, H.*\*, Xiao, J.*\*, Naik, M. H., Ge, Z., He, Z., ... & Wang, F. (2025). Imaging quantum melting in a disordered 2D Wigner solid. *Science* **388**(6748), 736-740. [DOI: 10.1126/science.ado7136](https://www.science.org/doi/full/10.1126/science.ado7136)
 
 ### Peer-Reviewed Publications (2024)
-2. Li, H.*\*, **Xiang, Z.***\*, Wang, T. et al. Imaging tunable Luttinger liquid systems in van der Waals heterostructures. *Nature* **631**, 765–770 (2024).
+2. Li, H.*\*, **Xiang, Z.***\*, Wang, T. et al. Imaging tunable Luttinger liquid systems in van der Waals heterostructures. *Nature* **631**(8022), 765–770 (2024). [DOI: 10.1038/s41586-024-07596-6](https://www.nature.com/articles/s41586-024-07596-6)
 
-3. Li, H.*\*, **Xiang, Z.***\*, Wang, T. et al. Wigner molecular crystals from multielectron moiré artificial atoms. *Science* **385**, 86-91 (2024).
+3. Li, H.*\*, **Xiang, Z.***\*, Wang, T. et al. Wigner molecular crystals from multielectron moiré artificial atoms. *Science* **385**(6704), 86-91 (2024). [DOI: 10.1126/science.adk1348](https://www.science.org/doi/full/10.1126/science.adk1348)
 
-4. Li, H.*\*, **Xiang, Z.***\*, Naik, M.H.*\* et al. Imaging moiré excited states with photocurrent tunnelling microscopy. *Nature Materials* **23**, 633–638 (2024).
+4. Li, H.*\*, **Xiang, Z.***\*, Naik, M.H.*\* et al. Imaging moiré excited states with photocurrent tunnelling microscopy. *Nature Materials* **23**(5), 633–638 (2024). [DOI: 10.1038/s41563-023-01753-4](https://www.nature.com/articles/s41563-023-01753-4)
 
-5. Li, H.*\*, **Xiang, Z.***\*, Regan, E. et al. Mapping charge excitations in generalized Wigner crystals. *Nature Nanotechnology* **19**, 618–623 (2024).
+5. Li, H.*\*, **Xiang, Z.***\*, Regan, E. et al. Mapping charge excitations in generalized Wigner crystals. *Nature Nanotechnology* **19**(5), 618–623 (2024). [DOI: 10.1038/s41565-023-01594-x](https://www.nature.com/articles/s41565-023-01594-x)
 
 ### Peer-Reviewed Publications (2021)
-6. Stansbury, C., M Iqbal Bakti Utama, Fatuzzo, C., Regan, E., Wang, D., **Xiang, Z.** et al. Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space. *Science Advances* **7**(37), eabf4387 (2021).
+6. Stansbury, C., M Iqbal Bakti Utama, Fatuzzo, C., Regan, E., Wang, D., **Xiang, Z.** et al. Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space. *Science Advances* **7**(37), eabf4387 (2021). [DOI: 10.1126/sciadv.abf4387](https://www.science.org/doi/full/10.1126/sciadv.abf4387)
 
 ## Technical Skills
 

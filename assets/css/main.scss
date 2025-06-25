@@ -4,3 +4,39 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// Custom CSS to reduce text size globally
+html {
+  font-size: 14px; // Default is 16px, reducing to 14px
+
+  @include breakpoint($medium) {
+    font-size: 16px; // Default is 18px, reducing to 16px
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px; // Default is 20px, reducing to 18px
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 20px; // Default is 22px, reducing to 20px
+  }
+}
+
+// Additional text size adjustments
+.page__content {
+  p, li {
+    font-size: 0.9em; // Reduce paragraph and list text by 10%
+  }
+}
+
+.page__title {
+  font-size: 1.8em; // Reduce title size slightly
+}
+
+.archive__subtitle {
+  font-size: 0.9em;
+}
+
+.author__bio {
+  font-size: 0.85em; // Smaller bio text
+}
