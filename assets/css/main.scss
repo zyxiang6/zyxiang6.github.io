@@ -360,35 +360,35 @@
   }
 }
 
-// Make sidebar text much smaller - force with higher specificity
+// Make sidebar text moderately smaller - force with higher specificity
 .author__profile {
-  font-size: 0.7em !important; // Base smaller size for entire sidebar
+  font-size: 0.8em !important; // Base moderately smaller size for entire sidebar
   
   .author__bio {
-    font-size: 0.75em !important; // Smaller bio text
-    line-height: 1.2 !important;
+    font-size: 0.85em !important; // Moderately smaller bio text
+    line-height: 1.3 !important;
   }
   
   .author__urls {
-    font-size: 0.7em !important; // Smaller social links
+    font-size: 0.8em !important; // Moderately smaller social links
     
     .author__urls-wrapper {
-      font-size: 0.7em !important;
+      font-size: 0.8em !important;
     }
     
     a {
-      font-size: 0.7em !important; // Force smaller link text
+      font-size: 0.8em !important; // Force moderately smaller link text
     }
   }
   
   .author__name {
-    font-size: 1.0em !important; // Smaller name
+    font-size: 1.1em !important; // Slightly smaller name
   }
   
   .author__avatar {
     img {
-      width: 100px !important; // Smaller avatar
-      height: 100px !important;
+      width: 110px !important; // Slightly smaller avatar
+      height: 110px !important;
     }
   }
 }
@@ -396,24 +396,24 @@
 // Additional targeting for sidebar location and email
 .sidebar {
   .author__bio {
-    font-size: 0.75em !important;
+    font-size: 0.85em !important;
   }
   
   .author__urls {
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
     
     li {
-      font-size: 0.7em !important;
+      font-size: 0.8em !important;
     }
   }
 }
 
 // Target specific location text
 .author__location {
-  font-size: 0.7em !important;
+  font-size: 0.8em !important;
 }
 
-// Force smaller text for all sidebar elements
+// Force moderately smaller text for all sidebar elements
 .page__sidebar .author__profile * {
-  font-size: 0.7em !important;
+  font-size: 0.8em !important;
 }
