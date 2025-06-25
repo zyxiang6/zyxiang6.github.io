@@ -3,8 +3,6 @@ permalink: /about/
 title: "About Me"
 layout: single
 author_profile: true
-sidebar:
-  nav: "main"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

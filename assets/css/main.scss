@@ -46,9 +46,9 @@
 
 // Homepage specific styling - IMPORTANT: Force these styles
 .layout--home {
-  // Make intro section wider and left-aligned, not centered
+  // Make intro section 100% width and left-aligned like content below
   .feature__wrapper {
-    max-width: 85% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     text-align: left !important;
     
@@ -57,7 +57,7 @@
       width: 100% !important;
       
       .archive__item-excerpt {
-        font-size: 1em !important; // Reference size for intro text
+        font-size: 100% !important; // 100% size for intro text
         text-align: left !important;
         margin: 0 !important;
       }
@@ -65,34 +65,63 @@
   }
   
   .page__content {
-    // Keep homepage intro text at normal size (not smaller)
+    // Keep homepage intro text at 100% size
     p, li {
-      font-size: 1em !important; // Normal size for homepage intro
+      font-size: 100% !important; // 100% size for homepage intro
+    }
+    
+    // Latest News section - match intro size
+    h2 {
+      font-size: 100% !important; // Latest News heading
     }
   }
   
   // Latest News section same size as intro
   .news-section {
-    font-size: 1em !important;
-    max-width: 85% !important;
+    font-size: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     
     .news-item {
       h3 {
-        font-size: 1.1em !important; // Slightly bigger for headings
+        font-size: 100% !important; // Same size as intro
       }
       
       p {
-        font-size: 1em !important; // Same size as homepage intro
+        font-size: 100% !important; // Same size as intro
       }
     }
   }
   
-  // Main content area posts (if any)
+  // Recent posts section - match intro size
   .entries-list {
-    font-size: 1em !important;
-    max-width: 85% !important;
+    font-size: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
+    
+    .list__item {
+      .archive__item-title {
+        font-size: 100% !important; // Post titles same size
+      }
+      
+      .archive__item-excerpt {
+        font-size: 100% !important; // Post excerpts same size
+      }
+      
+      .page__meta {
+        font-size: 100% !important; // Post meta same size
+      }
+    }
+  }
+  
+  // Any other content sections
+  .archive__subtitle {
+    font-size: 100% !important;
+  }
+  
+  // All homepage content left-aligned
+  * {
+    text-align: left !important;
   }
 }
 
@@ -105,6 +134,27 @@
   .archive__item-excerpt {
     text-align: left !important;
     margin-left: 0 !important;
+  }
+}
+
+// Force all homepage text to be consistent size and left-aligned
+.layout--home {
+  .page__content {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 100% !important;
+      text-align: left !important;
+    }
+    
+    p, li, ul, ol {
+      font-size: 100% !important;
+      text-align: left !important;
+    }
+  }
+  
+  // Specific targeting for news and posts sections
+  h2, h3 {
+    font-size: 100% !important;
+    text-align: left !important;
   }
 }
 
