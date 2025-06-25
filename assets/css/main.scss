@@ -190,10 +190,13 @@
   .publication-image {
     flex: 0 0 140px;
     margin-right: 1.2em;
+    height: 105px; // Fixed height for consistent image frames
+    overflow: hidden;
     
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; // Crop images to fit frame while maintaining aspect ratio
       border-radius: 6px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.12);
       border: 1px solid #f0f0f0;
@@ -204,29 +207,29 @@
     flex: 1;
     
     h4 {
-      font-size: 0.95em !important;
-      margin-bottom: 0.4em;
+      font-size: 0.85em !important; // Smaller title size
+      margin-bottom: 0.3em;
       font-weight: 600;
-      line-height: 1.4;
+      line-height: 1.3;
       color: #2c3e50;
     }
     
     .journal-info {
-      font-size: 0.75em !important;
-      margin-bottom: 0.3em;
+      font-size: 0.7em !important; // Smaller journal info
+      margin-bottom: 0.25em;
       color: #666;
       font-weight: 500;
     }
     
     .authors {
-      font-size: 0.7em !important;
-      margin-bottom: 0.4em;
+      font-size: 0.65em !important; // Smaller author text
+      margin-bottom: 0.3em;
       color: #555;
       line-height: 1.3;
     }
     
     .doi-link {
-      font-size: 0.65em !important;
+      font-size: 0.6em !important; // Smaller DOI link
       
       a {
         color: #3498db;
@@ -253,7 +256,9 @@
       flex: none;
       margin-right: 0;
       margin-bottom: 1em;
-      max-width: 160px;
+      width: 160px;
+      height: 120px; // Maintain fixed height on mobile
+      max-width: none;
     }
     
     .publication-content {

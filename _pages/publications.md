@@ -14,7 +14,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/quantum-melting-placeholder.jpg" alt="Quantum melting publication" />
+    <img src="/assets/images/publications/quantum-melting-placeholder.jpg.jpg" alt="Quantum melting publication" />
   </div>
   <div class="publication-content">
     <h4>Imaging quantum melting in a disordered 2D Wigner solid</h4>
@@ -28,7 +28,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/luttinger-liquid-placeholder.jpg" alt="Luttinger liquid publication" />
+    <img src="/assets/images/publications/luttinger-liquid-placeholder.jpg.webp" alt="Luttinger liquid publication" />
   </div>
   <div class="publication-content">
     <h4>Imaging tunable Luttinger liquid systems in van der Waals heterostructures</h4>
@@ -40,7 +40,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/wigner-molecular-placeholder.jpg" alt="Wigner molecular crystals publication" />
+    <img src="/assets/images/publications/wigner-molecular-placeholder.jpg.jpg" alt="Wigner molecular crystals publication" />
   </div>
   <div class="publication-content">
     <h4>Wigner molecular crystals from multielectron moiré artificial atoms</h4>
@@ -52,7 +52,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/moire-excited-states-placeholder.jpg" alt="Moiré excited states publication" />
+    <img src="/assets/images/publications/moire-excited-states-placeholder.jpg.webp" alt="Moiré excited states publication" />
   </div>
   <div class="publication-content">
     <h4>Imaging moiré excited states with photocurrent tunnelling microscopy</h4>
@@ -64,7 +64,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/charge-excitations-placeholder.jpg" alt="Charge excitations publication" />
+    <img src="/assets/images/publications/charge-excitations-placeholder.jpg.webp" alt="Charge excitations publication" />
   </div>
   <div class="publication-content">
     <h4>Mapping charge excitations in generalized Wigner crystals</h4>
@@ -78,7 +78,7 @@ classes: publications-page
 
 <div class="publication-item">
   <div class="publication-image">
-    <img src="/assets/images/publications/electron-localization-placeholder.jpg" alt="Electron localization publication" />
+    <img src="/assets/images/publications/electron-localization-placeholder.jpg.jpg" alt="Electron localization publication" />
   </div>
   <div class="publication-content">
     <h4>Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space</h4>
