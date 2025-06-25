@@ -7,15 +7,15 @@
 
 // Custom CSS adjustments
 
-// Slightly smaller navigation header text size
+// Slightly increase navigation header text size
 .masthead {
   .site-title {
-    font-size: 1.1em; // Slightly smaller site title (was 1.2em)
+    font-size: 1em; // Slightly bigger site title
   }
   
   .masthead__menu {
     .masthead__menu-item {
-      font-size: 1.05em; // Slightly smaller navigation menu items (was 1.1em)
+      font-size: 0.9em; // Slightly bigger navigation menu items
     }
   }
 }
@@ -44,13 +44,25 @@
   }
 }
 
-// Homepage specific styling - wider content, left-aligned
+// Homepage specific styling
 .layout--home {
-  .page__content {
-    max-width: 95%; // Make homepage content wider (was 90%)
-    margin: 0; // Remove auto centering, align to left
-    padding-left: 20px; // Add some left padding
+  // Make intro section wider and left-aligned, not centered
+  .feature__wrapper {
+    max-width: 85%;
+    margin: 0;
+    text-align: left;
     
+    .feature__item {
+      text-align: left;
+      
+      .archive__item-excerpt {
+        font-size: 1em; // Reference size for intro text
+        text-align: left;
+      }
+    }
+  }
+  
+  .page__content {
     // Keep homepage intro text at normal size (not smaller)
     p, li {
       font-size: 1em; // Normal size for homepage intro
@@ -60,10 +72,12 @@
   // Latest News section same size as intro
   .news-section {
     font-size: 1em;
+    max-width: 85%;
+    margin: 0;
     
     .news-item {
       h3 {
-        font-size: 1em; // Same size as homepage intro text
+        font-size: 1.1em; // Slightly bigger for headings
       }
       
       p {
@@ -72,9 +86,11 @@
     }
   }
   
-  // Homepage headings same size as intro text
-  h2 {
-    font-size: 1em; // Make "Latest News" heading same size as intro
+  // Main content area posts (if any)
+  .entries-list {
+    font-size: 1em;
+    max-width: 85%;
+    margin: 0;
   }
 }
 
@@ -89,12 +105,12 @@
 
 // Search and toggle elements
 .search__toggle {
-  font-size: 1.05em; // Slightly smaller search toggle (was 1.1em)
+  font-size: 1.1em; // Bigger search toggle
 }
 
-// Make sure navigation items are slightly smaller
+// Make sure navigation items are bigger
 .visible-links {
   a {
-    font-size: 1.05em; // Slightly smaller navigation links (was 1.1em)
+    font-size: 1.05em; // Slightly bigger navigation links
   }
 }
