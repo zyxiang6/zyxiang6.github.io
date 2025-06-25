@@ -2,13 +2,14 @@
 layout: home
 author_profile: true
 title: "Welcome"
+excerpt: "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
+  overlay_image: /assets/images/header-bg.jpg
   actions:
     - label: "Learn More About My Research"
       url: "/research/"
-excerpt: "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy"
 intro: 
   - excerpt: "I am a fourth-year Ph.D. candidate in Physics at UC Berkeley in Prof. Feng Wang's group, focusing on strongly correlated two-dimensional electron systems. I earned my Bachelor of Science (2020) in Physics from the University of Chinese Academy of Sciences (UCAS). I also gained research experience at UC Berkeley as an undergraduate researcher in 2019.
 
@@ -23,19 +24,11 @@ intro:
 
 ## Latest News
 
-<div class="news-section">
-  <div class="news-item">
-    <h3>January 2025 - PhD Progress</h3>
-    <p>Continuing my PhD research in Prof. Feng Wang's group, working on quantum many-body phenomena in 2D materials.</p>
-  </div>
-  
-  <div class="news-item">
-    <h3>September 2024 - Kavli Fellow</h3>
-    <p>Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).</p>
-  </div>
+### January 2025 - PhD Progress
+Continuing my PhD research in Prof. Feng Wang's group, working on quantum many-body phenomena in 2D materials.
 
-  <div class="news-item">
-    <h3>2024 - Recent Publications</h3>
-    <p>Published several papers in Nature, Science, and Nature Materials on quantum crystals and moiré systems.</p>
-  </div>
-</div>
+### September 2024 - Kavli Fellow
+Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).
+
+### 2024 - Recent Publications
+Published several papers in Nature, Science, and Nature Materials on quantum crystals and moiré systems.

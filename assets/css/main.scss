@@ -5,70 +5,94 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Custom CSS to make text normal size
+// Custom CSS to reduce text size globally
 html {
-  font-size: 16px !important; // Back to normal default size
+  font-size: 13px; // Further reduced from 14px to 13px
 
   @include breakpoint($medium) {
-    font-size: 18px !important; // Back to normal default size
+    font-size: 15px; // Further reduced from 16px to 15px
   }
 
   @include breakpoint($large) {
-    font-size: 20px !important; // Back to normal default size
+    font-size: 16px; // Further reduced from 18px to 16px
   }
 
   @include breakpoint($x-large) {
-    font-size: 22px !important; // Back to normal default size
+    font-size: 17px; // Further reduced from 20px to 17px
   }
 }
 
-// Normal text sizes
+// Additional text size adjustments
 .page__content {
   p, li {
-    font-size: 1.0em !important; // Normal paragraph and list text
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 1.0em !important; // Normal heading sizes
+    font-size: 0.85em; // Further reduce paragraph and list text
   }
 }
 
 .page__title {
-  font-size: 2.0em !important; // Normal title size
+  font-size: 1.6em; // Further reduce title size
 }
 
 .archive__subtitle {
-  font-size: 1.0em !important; // Normal subtitle size
+  font-size: 0.85em;
 }
 
 .author__bio {
-  font-size: 0.9em !important; // Slightly smaller bio text but readable
+  font-size: 0.8em; // Smaller bio text
+}
+
+// Reduce navigation and header text sizes
+.masthead {
+  .site-title {
+    font-size: 1.1em; // Smaller site title
+  }
+  
+  .masthead__menu-item {
+    font-size: 0.9em; // Smaller navigation menu items
+  }
 }
 
 // Reduce sidebar text sizes
 .sidebar {
-  font-size: 0.8em !important;
+  .author__name {
+    font-size: 1.2em; // Smaller author name
+  }
+  
+  .author__bio {
+    font-size: 0.8em; // Smaller bio
+  }
+  
+  .author__urls {
+    font-size: 0.85em; // Smaller social links
+  }
 }
 
-.author__name {
-  font-size: 1.1em !important;
+// Reduce header overlay text
+.page__hero {
+  .page__title {
+    font-size: 2.2em; // Smaller hero title
+  }
+  
+  .page__lead {
+    font-size: 1.1em; // Smaller hero subtitle
+  }
 }
 
-// Reduce navigation text
-.masthead {
-  font-size: 0.75em !important;
+// Reduce feature row text sizes
+.feature__item {
+  .archive__item-title {
+    font-size: 1.2em; // Smaller feature titles
+  }
+  
+  .archive__item-excerpt {
+    font-size: 0.85em; // Smaller feature excerpts
+  }
 }
 
-// Make navigation bar text smaller
-.greedy-nav a {
-  font-size: 0.8em !important;
-}
-
-.greedy-nav .site-title {
-  font-size: 1.0em !important;
-}
-
-// Reduce footer text
-.page__footer {
-  font-size: 0.75em !important;
-}
+// Reduce general heading sizes
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
