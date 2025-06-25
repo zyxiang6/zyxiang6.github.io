@@ -1,33 +1,33 @@
 # Site Settings
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default"
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
 
 # Site Information
-locale                   : "en-US"
-title                    : "Ziyu Xiang"
-title_separator          : "-"
-subtitle                 : "PhD Student in Physics"
-name                     : "Ziyu Xiang"
-description              : "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy"
-url                      : "https://zyxiang6.github.io"
-baseurl                  : 
-repository               : "zyxiang6/zyxiang6.github.io"
-breadcrumbs              : false
-words_per_minute         : 200
-enable_copy_code_button  : true
+locale: "en-US"
+title: "Ziyu Xiang"
+title_separator: "-"
+subtitle: "PhD Student in Physics"
+name: "Ziyu Xiang"
+description: "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy"
+url: "https://zyxiang6.github.io"
+baseurl: ""
+repository: "zyxiang6/zyxiang6.github.io"
+breadcrumbs: false
+words_per_minute: 200
+enable_copy_code_button: true
 
 # Site Search
-search                   : true
-search_full_content      : true
-search_provider          : lunr
+search: true
+search_full_content: true
+search_provider: lunr
 
 # Site Author
 author:
-  name             : "Ziyu Xiang"
-  avatar           : "/assets/images/profile.jpg"
-  bio              : "PhD Student in Physics at UC Berkeley<br>Studying strongly correlated 2D electron systems"
-  location         : "Berkeley, CA"
-  email            : "zyxiang@berkeley.edu"
+  name: "Ziyu Xiang"
+  avatar: "/assets/images/profile.jpg"
+  bio: "PhD Student in Physics at UC Berkeley<br>Studying strongly correlated 2D electron systems"
+  location: "Berkeley, CA"
+  email: "zyxiang@berkeley.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
