@@ -179,20 +179,22 @@
   }
 }
 
-// Publication page styling - horizontal layout like Dingyi's website
+// Publication page styling - horizontal layout with proper alignment
 .publication-item {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; // Keep flex-start for top alignment
   margin-bottom: 1.8em;
   padding: 1em 0;
   border-bottom: 1px solid #e8e8e8;
   
   .publication-image {
-    flex: 0 0 210px; // Bigger frame for 3:2 aspect ratio
+    flex: 0 0 210px; // Fixed width for images
     margin-right: 1.2em;
     height: 140px; // 3:2 aspect ratio (210:140)
     overflow: hidden;
-    margin-top: -0.1em; // Negative margin to align better with title baseline
+    // REMOVED: margin-top: -0.1em; - This was causing the upward shift
+    display: flex; // Add flex to center image in container
+    align-items: center; // Center image vertically in its container
     
     img {
       width: 100%;
@@ -209,6 +211,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 0.2em; // Add small padding to better align with image center
     
     h4 {
       font-size: 0.85em !important; // Smaller title size
@@ -250,6 +253,81 @@
   }
 }
 
+// Alternative approach: If you want the image to align with the title baseline exactly
+// Uncomment this and comment out the above .publication-item if you prefer this alignment
+/*
+.publication-item {
+  display: flex;
+  align-items: baseline; // Align with text baseline
+  margin-bottom: 1.8em;
+  padding: 1em 0;
+  border-bottom: 1px solid #e8e8e8;
+  
+  .publication-image {
+    flex: 0 0 210px;
+    margin-right: 1.2em;
+    height: 140px;
+    overflow: hidden;
+    align-self: flex-start; // Override baseline alignment for image
+    margin-top: 0.2em; // Fine-tune alignment with title
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+      border: 1px solid #f0f0f0;
+    }
+  }
+  
+  .publication-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    h4 {
+      font-size: 0.85em !important;
+      margin: 0;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #2c3e50;
+    }
+    
+    .journal-info {
+      font-size: 0.7em !important;
+      margin-bottom: 0.25em;
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .authors {
+      font-size: 0.65em !important;
+      margin-bottom: 0.3em;
+      color: #555;
+      line-height: 1.3;
+    }
+    
+    .doi-link {
+      font-size: 0.6em !important;
+      
+      a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          text-decoration: underline;
+          color: #2980b9;
+        }
+      }
+    }
+  }
+}
+*/
+
 // Mobile responsive for publications
 @media (max-width: 768px) {
   .publication-item {
@@ -269,6 +347,7 @@
     
     .publication-content {
       text-align: left;
+      padding-top: 0; // Remove padding on mobile
     }
   }
 }
@@ -281,27 +360,60 @@
   }
 }
 
-// Make sidebar text smaller
-.sidebar {
-  font-size: 0.75em !important; // Even smaller sidebar text
+// Make sidebar text much smaller - force with higher specificity
+.author__profile {
+  font-size: 0.7em !important; // Base smaller size for entire sidebar
   
   .author__bio {
-    font-size: 0.8em !important; // Smaller bio text
-    line-height: 1.3;
+    font-size: 0.75em !important; // Smaller bio text
+    line-height: 1.2 !important;
   }
   
   .author__urls {
-    font-size: 0.75em !important; // Smaller social links
+    font-size: 0.7em !important; // Smaller social links
+    
+    .author__urls-wrapper {
+      font-size: 0.7em !important;
+    }
+    
+    a {
+      font-size: 0.7em !important; // Force smaller link text
+    }
   }
   
   .author__name {
-    font-size: 1.1em !important; // Slightly smaller name
+    font-size: 1.0em !important; // Smaller name
   }
   
   .author__avatar {
     img {
-      width: 110px !important; // Slightly smaller avatar
-      height: 110px !important;
+      width: 100px !important; // Smaller avatar
+      height: 100px !important;
     }
   }
+}
+
+// Additional targeting for sidebar location and email
+.sidebar {
+  .author__bio {
+    font-size: 0.75em !important;
+  }
+  
+  .author__urls {
+    font-size: 0.7em !important;
+    
+    li {
+      font-size: 0.7em !important;
+    }
+  }
+}
+
+// Target specific location text
+.author__location {
+  font-size: 0.7em !important;
+}
+
+// Force smaller text for all sidebar elements
+.page__sidebar .author__profile * {
+  font-size: 0.7em !important;
 }
