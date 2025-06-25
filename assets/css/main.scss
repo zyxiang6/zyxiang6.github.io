@@ -371,7 +371,7 @@
   // Author bio text (PhD Student, Studying text)
   .author__bio,
   .author__bio p {
-    font-size: 0.9em !important; // Larger than before but still smaller than default
+    font-size: 1.2em !important; // Larger than before but still smaller than default
     line-height: 1.4 !important;
   }
   
@@ -380,7 +380,7 @@
   .author__urls li,
   .author__urls a,
   .author__urls-wrapper {
-    font-size: 0.85em !important; // Comfortable reading size for links
+    font-size: 1em !important; // Comfortable reading size for links
   }
   
   // Author name
@@ -393,7 +393,7 @@
   
   // Location text
   .author__location {
-    font-size: 0.85em !important;
+    font-size: 1em !important;
   }
   
   // Avatar size
@@ -405,19 +405,19 @@
 
 // Even more aggressive targeting for stubborn elements
 html body .page__sidebar .author__profile .author__bio {
-  font-size: 0.9em !important;
+  font-size: 1em !important;
 }
 
 html body .page__sidebar .author__profile .author__urls {
-  font-size: 0.85em !important;
+  font-size: 1em !important;
 }
 
 html body .page__sidebar .author__profile .author__urls li {
-  font-size: 0.85em !important;
+  font-size: 1em !important;
 }
 
 html body .page__sidebar .author__profile .author__urls a {
-  font-size: 0.85em !important;
+  font-size: 1em !important;
 }
 
 // Target all possible sidebar containers
