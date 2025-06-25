@@ -248,3 +248,8 @@
     }
   }
 }
+
+// Test CSS to verify our styles are loading
+body {
+  border-top: 2px solid red !important; // Temporary test border
+}
