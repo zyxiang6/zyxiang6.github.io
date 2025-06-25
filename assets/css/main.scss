@@ -352,7 +352,7 @@
 // Make sidebar text smaller - use specific selectors to override theme
 .sidebar .author__profile,
 .page__sidebar .author__profile {
-  font-size: 0.85em !important; // Base smaller sidebar text
+  font-size: 0.9em !important; // Base smaller sidebar text
 }
 
 .sidebar .author__bio,
@@ -363,12 +363,12 @@
 
 .sidebar .author__urls,
 .page__sidebar .author__urls {
-  font-size: 0.85em !important; // Just a bit smaller social links
+  font-size: 0.9em !important; // Just a bit smaller social links
 }
 
 .sidebar .author__urls a,
 .page__sidebar .author__urls a {
-  font-size: 0.85em !important; // Ensure link text is also smaller
+  font-size: 0.9em !important; // Ensure link text is also smaller
 }
 
 .sidebar .author__name,
@@ -380,4 +380,424 @@
 .page__sidebar .author__avatar img {
   width: 110px !important; // Keep avatar size
   height: 110px !important;
+}
+
+// ========================================
+// HOMEPAGE SPECIFIC STYLES - NEW DESIGN
+// ========================================
+
+// Homepage container
+.homepage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Hero section
+.hero-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin: -2rem -1rem 3rem -1rem;
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .profile-photo {
+    flex: 0 0 200px;
+    
+    .author__avatar {
+      width: 200px !important;
+      height: 200px !important;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+  }
+  
+  .hero-text {
+    flex: 1;
+    
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: #34495e;
+      margin: 0 0 0.5rem 0;
+      font-weight: 500;
+    }
+    
+    .hero-description {
+      font-size: 1.1rem;
+      color: #5a6c7d;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.4;
+    }
+    
+    .contact-info {
+      margin-bottom: 1.5rem;
+      
+      p {
+        margin: 0.3rem 0;
+        font-size: 1rem;
+        color: #6c757d;
+        
+        i {
+          width: 20px;
+          margin-right: 8px;
+          color: #3498db;
+        }
+        
+        a {
+          color: #3498db;
+          text-decoration: none;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      
+      .btn--social {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        background: #fff;
+        color: #495057;
+        border: 1px solid #dee2e6;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: #3498db;
+          color: #fff;
+          border-color: #3498db;
+          transform: translateY(-2px);
+        }
+        
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+// Content sections
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// About section
+.about-section {
+  padding: 3rem 0;
+  
+  h2 {
+    font-size: 2rem !important;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .about-content {
+    p {
+      font-size: 1rem !important; // Same size as your intro paragraph
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: #444;
+      text-align: justify;
+    }
+    
+    .highlight-notice {
+      background: #e8f4fd;
+      border-left: 4px solid #3498db;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 0 8px 8px 0;
+      
+      p {
+        margin: 0;
+        font-size: 1rem !important;
+        color: #2c3e50;
+      }
+    }
+  }
+}
+
+// Research highlights
+.research-highlights {
+  padding: 3rem 0;
+  background: #f8f9fa;
+  margin: 0 -1rem;
+  
+  h2 {
+    font-size: 2rem !important;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .research-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    
+    .research-icon {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      font-size: 1.2rem !important;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    p {
+      font-size: 0.95rem !important;
+      color: #5a6c7d;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// News section
+.news-section-home {
+  padding: 3rem 0;
+  
+  h2 {
+    font-size: 2rem !important;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .news-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .news-item {
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #fff;
+    transition: box-shadow 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    
+    .news-date {
+      font-size: 0.85rem;
+      color: #3498db;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+    
+    h3 {
+      font-size: 1.1rem !important;
+      color: #2c3e50;
+      margin: 0 0 0.8rem 0;
+      font-weight: 600;
+    }
+    
+    p {
+      font-size: 0.95rem !important;
+      color: #5a6c7d;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// Stats section
+.stats-section {
+  padding: 3rem 0;
+  background: #2c3e50;
+  margin: 0 -1rem;
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+    color: #fff;
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+      color: #bdc3c7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// CTA section
+.cta-section {
+  padding: 3rem 0 4rem 0;
+  text-align: center;
+  
+  h2 {
+    font-size: 2rem !important;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1.1rem !important;
+    color: #5a6c7d;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Mobile responsiveness for homepage
+@media (max-width: 768px) {
+  .homepage-container {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-section {
+    margin: -1rem -0.5rem 2rem -0.5rem;
+    padding: 2rem 0;
+    
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    
+    .profile-photo {
+      flex: none;
+      margin-bottom: 1rem;
+      
+      .author__avatar {
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+    
+    .hero-text {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
+    }
+  }
+  
+  .research-highlights,
+  .stats-section {
+    margin: 0 -0.5rem;
+    
+    .research-grid,
+    .stats-grid {
+      padding: 0 1rem;
+    }
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    
+    .btn {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
