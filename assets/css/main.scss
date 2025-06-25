@@ -188,10 +188,11 @@
   border-bottom: 1px solid #e8e8e8;
   
   .publication-image {
-    flex: 0 0 140px;
+    flex: 0 0 180px; // Wider frame for 3:2 aspect ratio
     margin-right: 1.2em;
-    height: 105px; // Fixed height for consistent image frames
+    height: 120px; // 3:2 aspect ratio (180:120)
     overflow: hidden;
+    margin-top: 0.2em; // Slight adjustment to align with title
     
     img {
       width: 100%;
@@ -208,6 +209,7 @@
     
     h4 {
       font-size: 0.85em !important; // Smaller title size
+      margin-top: 0; // Remove top margin for better alignment
       margin-bottom: 0.3em;
       font-weight: 600;
       line-height: 1.3;
@@ -256,8 +258,9 @@
       flex: none;
       margin-right: 0;
       margin-bottom: 1em;
-      width: 160px;
-      height: 120px; // Maintain fixed height on mobile
+      margin-top: 0; // Reset margin on mobile
+      width: 210px; // Maintain 3:2 ratio on mobile
+      height: 140px; // 3:2 aspect ratio
       max-width: none;
     }
     
@@ -272,5 +275,30 @@
   .publication-item:last-child {
     border-bottom: none;
     margin-bottom: 1em;
+  }
+}
+
+// Make sidebar text smaller
+.sidebar {
+  font-size: 0.75em !important; // Even smaller sidebar text
+  
+  .author__bio {
+    font-size: 0.8em !important; // Smaller bio text
+    line-height: 1.3;
+  }
+  
+  .author__urls {
+    font-size: 0.75em !important; // Smaller social links
+  }
+  
+  .author__name {
+    font-size: 1.1em !important; // Slightly smaller name
+  }
+  
+  .author__avatar {
+    img {
+      width: 110px !important; // Slightly smaller avatar
+      height: 110px !important;
+    }
   }
 }
