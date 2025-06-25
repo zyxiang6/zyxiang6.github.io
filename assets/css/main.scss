@@ -5,44 +5,44 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Custom CSS to reduce text size globally - more aggressive reduction
+// Custom CSS to make text normal size
 html {
-  font-size: 12px !important; // Default is 16px, reducing to 12px
+  font-size: 16px !important; // Back to normal default size
 
   @include breakpoint($medium) {
-    font-size: 13px !important; // Default is 18px, reducing to 13px
+    font-size: 18px !important; // Back to normal default size
   }
 
   @include breakpoint($large) {
-    font-size: 14px !important; // Default is 20px, reducing to 14px
+    font-size: 20px !important; // Back to normal default size
   }
 
   @include breakpoint($x-large) {
-    font-size: 15px !important; // Default is 22px, reducing to 15px
+    font-size: 22px !important; // Back to normal default size
   }
 }
 
-// Much more aggressive text size reductions
+// Normal text sizes
 .page__content {
   p, li {
-    font-size: 0.9em !important; // Reduce paragraph and list text by 10% (not too small)
+    font-size: 1.0em !important; // Normal paragraph and list text
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-size: 0.95em !important; // Reduce heading sizes moderately
+    font-size: 1.0em !important; // Normal heading sizes
   }
 }
 
 .page__title {
-  font-size: 1.5em !important; // Reduce title size more
+  font-size: 2.0em !important; // Normal title size
 }
 
 .archive__subtitle {
-  font-size: 0.8em !important;
+  font-size: 1.0em !important; // Normal subtitle size
 }
 
 .author__bio {
-  font-size: 0.75em !important; // Much smaller bio text
+  font-size: 0.9em !important; // Slightly smaller bio text but readable
 }
 
 // Reduce sidebar text sizes
