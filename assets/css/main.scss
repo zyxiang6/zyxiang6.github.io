@@ -7,15 +7,15 @@
 
 // Custom CSS adjustments
 
-// Increase navigation header text size
+// Slightly smaller navigation header text size
 .masthead {
   .site-title {
-    font-size: 1.2em; // Bigger site title
+    font-size: 1.1em; // Slightly smaller site title (was 1.2em)
   }
   
   .masthead__menu {
     .masthead__menu-item {
-      font-size: 1.1em; // Bigger navigation menu items
+      font-size: 1.05em; // Slightly smaller navigation menu items (was 1.1em)
     }
   }
 }
@@ -44,11 +44,12 @@
   }
 }
 
-// Homepage specific styling - wider content
+// Homepage specific styling - wider content, left-aligned
 .layout--home {
   .page__content {
-    max-width: 90%; // Make homepage content wider
-    margin: 0 auto;
+    max-width: 95%; // Make homepage content wider (was 90%)
+    margin: 0; // Remove auto centering, align to left
+    padding-left: 20px; // Add some left padding
     
     // Keep homepage intro text at normal size (not smaller)
     p, li {
@@ -61,10 +62,19 @@
     font-size: 1em;
     
     .news-item {
+      h3 {
+        font-size: 1em; // Same size as homepage intro text
+      }
+      
       p {
         font-size: 1em; // Same size as homepage intro
       }
     }
+  }
+  
+  // Homepage headings same size as intro text
+  h2 {
+    font-size: 1em; // Make "Latest News" heading same size as intro
   }
 }
 
@@ -79,12 +89,12 @@
 
 // Search and toggle elements
 .search__toggle {
-  font-size: 1.1em; // Bigger search toggle
+  font-size: 1.05em; // Slightly smaller search toggle (was 1.1em)
 }
 
-// Make sure navigation items are bigger
+// Make sure navigation items are slightly smaller
 .visible-links {
   a {
-    font-size: 1.1em; // Bigger navigation links
+    font-size: 1.05em; // Slightly smaller navigation links (was 1.1em)
   }
 }
