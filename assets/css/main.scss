@@ -360,60 +360,84 @@
   }
 }
 
-// Make sidebar text moderately smaller - force with higher specificity
-.author__profile {
-  font-size: 0.8em !important; // Base moderately smaller size for entire sidebar
+// AGGRESSIVE CSS targeting to override theme styles - sidebar text sizing
+.page__sidebar,
+.sidebar,
+.author__profile,
+.layout--single .page__sidebar,
+.layout--single .sidebar,
+.layout--single .author__profile {
+  
+  // Author bio text (PhD Student, Studying text)
+  .author__bio,
+  .author__bio p {
+    font-size: 0.9em !important; // Larger than before but still smaller than default
+    line-height: 1.4 !important;
+  }
+  
+  // Social media links
+  .author__urls,
+  .author__urls li,
+  .author__urls a,
+  .author__urls-wrapper {
+    font-size: 0.85em !important; // Comfortable reading size for links
+  }
+  
+  // Author name
+  .author__name,
+  .author__name h1,
+  .author__name h2,
+  .author__name h3 {
+    font-size: 1.2em !important; // Slightly smaller than default name
+  }
+  
+  // Location text
+  .author__location {
+    font-size: 0.85em !important;
+  }
+  
+  // Avatar size
+  .author__avatar img {
+    width: 120px !important; // Comfortable avatar size
+    height: 120px !important;
+  }
+}
+
+// Even more aggressive targeting for stubborn elements
+html body .page__sidebar .author__profile .author__bio {
+  font-size: 0.9em !important;
+}
+
+html body .page__sidebar .author__profile .author__urls {
+  font-size: 0.85em !important;
+}
+
+html body .page__sidebar .author__profile .author__urls li {
+  font-size: 0.85em !important;
+}
+
+html body .page__sidebar .author__profile .author__urls a {
+  font-size: 0.85em !important;
+}
+
+// Target all possible sidebar containers
+.layout--single .page__sidebar .author__profile,
+.page__sidebar .author__profile,
+aside.sidebar .author__profile {
   
   .author__bio {
-    font-size: 0.85em !important; // Moderately smaller bio text
-    line-height: 1.3 !important;
+    font-size: 0.9em !important;
   }
   
   .author__urls {
-    font-size: 0.8em !important; // Moderately smaller social links
+    font-size: 0.85em !important;
     
-    .author__urls-wrapper {
-      font-size: 0.8em !important;
-    }
-    
-    a {
-      font-size: 0.8em !important; // Force moderately smaller link text
+    li, a {
+      font-size: 0.85em !important;
     }
   }
   
   .author__name {
-    font-size: 1.1em !important; // Slightly smaller name
+    font-size: 1.2em !important;
   }
-  
-  .author__avatar {
-    img {
-      width: 110px !important; // Slightly smaller avatar
-      height: 110px !important;
-    }
-  }
-}
-
-// Additional targeting for sidebar location and email
-.sidebar {
-  .author__bio {
-    font-size: 0.85em !important;
-  }
-  
-  .author__urls {
-    font-size: 0.8em !important;
-    
-    li {
-      font-size: 0.8em !important;
-    }
-  }
-}
-
-// Target specific location text
-.author__location {
-  font-size: 0.8em !important;
-}
-
-// Force moderately smaller text for all sidebar elements
-.page__sidebar .author__profile * {
-  font-size: 0.8em !important;
 }
