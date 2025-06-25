@@ -7,92 +7,36 @@
 
 // Custom CSS to reduce text size globally
 html {
-  font-size: 13px; // Further reduced from 14px to 13px
+  font-size: 14px; // Default is 16px, reducing to 14px
 
   @include breakpoint($medium) {
-    font-size: 15px; // Further reduced from 16px to 15px
+    font-size: 16px; // Default is 18px, reducing to 16px
   }
 
   @include breakpoint($large) {
-    font-size: 16px; // Further reduced from 18px to 16px
+    font-size: 18px; // Default is 20px, reducing to 18px
   }
 
   @include breakpoint($x-large) {
-    font-size: 17px; // Further reduced from 20px to 17px
+    font-size: 20px; // Default is 22px, reducing to 20px
   }
 }
 
 // Additional text size adjustments
 .page__content {
   p, li {
-    font-size: 0.85em; // Further reduce paragraph and list text
+    font-size: 0.9em; // Reduce paragraph and list text by 10%
   }
 }
 
 .page__title {
-  font-size: 1.6em; // Further reduce title size
+  font-size: 1.8em; // Reduce title size slightly
 }
 
 .archive__subtitle {
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .author__bio {
-  font-size: 0.8em; // Smaller bio text
+  font-size: 0.85em; // Smaller bio text
 }
-
-// Reduce navigation and header text sizes
-.masthead {
-  .site-title {
-    font-size: 1.1em; // Smaller site title
-  }
-  
-  .masthead__menu-item {
-    font-size: 0.9em; // Smaller navigation menu items
-  }
-}
-
-// Reduce sidebar text sizes
-.sidebar {
-  .author__name {
-    font-size: 1.2em; // Smaller author name
-  }
-  
-  .author__bio {
-    font-size: 0.8em; // Smaller bio
-  }
-  
-  .author__urls {
-    font-size: 0.85em; // Smaller social links
-  }
-}
-
-// Reduce header overlay text
-.page__hero {
-  .page__title {
-    font-size: 2.2em; // Smaller hero title
-  }
-  
-  .page__lead {
-    font-size: 1.1em; // Smaller hero subtitle
-  }
-}
-
-// Reduce feature row text sizes
-.feature__item {
-  .archive__item-title {
-    font-size: 1.2em; // Smaller feature titles
-  }
-  
-  .archive__item-excerpt {
-    font-size: 0.85em; // Smaller feature excerpts
-  }
-}
-
-// Reduce general heading sizes
-h1 { font-size: 1.8em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.3em; }
-h4 { font-size: 1.1em; }
-h5 { font-size: 1em; }
-h6 { font-size: 0.9em; }
