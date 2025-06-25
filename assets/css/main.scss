@@ -25,11 +25,11 @@ html {
 // Much more aggressive text size reductions
 .page__content {
   p, li {
-    font-size: 0.8em !important; // Reduce paragraph and list text by 20%
+    font-size: 0.9em !important; // Reduce paragraph and list text by 10% (not too small)
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-size: 0.85em !important; // Reduce heading sizes
+    font-size: 0.95em !important; // Reduce heading sizes moderately
   }
 }
 
@@ -54,38 +54,18 @@ html {
   font-size: 1.1em !important;
 }
 
-// Reduce navigation text - make it much smaller
+// Reduce navigation text
 .masthead {
-  font-size: 0.7em !important;
+  font-size: 0.75em !important;
 }
 
-// Specifically target navigation links
-.masthead__menu {
-  font-size: 0.7em !important;
-}
-
-.masthead__menu-item {
+// Make navigation bar text smaller
+.greedy-nav a {
   font-size: 0.8em !important;
 }
 
-// Reduce search toggle and other nav elements
-.search__toggle {
-  font-size: 0.7em !important;
-}
-
-// Apply the same small text size to all page content (not just home)
-.page__content, 
-.archive__item-title,
-.archive__item-excerpt,
-.list__item .archive__item-title,
-.list__item .archive__item-excerpt {
-  p, li, div, span {
-    font-size: 0.8em !important;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 0.85em !important;
-  }
+.greedy-nav .site-title {
+  font-size: 1.0em !important;
 }
 
 // Reduce footer text
