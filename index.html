@@ -60,6 +60,34 @@ html {
   color: #fff !important;
 }
 
+/* CRITICAL FIX: Remove ALL layout constraints from homepage - force hero to start from left edge like header */
+.homepage .page,
+.homepage .page__content,
+.homepage .initial-content,
+.homepage #main,
+.homepage .layout--single,
+.homepage .wide,
+.homepage .wrapper,
+.homepage .container {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Override ANY theme-level max-width constraints specifically for homepage */
+body.homepage .page,
+body.homepage .page__content,
+body.homepage .initial-content,
+body.homepage #main,
+body.homepage .layout--single {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
 /* Masthead styling - ONLY colors, same positioning as other pages */
 .masthead__inner-wrap {
   background-color: #000 !important;
@@ -250,12 +278,28 @@ html {
   line-height: 1.2 !important;
 }
 
-/* Fix hero content alignment - center on page for PC, keep mobile unchanged */
+/* FORCE homepage container to break out of ALL theme layout constraints */
+.homepage-container {
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Hero content alignment - position from left edge like header logo, NOT centered like lower sections */
 @media (min-width: 769px) {
   .homepage-container .hero-section .hero-content {
-    max-width: 1200px !important;
-    margin: 0 auto !important; /* Center the entire hero content */
-    padding: 0 2rem !important;
+    max-width: none !important;
+    margin: 0 !important; /* NO centering - position from left edge */
+    padding-left: 1rem !important; /* Align closer to header logo position */
+    padding-right: 4rem !important;
+    width: auto !important;
+    position: relative !important;
+    left: 0 !important; /* Force positioning from absolute left edge */
   }
 }
 
