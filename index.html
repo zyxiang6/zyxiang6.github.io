@@ -34,13 +34,42 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  
+  // Remove "Search" text link from navigation - keep only magnifying glass
+  const searchLinks = document.querySelectorAll('a[href*="/search/"]');
+  searchLinks.forEach(link => {
+    if (link.textContent.trim().toLowerCase() === 'search') {
+      link.style.display = 'none';
+    }
+  });
 });
 </script>
 
 <style>
+/* Hide "Search" text link from navigation - keep only magnifying glass */
+.masthead .visible-links a[href*="/search/"] {
+  display: none !important;
+}
+
+/* Style search toggle button - remove box, make it floating */
+.masthead .search__toggle {
+  color: #fff !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 1.2rem !important;
+}
+
+.masthead .search__toggle:hover {
+  color: #4fc3f7 !important;
+  background-color: transparent !important;
+  transform: scale(1.1) !important;
+}
+
 /* Force masthead to have EXACTLY same positioning as other pages - ONLY change colors */
 .homepage .masthead {
-  /* Use theme default positioning - DO NOT OVERRIDE */
   background-color: #000 !important;
   border-bottom: 1px solid #333 !important;
 }
@@ -109,23 +138,40 @@ html {
   color: #4fc3f7 !important;
 }
 
+/* Fix mobile menu dropdown - dark theme with visible text */
+.masthead .greedy-nav .hidden-links {
+  background: #000 !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+}
+
+.masthead .greedy-nav .hidden-links a {
+  color: #fff !important;
+  background: #000 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.masthead .greedy-nav .hidden-links a:hover {
+  color: #4fc3f7 !important;
+  background: #111 !important;
+}
+
+.masthead .greedy-nav__toggle {
+  color: #fff !important;
+  background: #000 !important;
+  border: 1px solid #fff !important;
+}
+
+.masthead .greedy-nav__toggle:hover {
+  color: #000 !important;
+  background: #fff !important;
+}
+
 /* Hide mobile menu button on desktop */
 @media (min-width: 769px) {
   .masthead .greedy-nav__toggle {
     display: none !important;
   }
-}
-
-/* Search toggle button */
-.masthead .search__toggle {
-  color: #fff !important;
-  background-color: transparent !important;
-  border: 1px solid #fff !important;
-}
-
-.masthead .search__toggle:hover {
-  color: #000 !important;
-  background-color: #fff !important;
 }
 
 /* Page footer */
@@ -217,7 +263,178 @@ html {
   margin: 0 0 1rem 0 !important;
   line-height: 1.2 !important;
 }
+
+/* Align hero content with masthead site title - not with full page width */
+.homepage-container .hero-section .hero-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 2rem !important;
+}
+
+/* Calculate alignment with masthead inner wrap */
+@media (min-width: 80em) {
+  .homepage-container .hero-section .hero-content {
+    margin-left: calc((100vw - 80em) / 2) !important;
+  }
+}
+
+@media (min-width: 64em) and (max-width: 80em) {
+  .homepage-container .hero-section .hero-content {
+    margin-left: calc((100vw - 64em) / 2) !important;
+  }
+}
+
+@media (max-width: 64em) {
+  .homepage-container .hero-section .hero-content {
+    margin-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ziyu Xiang",
+  "alternateName": "向子钰",
+  "jobTitle": "PhD Student in Physics",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "University of California, Berkeley",
+    "url": "https://www.berkeley.edu"
+  },
+  "url": "https://zyxiang6.github.io",
+  "image": "https://zyxiang6.github.io/assets/images/ziyu-full.jpg",
+  "description": "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy",
+  "email": "zyxiang@berkeley.edu",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berkeley",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en",
+    "https://www.linkedin.com/in/ziyu-xiang-8481292b3/",
+    "https://github.com/zyxiang6",
+    "https://orcid.org/0000-0002-3954-7631",
+    "https://www.researchgate.net/profile/Ziyu-Xiang-6"
+  ],
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "University of Chinese Academy of Sciences"
+  },
+  "knowsAbout": [
+    "Quantum Physics",
+    "Condensed Matter Physics", 
+    "Scanning Tunneling Microscopy",
+    "2D Materials",
+    "Quantum Many-Body Systems",
+    "Moiré Superlattices",
+    "Strongly Correlated Electron Systems"
+  ]
+}
+</script>
+
+<div class="homepage-container">
+  
+  <!-- Main Hero Section with Image Left, Content Right -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="profile-photo">
+        <img src="/assets/images/ziyu-full.jpg" alt="Ziyu Xiang" class="author__avatar">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">Ziyu Xiang (向子钰)</h1>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <a href="mailto:zyxiang@berkeley.edu">zyxiang@berkeley.edu</a></p>
+        </div>
+        
+        <h2 class="about-title">About</h2>
+        <div class="about-content">
+          <p>I am a fourth-year Ph.D. student in Physics at UC Berkeley, supervised by Prof. Feng Wang and also a member of the Ultrafast Nano-Optics Group. I earned my B.Sc. (2020) in Physics from the University of Chinese Academy of Sciences (UCAS) advised by Prof. Wu Zhou. I also served as a research assistant at UC Berkeley with Prof. Feng Wang during my undergraduate studies.</p>
+          
+          <p>I bring advanced experimental techniques to quantum materials research and condensed matter physics, broadly including four key research themes. (1) <strong>Quantum many-body phenomena</strong> leverages scanning tunneling microscopy for studying Wigner crystals, quantum melting, and strongly correlated electron systems across large-scale 2D materials. (2) <strong>Moiré superlattices</strong> focuses on artificial atoms and excited states, ensuring reliable characterization of van der Waals heterostructures in real-world measurements. (3) <strong>Advanced microscopy</strong> addresses photocurrent tunneling microscopy, spatial resolution enhancement, and single-electron sensitivity, promoting precise quantum state imaging. (4) <strong>2D material fabrication</strong> integrates various techniques—from exfoliation to lithography—to enhance device performance and experimental capability in quantum material systems.</p>
+          
+          <p>I will continue my research at UC Berkeley through 2025. Before that, I spent time doing research at UC Berkeley during my undergraduate studies and at UCAS with various experimental physics groups.</p>
+          
+          <div class="highlight-notice">
+            <p><strong>Note:</strong> I will be on the academic job market 2025-2026. Feel free to contact me if you know of a position for which I could be a fit.</p>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="/cv/" class="btn btn--social">CV</a>
+          <a href="https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en" class="btn btn--social">Scholar</a>
+          <a href="https://www.researchgate.net/profile/Ziyu-Xiang-6" class="btn btn--social">ResearchGate</a>
+          <a href="https://www.linkedin.com/in/ziyu-xiang-8481292b3/" class="btn btn--social">LinkedIn</a>
+          <a href="https://github.com/zyxiang6" class="btn btn--social">Github</a>
+          <a href="https://orcid.org/0000-0002-3954-7631" class="btn btn--social">ORCID</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Research Highlights -->
+  <section class="research-highlights">
+    <div class="content-wrapper">
+      <h2>Research Highlights</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="research-icon">
+            <i class="fas fa-atom"></i>
+          </div>
+          <h3>Quantum Many-Body Systems</h3>
+          <p>Investigating Wigner crystals, quantum melting, and strongly correlated electron phenomena using advanced scanning tunneling microscopy.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>Moiré Superlattices</h3>
+          <p>Characterizing artificial atoms and excited states in van der Waals heterostructures with nanoscale precision.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3>Advanced Microscopy</h3>
+          <p>Developing photocurrent tunneling microscopy techniques for single-electron sensitivity and quantum state imaging.</p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3>2D Material Fabrication</h3>
+          <p>Integrating fabrication techniques from exfoliation to lithography for enhanced quantum material device performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="news-section-home">
+    <div class="content-wrapper">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        <div class="news-item">
+          <div class="news-date">January 2025</div>
+          <h3>Science Publication</h3>
+          <p>Our paper on quantum melting in disordered 2D Wigner solids was published in <em>Science</em>.</p>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">September 2024</div>
+          <h3>Kavli Fellowship</h3>
+          <p>Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 <script type="application/ld+json">
 {
