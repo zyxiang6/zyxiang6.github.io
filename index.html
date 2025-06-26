@@ -1,57 +1,103 @@
 ---
-layout: single
-classes: wide
-body_class: homepage
+layout: home
+classes: wide homepage
 author_profile: false
 title: "Ziyu Xiang"
 excerpt: "PhD Student in Physics | UC Berkeley | Quantum Materials & Scanning Tunneling Microscopy"
 ---
 
-<style>
-/* Force dark theme for this page and ensure masthead visibility */
-html, body, .page, .page__content, .initial-content, #main {
-  background-color: #000 !important;
-  color: #fff !important;
-}
+<script>
+// Force show masthead on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const masthead = document.querySelector('.masthead');
+  if (masthead) {
+    masthead.style.display = 'block';
+    masthead.style.visibility = 'visible';
+    masthead.style.opacity = '1';
+  }
+});
+</script>
 
-/* Ensure masthead is visible and styled */
+<style>
+/* CRITICAL: Force masthead visibility for homepage */
+body.homepage .masthead,
+.homepage .masthead,
 .masthead {
   display: block !important;
   visibility: visible !important;
+  opacity: 1 !important;
   background-color: #000 !important;
   border-bottom: 1px solid #333 !important;
   position: relative !important;
-  z-index: 20 !important;
+  z-index: 100 !important;
+  height: auto !important;
+  min-height: 4rem !important;
+  top: 0 !important;
 }
 
+/* Force dark theme for entire page */
+body.homepage,
+.homepage,
+html {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.homepage .page,
+.homepage .page__content,
+.homepage .initial-content,
+.homepage #main,
+.homepage .layout--home {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Masthead inner elements */
 .masthead__inner-wrap {
   background-color: #000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
 }
 
+/* Site title styling */
 .masthead .site-title {
   color: #fff !important;
   text-decoration: none !important;
+  font-weight: bold !important;
+  display: block !important;
 }
 
 .masthead .site-title:hover {
   color: #4fc3f7 !important;
 }
 
+/* Navigation menu styling */
 .masthead .masthead__menu {
   background-color: #000 !important;
+  display: block !important;
+}
+
+.masthead .masthead__menu-item {
+  display: inline-block !important;
 }
 
 .masthead .masthead__menu-item a {
   color: #fff !important;
   text-decoration: none !important;
+  padding: 0.5rem 1rem !important;
+  display: inline-block !important;
 }
 
 .masthead .masthead__menu-item a:hover {
   color: #4fc3f7 !important;
 }
 
+/* Greedy nav styling */
 .masthead .greedy-nav {
   background: #000 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .masthead .greedy-nav a {
@@ -62,8 +108,13 @@ html, body, .page, .page__content, .initial-content, #main {
   color: #4fc3f7 !important;
 }
 
+.masthead .greedy-nav .visible-links {
+  display: flex !important;
+}
+
 .masthead .greedy-nav .visible-links a {
   color: #fff !important;
+  padding: 0.5rem 1rem !important;
 }
 
 .masthead .greedy-nav .visible-links a:hover {
@@ -73,10 +124,13 @@ html, body, .page, .page__content, .initial-content, #main {
 /* Search toggle button */
 .masthead .search__toggle {
   color: #fff !important;
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
 }
 
 .masthead .search__toggle:hover {
-  color: #4fc3f7 !important;
+  color: #000 !important;
+  background-color: #fff !important;
 }
 
 /* Page footer */
@@ -90,11 +144,14 @@ html, body, .page, .page__content, .initial-content, #main {
   color: #ccc !important;
 }
 
-/* Remove any overlay styles that might hide the masthead */
-.page__hero {
-  display: none !important;
+/* Override any layout that might hide masthead */
+.layout--home .masthead,
+.layout--single .masthead {
+  display: block !important;
 }
 
+/* Remove hero overlays */
+.page__hero,
 .page__hero--overlay {
   display: none !important;
 }

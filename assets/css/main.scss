@@ -15,11 +15,12 @@
 html.homepage, 
 body.homepage, 
 .page.homepage,
-.homepage {
+.homepage,
+body.layout--home {
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme - ensure visibility
+  // Header/masthead dark theme - FORCE VISIBILITY
   .masthead {
     display: block !important;
     visibility: visible !important;
@@ -27,7 +28,9 @@ body.homepage,
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
     position: relative !important;
-    z-index: 20 !important;
+    z-index: 100 !important;
+    height: auto !important;
+    min-height: 4rem !important;
     
     .masthead__inner-wrap {
       background-color: #000 !important;
@@ -127,6 +130,29 @@ body.homepage,
         }
       }
     }
+  }
+}
+
+// Additional override for homepage masthead - force display
+.layout--home .masthead,
+.homepage .masthead,
+body.layout--home .masthead {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+// Override any theme that might hide the masthead on home layout
+.layout--home {
+  .masthead {
+    display: block !important;
+  }
+  
+  .page__hero,
+  .page__hero--overlay {
+    display: none !important;
   }
 }
 
