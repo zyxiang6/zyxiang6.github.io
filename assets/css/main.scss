@@ -20,7 +20,7 @@ body.layout--home {
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme - FORCE VISIBILITY
+  // Header/masthead dark theme - EXACT SAME AS OTHER PAGES
   .masthead {
     display: block !important;
     visibility: visible !important;
@@ -29,15 +29,11 @@ body.layout--home {
     border-bottom: 1px solid #333 !important;
     position: relative !important;
     z-index: 100 !important;
-    height: auto !important;
-    min-height: 4rem !important;
-    padding: 1rem 0 !important;
+    // Use same dimensions and spacing as other pages
     
     .masthead__inner-wrap {
       background-color: #000 !important;
-      max-width: 1280px !important;
-      margin: 0 auto !important;
-      padding: 0 1rem !important;
+      // Match exact layout of other pages
       
       .site-title {
         color: #fff !important;
@@ -177,6 +173,21 @@ body.layout--home .masthead,
     padding: 0.3rem 0.6rem !important;
     font-size: 0.7rem !important;
     gap: 0.3rem !important;
+  }
+  
+  // Ensure masthead has exact same styling as other pages, just different color
+  .masthead {
+    // Remove any custom padding that makes it different
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  .masthead__inner-wrap {
+    // Use default theme layout
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 

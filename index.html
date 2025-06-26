@@ -212,15 +212,18 @@ html {
   border-radius: 3px !important;
 }
 
-/* Make masthead consistent with other pages */
+/* Remove custom masthead positioning - use theme defaults */
 .masthead {
-  padding: 1rem 0 !important;
+  /* Only change colors, keep all positioning same as other pages */
 }
 
-.masthead__inner-wrap {
-  max-width: 1280px !important;
-  margin: 0 auto !important;
-  padding: 0 1rem !important;
+/* Style the hero title (not page title) */
+.homepage-container .hero-title {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin: 0 0 1rem 0 !important;
+  line-height: 1.2 !important;
 }
 </style>
 
@@ -278,6 +281,7 @@ html {
         <img src="/assets/images/ziyu-full.jpg" alt="Ziyu Xiang" class="author__avatar">
       </div>
       <div class="hero-text">
+        <h1 class="hero-title">Ziyu Xiang (向子钰)</h1>
         <div class="contact-info">
           <p><i class="fas fa-envelope"></i> <a href="mailto:zyxiang@berkeley.edu">zyxiang@berkeley.edu</a></p>
         </div>
