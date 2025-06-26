@@ -19,10 +19,15 @@ body.homepage,
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme
+  // Header/masthead dark theme - ensure visibility
   .masthead {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
+    position: relative !important;
+    z-index: 20 !important;
     
     .masthead__inner-wrap {
       background-color: #000 !important;

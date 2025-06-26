@@ -4,42 +4,82 @@ classes: wide
 body_class: homepage
 author_profile: false
 title: "Ziyu Xiang"
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.6"
-  actions:
-    - label: "View Research"
-      url: "/research/"
-      class: "btn--primary btn--large"
-    - label: "Publications"
-      url: "/publications/"
-      class: "btn--inverse btn--large"
 excerpt: "PhD Student in Physics | UC Berkeley | Quantum Materials & Scanning Tunneling Microscopy"
 ---
 
 <style>
-/* Force dark theme for this page */
-html, body, .page, .masthead, .page__content, .initial-content, #main {
+/* Force dark theme for this page and ensure masthead visibility */
+html, body, .page, .page__content, .initial-content, #main {
   background-color: #000 !important;
   color: #fff !important;
 }
 
-.masthead .site-title,
-.masthead .masthead__menu-item a,
+/* Ensure masthead is visible and styled */
+.masthead {
+  display: block !important;
+  visibility: visible !important;
+  background-color: #000 !important;
+  border-bottom: 1px solid #333 !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.masthead__inner-wrap {
+  background-color: #000 !important;
+}
+
+.masthead .site-title {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.masthead .site-title:hover {
+  color: #4fc3f7 !important;
+}
+
+.masthead .masthead__menu {
+  background-color: #000 !important;
+}
+
+.masthead .masthead__menu-item a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.masthead .masthead__menu-item a:hover {
+  color: #4fc3f7 !important;
+}
+
+.masthead .greedy-nav {
+  background: #000 !important;
+}
+
 .masthead .greedy-nav a {
   color: #fff !important;
 }
 
-.masthead .site-title:hover,
-.masthead .masthead__menu-item a:hover,
 .masthead .greedy-nav a:hover {
   color: #4fc3f7 !important;
 }
 
-.masthead {
-  border-bottom: 1px solid #333 !important;
+.masthead .greedy-nav .visible-links a {
+  color: #fff !important;
 }
 
+.masthead .greedy-nav .visible-links a:hover {
+  color: #4fc3f7 !important;
+}
+
+/* Search toggle button */
+.masthead .search__toggle {
+  color: #fff !important;
+}
+
+.masthead .search__toggle:hover {
+  color: #4fc3f7 !important;
+}
+
+/* Page footer */
 .page__footer {
   background-color: #000 !important;
   border-top: 1px solid #333 !important;
@@ -48,6 +88,15 @@ html, body, .page, .masthead, .page__content, .initial-content, #main {
 
 .page__footer-copyright {
   color: #ccc !important;
+}
+
+/* Remove any overlay styles that might hide the masthead */
+.page__hero {
+  display: none !important;
+}
+
+.page__hero--overlay {
+  display: none !important;
 }
 </style>
 
