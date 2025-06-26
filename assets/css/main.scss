@@ -5,7 +5,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
 @import "minimal-mistakes"; /* main partials */
 
-/* FORCE CACHE REFRESH - Homepage Dark Theme v5.0 - Jan 2025 */
+/* FORCE CACHE REFRESH - Homepage Dark Theme v6.0 - Jan 2025 */
 
 // ========================================
 // GLOBAL NAVIGATION FIXES - REMOVE SEARCH TAB, KEEP MAGNIFYING GLASS
@@ -434,7 +434,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - dark theme with CENTERED alignment for PC only
+// Hero section - CENTERED on page, independent from sections below
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -446,16 +446,29 @@ body.layout--home .masthead,
     display: flex !important;
     align-items: flex-start !important;
     gap: 3rem !important;
-    // CENTER on page for PC (not align with sections below)
+    
+    // FIXED: Center hero content independently, not aligned with sections below
     max-width: 1200px !important;
-    margin: 0 auto !important; // Center the hero content on page
+    margin: 0 auto !important; // This centers the hero content on the page
     padding: 0 2rem !important;
     position: relative !important;
     
-    // Override only for PC (769px and up)
+    // PC specific - ensure centering
     @media (min-width: 769px) {
-      margin: 0 auto !important; // Ensure centering on PC
+      max-width: 1200px !important;
+      margin: 0 auto !important; // Center on page, independent from other sections
       padding: 0 2rem !important;
+    }
+    
+    // Mobile specific - keep current behavior
+    @media (max-width: 768px) {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      text-align: center !important;
+      align-items: center !important;
+      margin-left: 1rem !important;
+      margin-right: 1rem !important;
+      padding: 0 !important;
     }
   }
   
@@ -571,7 +584,7 @@ body.layout--home .masthead,
   }
 }
 
-// Content sections
+// Content sections - these remain aligned normally (different from hero)
 .content-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -691,17 +704,8 @@ body.layout--home .masthead,
   }
 }
 
-// Mobile responsiveness for homepage - stack layout with proper centering
+// Mobile responsiveness for homepage - keep mobile layout unchanged
 @media (max-width: 768px) {
-  .homepage-container .hero-section .hero-content {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-    text-align: center !important;
-    align-items: center !important;
-    margin-left: 1rem !important; // Smaller margin on mobile
-    margin-right: 1rem !important;
-  }
-  
   .homepage-container .hero-section {
     padding: 0.5rem 0 !important;
     
