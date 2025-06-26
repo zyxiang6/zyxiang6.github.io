@@ -178,7 +178,7 @@ body.layout--home .masthead,
   
   .homepage-container .hero-section {
     margin-top: 0 !important;
-    padding-top: 0.5rem !important;
+    padding-top: 1rem !important;
   }
 }
 
@@ -618,7 +618,7 @@ body.homepage, .homepage {
 
 // Hero section - image left, all content right - dark theme
 .homepage-container .hero-section {
-  padding: 0.5rem 0 !important;
+  padding: 1rem 0 !important;
   background: #000 !important; // Black background
   margin: 0 !important;
   overflow: visible !important;
@@ -919,7 +919,7 @@ body.homepage, .homepage {
   }
   
   .homepage-container .hero-section {
-    padding: 2rem 0 !important;
+    padding: 1rem 0 !important;
     background: #000 !important; // Black background on mobile
     
     .profile-photo {
