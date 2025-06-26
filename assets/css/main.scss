@@ -447,18 +447,19 @@ body {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: 2rem !important; // Fixed gap instead of dynamic
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 2rem 0 0 !important; // Reduced padding
+    gap: 2rem !important; // Fixed gap between image and text
+    max-width: 1200px !important; // Container max-width
+    margin: 0 auto !important; // Center the entire content block
+    padding: 0 2rem 0 0 !important; // Padding for right edge
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
     justify-content: flex-start !important; // Align items to start
+    transform: translateX(calc(-200px)) !important; // Shift entire block left to align image with header
   }
   
   .profile-photo {
     flex: 0 0 450px !important;
-    margin-left: calc(max(-30vw, -20rem)) !important; // Dynamic alignment with header logo
+    margin-left: 0 !important; // Remove dynamic positioning
     position: relative !important;
     z-index: 10 !important; // Ensure image appears above any background layers
     
@@ -478,7 +479,7 @@ body {
     flex: 0 1 600px !important; // Fixed max width instead of flex: 1
     max-width: 600px !important; // Consistent width for About content
     padding-right: 2rem !important; // Reduced padding
-    margin-left: auto !important; // Push content away from image
+    margin-left: 0 !important; // Remove auto margin to keep distance consistent
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -780,10 +781,11 @@ body {
   }
 }
 
-// Responsive alignment for different screen sizes - adjusted for fixed content width
+// Responsive alignment for different screen sizes - move entire content block
 @media (min-width: 1400px) {
-  .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-20vw) !important; // Larger screens - less negative margin
+  .homepage-container .hero-section .hero-content {
+    transform: translateX(calc(-150px)) !important; // Less shift on larger screens
+    max-width: 1400px !important;
   }
   .homepage-container .hero-section .hero-text {
     max-width: 700px !important; // Slightly wider on large screens
@@ -791,8 +793,9 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-25vw) !important; // Medium screens
+  .homepage-container .hero-section .hero-content {
+    transform: translateX(calc(-180px)) !important; // Medium shift
+    max-width: 1000px !important;
   }
   .homepage-container .hero-section .hero-text {
     max-width: 550px !important; // Slightly narrower
@@ -800,8 +803,9 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-30vw) !important; // Tablet landscape
+  .homepage-container .hero-section .hero-content {
+    transform: translateX(calc(-120px)) !important; // Smaller shift for tablets
+    max-width: 900px !important;
   }
   .homepage-container .hero-section .hero-text {
     max-width: 500px !important; // Narrower for tablets
