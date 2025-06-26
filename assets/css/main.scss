@@ -426,17 +426,17 @@ body, html {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(3rem + 5vw) !important; // Dynamic gap that adjusts with viewport
+    gap: calc(2rem + 3vw) !important; // Smaller gap to bring image and text closer
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
+    padding: 0 2rem 0 0 !important; // Reduced right padding for wider text area
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
   }
   
   .profile-photo {
     flex: 0 0 450px !important;
-    margin-left: calc(max(-30vw, -20rem)) !important; // Dynamic alignment with header logo
+    margin-left: calc(max(-25vw, -15rem)) !important; // Move image closer to text
     position: relative !important;
     z-index: 999 !important; // Very high z-index to ensure image appears above everything
     min-width: 450px !important; // Prevent shrinking
@@ -455,8 +455,8 @@ body, html {
   
   .hero-text {
     flex: 1 !important;
-    max-width: 70% !important; // Limit text width for better readability
-    padding-right: 6rem !important; // Maximum space on the right
+    max-width: 80% !important; // Wider text area for About content
+    padding-right: 3rem !important; // Reduced right padding for more text space
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -758,22 +758,22 @@ body, html {
   }
 }
 
-// Responsive alignment for different screen sizes
+// Responsive alignment for different screen sizes - adjusted for closer positioning
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-25vw) !important; // Larger screens
+    margin-left: calc(-20vw) !important; // Larger screens - closer to text
   }
 }
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-28vw) !important; // Medium screens
+    margin-left: calc(-23vw) !important; // Medium screens - closer to text
   }
 }
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-32vw) !important; // Tablet landscape
+    margin-left: calc(-27vw) !important; // Tablet landscape - closer to text
   }
 }
 
