@@ -84,6 +84,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - google447df939a6ff470b.html
 exclude:
   - vendor
   - .asset-cache
