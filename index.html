@@ -1,9 +1,9 @@
 ---
-layout: home
+layout: single
 classes: wide homepage
 author_profile: false
-title: "Ziyu Xiang"
-excerpt: "PhD Student in Physics | UC Berkeley | Quantum Materials & Scanning Tunneling Microscopy"
+title: ""
+excerpt: ""
 ---
 
 <script>
@@ -93,15 +93,37 @@ html {
   color: #4fc3f7 !important;
 }
 
-/* Social links - smaller and fit on one line */
-.social-links {
+/* Hide page title and content that we don't want */
+.page__title,
+.page__content h1,
+.entries-list,
+.archive__subtitle,
+.taxonomy__section,
+.home .page__content > h1,
+.home .page__content > h2,
+.home .page__content > h3,
+.layout--home .page__content > *:not(.homepage-container),
+.page__content > .entries-list,
+.page__content > .archive,
+.recent-posts,
+.posts-section {
+  display: none !important;
+}
+
+/* Social links - smaller and fit on one line - FORCE OVERRIDE */
+.homepage-container .social-links,
+.hero-text .social-links {
   display: flex !important;
   gap: 0.4rem !important;
   flex-wrap: wrap !important;
   justify-content: flex-start !important;
+  margin-top: 1rem !important;
 }
 
-.social-links .btn--social {
+.homepage-container .social-links .btn--social,
+.hero-text .social-links .btn--social,
+.homepage-container .social-links a,
+.hero-text .social-links a {
   padding: 0.4rem 0.8rem !important;
   background: transparent !important;
   color: #fff !important;
@@ -112,9 +134,14 @@ html {
   font-size: 0.75rem !important;
   transition: all 0.3s ease !important;
   white-space: nowrap !important;
+  min-width: auto !important;
+  width: auto !important;
 }
 
-.social-links .btn--social:hover {
+.homepage-container .social-links .btn--social:hover,
+.hero-text .social-links .btn--social:hover,
+.homepage-container .social-links a:hover,
+.hero-text .social-links a:hover {
   background: #fff !important;
   color: #000 !important;
 }

@@ -598,6 +598,15 @@ body.homepage, .homepage {
   overflow: visible !important;
   width: 100% !important;
   
+  // Hide any unwanted page titles or content
+  .page__title,
+  .page__content h1,
+  .entries-list,
+  .archive__subtitle,
+  .taxonomy__section {
+    display: none !important;
+  }
+  
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
@@ -705,8 +714,10 @@ body.homepage, .homepage {
         gap: 0.4rem !important;
         flex-wrap: wrap !important;
         justify-content: flex-start !important;
+        margin-top: 1rem !important;
         
-        .btn--social {
+        .btn--social,
+        a {
           padding: 0.4rem 0.8rem !important;
           background: transparent !important;
           color: #fff !important; // White text
@@ -717,6 +728,8 @@ body.homepage, .homepage {
           font-size: 0.75rem !important;
           transition: all 0.3s ease !important;
           white-space: nowrap !important;
+          min-width: auto !important;
+          width: auto !important;
           
           &:hover {
             background: #fff !important; // White background on hover
