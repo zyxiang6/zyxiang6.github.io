@@ -850,3 +850,85 @@ body.layout--home .masthead,
     }
   }
 }
+
+// ========================================
+// CLICKABLE PUBLICATIONS - TITLES AND IMAGES
+// ========================================
+
+// Publication item clickable elements - maintain exact same appearance
+.publication-item {
+  // Clickable image links
+  .publication-image {
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      
+      img {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      
+      &:hover {
+        img {
+          transform: scale(1.02); // Very subtle zoom on hover
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  
+  // Clickable title links - maintain exact same appearance as before
+  .publication-content {
+    h4 {
+      a {
+        color: #2c3e50 !important; // Same color as before
+        text-decoration: none !important;
+        font-size: 0.85em !important; // Same size as before
+        font-weight: 600 !important; // Same weight as before
+        line-height: 1.3 !important; // Same line height as before
+        display: block; // Make entire heading clickable
+        
+        &:hover {
+          color: #1a252f !important; // Slightly darker on hover
+          text-decoration: none !important; // No underline on hover
+        }
+        
+        &:visited {
+          color: #2c3e50 !important; // Same color even after visited
+        }
+        
+        &:focus {
+          color: #2c3e50 !important; // Same color on focus
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+// Mobile responsive adjustments for clickable elements
+@media (max-width: 768px) {
+  .publication-item {
+    .publication-image {
+      a {
+        &:hover {
+          img {
+            transform: none; // No zoom on mobile to avoid touch issues
+            opacity: 1;
+          }
+        }
+      }
+    }
+    
+    .publication-content {
+      h4 {
+        a {
+          &:hover {
+            color: #2c3e50 !important; // No hover effect on mobile
+          }
+        }
+      }
+    }
+  }
+}
