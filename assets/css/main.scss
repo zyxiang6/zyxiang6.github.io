@@ -816,11 +816,14 @@ body {
 @media (max-width: 768px) {
   .homepage-container {
     padding: 0 0.5rem;
+    width: 100% !important; // Reset to normal width on mobile
+    overflow: visible !important;
   }
   
   .hero-section {
     margin: -1rem -0.5rem 1.5rem -0.5rem !important;
     padding: 1.5rem 0 !important;
+    width: 100% !important; // Reset to normal width on mobile
     
     .hero-content {
       flex-direction: column !important;
@@ -828,11 +831,15 @@ body {
       padding: 0 1rem !important;
       align-items: center !important;
       gap: 1.5rem !important;
+      transform: none !important; // Remove the desktop transform
+      max-width: 100% !important; // Use full width on mobile
+      margin: 0 !important; // Remove centering margin
     }
     
     .profile-photo {
       flex: none !important;
       margin-bottom: 1rem !important;
+      margin-left: 0 !important; // Reset any left margin
       
       .author__avatar {
         width: 280px !important;
@@ -843,28 +850,49 @@ body {
     
     .hero-text {
       text-align: center !important;
+      flex: none !important; // Reset flex
+      max-width: 100% !important; // Use full width
+      padding-right: 0 !important; // Remove right padding
       
       .hero-title {
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
       }
       
       .hero-subtitle {
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
       }
       
       .about-title {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         text-align: center !important;
       }
       
       .about-content {
         p {
           text-align: left !important; // Keep text left-aligned for readability
+          font-size: 0.85rem !important; // Slightly larger on mobile
+        }
+        
+        .highlight-notice {
+          p {
+            font-size: 0.8rem !important; // Consistent with mobile sizing
+          }
+        }
+      }
+      
+      .contact-info {
+        p {
+          font-size: 0.8rem !important; // Larger contact info on mobile
         }
       }
       
       .social-links {
         justify-content: center !important;
+        
+        .btn--social {
+          font-size: 0.75rem !important; // Slightly larger buttons on mobile
+          padding: 0.3rem 0.6rem !important; // More padding for touch targets
+        }
         
         .btn--social:not(:last-child)::after {
           content: " | " !important;
@@ -883,7 +911,27 @@ body {
   }
 }
 
+// Additional mobile breakpoint for very small screens
 @media (max-width: 480px) {
+  .homepage-container .hero-section .hero-content {
+    padding: 0 0.5rem !important;
+    
+    .profile-photo .author__avatar {
+      width: 240px !important;
+      height: 240px !important;
+    }
+    
+    .hero-text {
+      .hero-title {
+        font-size: 1.2rem !important;
+      }
+      
+      .about-content p {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+  
   .stats-grid {
     grid-template-columns: 1fr !important;
   }
