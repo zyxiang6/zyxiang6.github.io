@@ -2,8 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
+@import "minimal-mistakes"; /* main partials */
+
+/* FORCE CACHE REFRESH - Homepage Redesign v2.1 - Jan 2025 */
 
 // Custom CSS adjustments
 
@@ -393,108 +395,136 @@
   padding: 0 1rem;
 }
 
-// Hero section - left image, right text format
-.hero-section {
-  padding: 2rem 0;
-  background: #fff;
-  margin: -1rem -1rem 2rem -1rem;
+// Hero section - square image left, about content right - FORCED OVERRIDE
+.homepage-container .hero-section {
+  padding: 2rem 0 !important;
+  background: #fff !important;
+  margin: -1rem -1rem 2rem -1rem !important;
   
   .hero-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 2.5rem !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
   }
   
   .profile-photo {
-    flex: 0 0 180px;
+    flex: 0 0 250px !important;
     
     .author__avatar {
-      width: 180px !important;
-      height: 180px !important;
-      border-radius: 50%;
-      border: 2px solid #ddd;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 250px !important;
+      height: 250px !important;
+      border-radius: 8px !important; // Square with rounded corners
+      border: 2px solid #ddd !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+      object-fit: cover !important;
     }
   }
   
   .hero-text {
-    flex: 1;
+    flex: 1 !important;
     
     .hero-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin: 0 0 0.5rem 0;
-      line-height: 1.3;
+      font-size: 2rem !important;
+      font-weight: 600 !important;
+      color: #2c3e50 !important;
+      margin: 0 0 0.5rem 0 !important;
+      line-height: 1.3 !important;
     }
     
     .hero-subtitle {
-      font-size: 1rem;
-      color: #555;
-      margin: 0 0 0.5rem 0;
-      font-weight: 500;
-    }
-    
-    .hero-description {
-      font-size: 0.95rem;
-      color: #666;
-      margin: 0 0 1rem 0;
-      line-height: 1.5;
+      font-size: 1.1rem !important;
+      color: #555 !important;
+      margin: 0 0 1rem 0 !important;
+      font-weight: 500 !important;
     }
     
     .contact-info {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem !important;
       
       p {
-        margin: 0.2rem 0;
-        font-size: 0.9rem;
-        color: #666;
+        margin: 0.3rem 0 !important;
+        font-size: 0.95rem !important;
+        color: #666 !important;
         
         i {
-          width: 16px;
-          margin-right: 6px;
-          color: #555;
+          width: 18px !important;
+          margin-right: 8px !important;
+          color: #555 !important;
         }
         
         a {
-          color: #2c3e50;
-          text-decoration: none;
+          color: #2c3e50 !important;
+          text-decoration: none !important;
           
           &:hover {
-            text-decoration: underline;
+            text-decoration: underline !important;
           }
         }
       }
     }
     
+    .about-title {
+      font-size: 1.6rem !important;
+      color: #2c3e50 !important;
+      margin: 0 0 1rem 0 !important;
+      font-weight: 600 !important;
+    }
+    
+    .about-content {
+      margin-bottom: 1.5rem !important;
+      
+      p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.2rem !important;
+        color: #444 !important;
+        text-align: justify !important;
+      }
+      
+      .highlight-notice {
+        background: #f8f9fa !important;
+        border-left: 4px solid #2c3e50 !important;
+        padding: 1.2rem !important;
+        margin-top: 1.5rem !important;
+        border-radius: 0 6px 6px 0 !important;
+        
+        p {
+          margin: 0 !important;
+          font-size: 0.95rem !important;
+          color: #2c3e50 !important;
+        }
+      }
+    }
+    
     .social-links {
-      display: flex;
-      gap: 0.3rem;
-      flex-wrap: wrap;
-      font-size: 0.85rem;
+      display: flex !important;
+      gap: 0.4rem !important;
+      flex-wrap: wrap !important;
+      font-size: 0.9rem !important;
+      margin-top: 1rem !important;
       
       .btn--social {
-        padding: 0.3rem 0.6rem;
-        background: #fff;
-        color: #2c3e50;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: all 0.2s ease;
+        padding: 0.4rem 0.8rem !important;
+        background: #fff !important;
+        color: #2c3e50 !important;
+        border: 1px solid #ddd !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
         
         &:hover {
-          background: #f5f5f5;
-          color: #000;
-          border-color: #999;
+          background: #f5f5f5 !important;
+          color: #000 !important;
+          border-color: #999 !important;
         }
         
         &:not(:last-child)::after {
-          content: " | ";
-          color: #999;
-          margin-left: 0.6rem;
+          content: " | " !important;
+          color: #999 !important;
+          margin-left: 0.8rem !important;
         }
       }
     }
@@ -508,41 +538,9 @@
   padding: 0 1rem;
 }
 
-// About section
+// About section - now integrated into hero section, this can be removed or hidden
 .about-section {
-  padding: 2rem 0;
-  
-  h2 {
-    font-size: 1.4rem !important;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .about-content {
-    p {
-      font-size: 0.9rem !important;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-      color: #444;
-      text-align: justify;
-    }
-    
-    .highlight-notice {
-      background: #f8f9fa;
-      border-left: 4px solid #2c3e50;
-      padding: 1.2rem;
-      margin-top: 1.5rem;
-      border-radius: 0 6px 6px 0;
-      
-      p {
-        margin: 0;
-        font-size: 0.9rem !important;
-        color: #2c3e50;
-      }
-    }
-  }
+  display: none !important; // Hide since about content is now in hero section
 }
 
 // Research highlights
@@ -728,53 +726,62 @@
   }
 }
 
-// Mobile responsiveness for homepage
+// Mobile responsiveness for homepage - square image layout
 @media (max-width: 768px) {
   .homepage-container {
     padding: 0 0.5rem;
   }
   
   .hero-section {
-    margin: -1rem -0.5rem 1.5rem -0.5rem;
-    padding: 1.5rem 0;
+    margin: -1rem -0.5rem 1.5rem -0.5rem !important;
+    padding: 1.5rem 0 !important;
     
     .hero-content {
-      flex-direction: column;
-      text-align: center;
-      padding: 0 1rem;
-      align-items: center;
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: 0 1rem !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
     }
     
     .profile-photo {
-      flex: none;
-      margin-bottom: 1rem;
+      flex: none !important;
+      margin-bottom: 1rem !important;
       
       .author__avatar {
-        width: 140px !important;
-        height: 140px !important;
+        width: 200px !important;
+        height: 200px !important;
+        border-radius: 6px !important; // Keep square on mobile too
       }
     }
     
     .hero-text {
-      text-align: center;
+      text-align: center !important;
       
       .hero-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem !important;
       }
       
       .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 1rem !important;
       }
       
-      .hero-description {
-        font-size: 0.85rem;
+      .about-title {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+      }
+      
+      .about-content {
+        p {
+          text-align: left !important; // Keep text left-aligned for readability
+        }
       }
       
       .social-links {
-        justify-content: center;
+        justify-content: center !important;
         
         .btn--social:not(:last-child)::after {
-          content: " | ";
+          content: " | " !important;
         }
       }
     }
