@@ -20,20 +20,13 @@ body.layout--home {
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme - EXACT SAME AS OTHER PAGES
+  // Header/masthead dark theme - ONLY CHANGE COLORS, NOT POSITIONING
   .masthead {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
-    position: relative !important;
-    z-index: 100 !important;
-    // Use same dimensions and spacing as other pages
     
     .masthead__inner-wrap {
       background-color: #000 !important;
-      // Match exact layout of other pages
       
       .site-title {
         color: #fff !important;
@@ -73,6 +66,43 @@ body.layout--home {
               
               &:hover {
                 color: #4fc3f7 !important;
+              }
+            }
+          }
+          
+          // Mobile menu button
+          .greedy-nav__toggle {
+            color: #fff !important;
+            background: #000 !important;
+            border: 1px solid #fff !important;
+            
+            &:hover {
+              color: #000 !important;
+              background: #fff !important;
+            }
+            
+            .navicon {
+              background: #fff !important;
+              
+              &:before, &:after {
+                background: #fff !important;
+              }
+            }
+          }
+          
+          // Mobile dropdown menu
+          .hidden-links {
+            background: #000 !important;
+            border: 1px solid #333 !important;
+            box-shadow: 0 2px 4px rgba(255,255,255,0.1) !important;
+            
+            a {
+              color: #fff !important;
+              background: #000 !important;
+              
+              &:hover {
+                color: #4fc3f7 !important;
+                background: #111 !important;
               }
             }
           }
@@ -133,24 +163,8 @@ body.layout--home {
   }
 }
 
-// Additional override for homepage masthead - force display
-.layout--home .masthead,
-.homepage .masthead,
-body.layout--home .masthead,
-.layout--single .masthead {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: relative !important;
-  z-index: 999 !important;
-}
-
-// Override any theme that might hide the masthead on home layout
+// Only hide hero overlays, don't change masthead positioning
 .layout--home, .layout--single {
-  .masthead {
-    display: block !important;
-  }
-  
   .page__hero,
   .page__hero--overlay {
     display: none !important;
@@ -175,19 +189,27 @@ body.layout--home .masthead,
     gap: 0.3rem !important;
   }
   
-  // Ensure masthead has exact same styling as other pages, just different color
+  // Override any positioning differences - use exact theme defaults
   .masthead {
-    // Remove any custom padding that makes it different
-    padding: 0 !important;
-    height: auto !important;
-    min-height: auto !important;
+    // Remove ALL custom positioning/sizing
+    padding: inherit !important;
+    height: inherit !important;
+    min-height: inherit !important;
+    position: inherit !important;
+    z-index: inherit !important;
+    display: inherit !important;
+    visibility: inherit !important;
+    opacity: inherit !important;
   }
   
   .masthead__inner-wrap {
-    // Use default theme layout
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    // Use exact theme defaults
+    max-width: inherit !important;
+    margin: inherit !important;
+    padding: inherit !important;
+    display: inherit !important;
+    align-items: inherit !important;
+    justify-content: inherit !important;
   }
 }
 
