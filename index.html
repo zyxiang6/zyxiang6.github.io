@@ -1,23 +1,10 @@
 ---
 layout: splash
-title: "Ziyu Xiang - PhD Student in Physics at UC Berkeley"
-description: "Ziyu Xiang is a PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
-keywords: "Ziyu Xiang, Physics PhD, UC Berkeley, quantum materials, 2D electron systems, scanning tunneling microscopy, Wigner crystals, moiré superlattices"
-author: "Ziyu Xiang"
-image: "/assets/images/ziyu-full.jpg"
-canonical_url: "https://zyxiang6.github.io/"
+title: "Ziyu Xiang"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-excerpt: "PhD Student in Physics • UC Berkeley • Quantum Materials & Scanning Tunneling Microscopy"
-intro: 
-  - excerpt: "PhD Student in Physics • UC Berkeley • Quantum Materials & Scanning Tunneling Microscopy"
-feature_row:
-  - title: "View Research Publications"
-    excerpt: "Explore my publications in Nature, Science, and other top-tier journals"
-    url: "/publications/"
-    btn_label: "Publications"
-    btn_class: "btn--primary"
+  overlay_color: "#000000"
+  overlay_filter: "0.0"
+excerpt: "PhD Student in Physics<br>UC Berkeley<br>Quantum Materials & Scanning Tunneling Microscopy<br><br>[View Research Publications](/publications/){: .btn .btn--primary .btn--large}"
 ---
 
 <script type="application/ld+json">
@@ -66,29 +53,36 @@ feature_row:
 </script>
 
 <style>
+/* Main hero section with black background */
 .page__hero {
-  background-color: #000 !important;
+  background-color: #000000 !important;
   color: white !important;
-  text-align: center;
-  padding: 8rem 0;
+  text-align: center !important;
+  padding: 8rem 1rem !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.page__hero .page__hero-caption {
-  color: white !important;
-  font-size: 1.5rem;
-  margin: 2rem 0;
+.page__hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page__title {
   color: white !important;
-  font-size: 3rem !important;
+  font-size: 4rem !important;
   font-weight: bold !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 2rem !important;
+  text-shadow: none !important;
 }
 
-.archive__item-excerpt {
-  color: #ccc !important;
-  font-size: 1.2rem !important;
+.page__lead {
+  color: white !important;
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 3rem !important;
 }
 
 .btn--primary {
@@ -97,7 +91,10 @@ feature_row:
   border: 2px solid #fff !important;
   font-weight: bold !important;
   padding: 1rem 2rem !important;
-  font-size: 1.1rem !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  border-radius: 4px !important;
   transition: all 0.3s ease !important;
 }
 
@@ -105,52 +102,26 @@ feature_row:
   background-color: transparent !important;
   color: #fff !important;
   border: 2px solid #fff !important;
+  text-decoration: none !important;
 }
 
-.feature__wrapper {
-  margin-top: 3rem;
+.btn--large {
+  padding: 1.2rem 2.5rem !important;
+  font-size: 1.3rem !important;
 }
 
-.feature__item {
-  text-align: center;
-}
-
-.feature__item .archive__item-title {
-  color: white !important;
-  font-size: 1.5rem !important;
-}
-
-.feature__item .archive__item-excerpt {
-  color: #ccc !important;
-}
-
-/* Hide recent posts section */
-.list__item {
+/* Hide all content below hero */
+.page__content {
   display: none !important;
 }
 
-.archive {
-  background-color: #000 !important;
-}
-
-.page__content {
-  background-color: #000 !important;
-}
-
-body {
-  background-color: #000 !important;
-}
-
+/* Navigation styling */
 .masthead {
   background-color: rgba(0,0,0,0.9) !important;
-}
-
-.masthead__inner-wrap {
-  background-color: transparent !important;
-}
-
-.greedy-nav {
-  background-color: rgba(0,0,0,0.9) !important;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
 }
 
 .site-title {
@@ -161,6 +132,11 @@ body {
   color: white !important;
 }
 
+.greedy-nav a:hover {
+  color: #ccc !important;
+}
+
+/* Footer styling */
 .page__footer {
   background-color: #111 !important;
   color: white !important;
@@ -173,8 +149,28 @@ body {
 .page__footer a {
   color: #ccc !important;
 }
+
+/* Hide any post/archive content */
+.archive {
+  display: none !important;
+}
+
+.list__item {
+  display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page__title {
+    font-size: 2.5rem !important;
+  }
+  
+  .page__lead {
+    font-size: 1.2rem !important;
+  }
+  
+  .page__hero {
+    padding: 4rem 1rem !important;
+  }
+}
 </style>
-
-{% include feature_row id="intro" type="center" %}
-
-{% include feature_row %}
