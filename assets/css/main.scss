@@ -447,10 +447,10 @@ body.layout--home .masthead,
     align-items: flex-start !important;
     gap: 3rem !important;
     
-    // CRITICAL: Make hero completely independent - NO constraints, positioned from left edge like header logo
+    // CRITICAL: Make hero completely independent - NO constraints, positioned to align with header logo
     max-width: none !important; // No width limits
     margin: 0 !important; // No auto centering
-    padding-left: 1rem !important; // Align with header logo area (reduced from 2rem)
+    padding-left: 1.5rem !important; // Align with header logo area - never go beyond header logo
     padding-right: 4rem !important; // Right padding for breathing room
     position: relative !important;
     width: auto !important; // Let content determine width
@@ -459,7 +459,7 @@ body.layout--home .masthead,
     @media (min-width: 769px) {
       max-width: none !important; // NO width constraint
       margin: 0 !important; // NO centering (this is key difference from lower sections)
-      padding-left: 1rem !important; // Position closer to header logo (reduced from 2rem)
+      padding-left: 1.5rem !important; // Position to align with header logo - never go beyond it
       padding-right: 4rem !important; // Generous right padding
       width: auto !important; // Content-based width
     }

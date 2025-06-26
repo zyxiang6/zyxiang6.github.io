@@ -281,8 +281,6 @@ body.homepage .layout--single {
 /* FORCE homepage container to break out of ALL theme layout constraints */
 .homepage-container {
   position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -290,16 +288,18 @@ body.homepage .layout--single {
   overflow: visible !important;
 }
 
-/* Hero content alignment - position from left edge like header logo, NOT centered like lower sections */
+/* Hero content alignment - align with header logo left position, never go beyond it */
 @media (min-width: 769px) {
   .homepage-container .hero-section .hero-content {
     max-width: none !important;
     margin: 0 !important; /* NO centering - position from left edge */
-    padding-left: 1rem !important; /* Align closer to header logo position */
+    margin-left: 0 !important; /* Explicit left margin reset */
+    padding-left: 1.5rem !important; /* Match header logo's left positioning */
     padding-right: 4rem !important;
     width: auto !important;
     position: relative !important;
-    left: 0 !important; /* Force positioning from absolute left edge */
+    left: 0 !important;
+    transform: translateX(0) !important; /* Reset any transforms */
   }
 }
 
