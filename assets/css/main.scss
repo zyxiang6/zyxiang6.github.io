@@ -411,14 +411,14 @@
   }
   
   .profile-photo {
-    flex: 0 0 250px !important;
+    flex: 0 0 300px !important;
     
     .author__avatar {
-      width: 250px !important;
-      height: 250px !important;
-      border-radius: 8px !important; // Square with rounded corners
-      border: 2px solid #ddd !important;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+      width: 300px !important;
+      height: 300px !important;
+      border-radius: 6px !important; // Square frame with minimal rounding
+      border: 3px solid #ddd !important;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
       object-fit: cover !important;
     }
   }
@@ -427,26 +427,26 @@
     flex: 1 !important;
     
     .hero-title {
-      font-size: 2rem !important;
+      font-size: 1.8rem !important;
       font-weight: 600 !important;
       color: #2c3e50 !important;
-      margin: 0 0 0.5rem 0 !important;
+      margin: 0 0 0.4rem 0 !important;
       line-height: 1.3 !important;
     }
     
     .hero-subtitle {
-      font-size: 1.1rem !important;
+      font-size: 1rem !important;
       color: #555 !important;
-      margin: 0 0 1rem 0 !important;
+      margin: 0 0 0.8rem 0 !important;
       font-weight: 500 !important;
     }
     
     .contact-info {
-      margin-bottom: 1.5rem !important;
+      margin-bottom: 1.2rem !important;
       
       p {
-        margin: 0.3rem 0 !important;
-        font-size: 0.95rem !important;
+        margin: 0.25rem 0 !important;
+        font-size: 0.9rem !important;
         color: #666 !important;
         
         i {
@@ -467,19 +467,19 @@
     }
     
     .about-title {
-      font-size: 1.6rem !important;
+      font-size: 1.4rem !important;
       color: #2c3e50 !important;
-      margin: 0 0 1rem 0 !important;
+      margin: 0 0 0.8rem 0 !important;
       font-weight: 600 !important;
     }
     
     .about-content {
-      margin-bottom: 1.5rem !important;
+      margin-bottom: 1.2rem !important;
       
       p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 1.2rem !important;
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 1rem !important;
         color: #444 !important;
         text-align: justify !important;
       }
@@ -493,7 +493,7 @@
         
         p {
           margin: 0 !important;
-          font-size: 0.95rem !important;
+          font-size: 0.88rem !important;
           color: #2c3e50 !important;
         }
       }
@@ -749,9 +749,9 @@
       margin-bottom: 1rem !important;
       
       .author__avatar {
-        width: 200px !important;
-        height: 200px !important;
-        border-radius: 6px !important; // Keep square on mobile too
+        width: 220px !important;
+        height: 220px !important;
+        border-radius: 4px !important; // Keep square on mobile too
       }
     }
     
