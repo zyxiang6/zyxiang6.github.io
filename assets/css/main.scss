@@ -7,8 +7,8 @@
 
 /* FORCE CACHE REFRESH - Homepage Redesign v2.2 - Square Image Layout - Jan 2025 */
 
-// Ensure image is never clipped by any container
-body, html {
+// Global container overrides to prevent image clipping
+body {
   overflow-x: visible !important;
 }
 
@@ -20,8 +20,28 @@ body, html {
   overflow: visible !important;
 }
 
-.main {
+.layout--home {
   overflow: visible !important;
+  
+  .page {
+    overflow: visible !important;
+  }
+  
+  .page__content {
+    overflow: visible !important;
+    max-width: none !important;
+  }
+}
+
+// Main content wrapper fixes
+#main {
+  overflow: visible !important;
+  max-width: none !important;
+}
+
+.page__inner-wrap {
+  overflow: visible !important;
+  max-width: none !important;
 }
 
 // Custom CSS adjustments
@@ -411,22 +431,23 @@ body, html {
   margin: 0 !important;
   padding: 0 !important;
   overflow: visible !important; // Ensure image is not clipped
+  width: 100vw !important; // Full viewport width
   position: relative !important;
-  width: 100vw !important; // Full viewport width to prevent clipping
-  margin-left: calc(50% - 50vw) !important; // Center the full-width container
 }
 
 // Hero section - square image left, about content right - FORCED OVERRIDE
 .homepage-container .hero-section {
   padding: 2rem 0 !important;
   background: #fff !important;
-  margin: -1rem -1rem 2rem -1rem !important;
+  margin: 0 !important; // Remove negative margins that can cause clipping
   overflow: visible !important; // Allow image to extend beyond container
+  width: 100vw !important; // Full viewport width
+  position: relative !important;
   
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(2rem + 3vw) !important; // Reduced gap to bring image closer to text
+    gap: calc(3rem + 5vw) !important; // Dynamic gap that adjusts with viewport
     max-width: none !important;
     margin: 0 !important;
     padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
@@ -436,10 +457,9 @@ body, html {
   
   .profile-photo {
     flex: 0 0 450px !important;
-    margin-left: calc(max(-25vw, -15rem)) !important; // Move image closer to text
+    margin-left: calc(max(-30vw, -20rem)) !important; // Dynamic alignment with header logo
     position: relative !important;
-    z-index: 999 !important; // Very high z-index to ensure image appears above everything
-    min-width: 450px !important; // Prevent shrinking
+    z-index: 10 !important; // Ensure image appears above any background layers
     
     .author__avatar {
       width: 450px !important;
@@ -758,22 +778,22 @@ body, html {
   }
 }
 
-// Responsive alignment for different screen sizes - adjusted closer to text
+// Responsive alignment for different screen sizes
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-20vw) !important; // Larger screens - closer to text
+    margin-left: calc(-25vw) !important; // Larger screens
   }
 }
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-23vw) !important; // Medium screens - closer to text
+    margin-left: calc(-28vw) !important; // Medium screens
   }
 }
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-27vw) !important; // Tablet landscape - closer to text
+    margin-left: calc(-32vw) !important; // Tablet landscape
   }
 }
 
