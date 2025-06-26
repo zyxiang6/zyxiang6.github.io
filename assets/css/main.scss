@@ -5,7 +5,125 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
 @import "minimal-mistakes"; /* main partials */
 
-/* FORCE CACHE REFRESH - Homepage Redesign v2.2 - Square Image Layout - Jan 2025 */
+/* FORCE CACHE REFRESH - Homepage Dark Theme v3.1 - Jan 2025 */
+
+// ========================================
+// HOMEPAGE DARK THEME - CRITICAL OVERRIDES
+// ========================================
+
+// Force dark theme for homepage - highest specificity
+html.homepage, 
+body.homepage, 
+.page.homepage,
+.homepage {
+  background-color: #000 !important;
+  color: #fff !important;
+  
+  // Header/masthead dark theme
+  .masthead {
+    background-color: #000 !important;
+    border-bottom: 1px solid #333 !important;
+    
+    .masthead__inner-wrap {
+      background-color: #000 !important;
+      
+      .site-title {
+        color: #fff !important;
+        
+        &:hover {
+          color: #4fc3f7 !important;
+        }
+      }
+      
+      .masthead__menu {
+        background-color: #000 !important;
+        
+        .masthead__menu-item {
+          a {
+            color: #fff !important;
+            
+            &:hover {
+              color: #4fc3f7 !important;
+            }
+          }
+        }
+        
+        .greedy-nav {
+          background: #000 !important;
+          
+          a {
+            color: #fff !important;
+            
+            &:hover {
+              color: #4fc3f7 !important;
+            }
+          }
+          
+          .visible-links {
+            a {
+              color: #fff !important;
+              
+              &:hover {
+                color: #4fc3f7 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Page content dark
+  .page {
+    background-color: #000 !important;
+  }
+  
+  .page__content {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  .initial-content {
+    background-color: #000 !important;
+  }
+  
+  // Footer dark
+  .page__footer {
+    background-color: #000 !important;
+    border-top: 1px solid #333 !important;
+    color: #fff !important;
+    
+    .page__footer-follow {
+      color: #fff !important;
+    }
+    
+    .page__footer-copyright {
+      color: #ccc !important;
+    }
+  }
+  
+  // Layout wrapper dark
+  .layout--single {
+    background-color: #000 !important;
+  }
+  
+  // Main content wrapper
+  #main {
+    background-color: #000 !important;
+  }
+  
+  // Skip links
+  .skip-links {
+    ul {
+      li {
+        a {
+          color: #fff !important;
+          background: #000 !important;
+        }
+      }
+    }
+  }
+}
 
 // Global container overrides to prevent image clipping
 body {
@@ -727,18 +845,23 @@ body.homepage, .homepage {
   }
 }
 
-// Mobile responsiveness for homepage - dark theme stack layout
+// Mobile responsiveness for homepage - dark theme stack layout with proper centering
 @media (max-width: 768px) {
+  // Override any transforms on mobile - reset positioning
+  .homepage-container .hero-section .hero-content {
+    transform: none !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  
   .homepage-container .hero-section {
     padding: 2rem 0 !important;
     background: #000 !important; // Black background on mobile
-    
-    .hero-content {
-      flex-direction: column !important;
-      gap: 2rem !important;
-      padding: 0 1rem !important;
-      text-align: center !important;
-    }
     
     .profile-photo {
       flex: none !important;
@@ -749,24 +872,29 @@ body.homepage, .homepage {
         height: 300px !important;
         border: 2px solid #333 !important; // Dark border on mobile
         box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // White glow on mobile
+        display: block !important;
+        margin: 0 auto !important;
       }
     }
     
     .hero-text {
-      text-align: left !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 600px !important;
+      margin: 0 auto !important;
       
-              .hero-title {
-          font-size: 1.2rem !important;
-          text-align: center !important;
-          color: #fff !important; // White text on mobile
-        }
-        
-        .hero-subtitle {
-          font-size: 0.85rem !important;
-          text-align: center !important;
-          margin-bottom: 1rem !important;
-          color: #ccc !important; // Light gray on mobile
-        }
+      .hero-title {
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        color: #fff !important; // White text on mobile
+      }
+      
+      .hero-subtitle {
+        font-size: 0.85rem !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+        color: #ccc !important; // Light gray on mobile
+      }
       
       .contact-info {
         text-align: center !important;
