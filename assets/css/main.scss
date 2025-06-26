@@ -8,284 +8,60 @@
 /* FORCE CACHE REFRESH - Homepage Dark Theme v5.0 - Jan 2025 */
 
 // ========================================
-// GLOBAL NAVIGATION FIXES - ALL PAGES
+// GLOBAL NAVIGATION FIXES - REMOVE SEARCH TAB, KEEP MAGNIFYING GLASS
 // ========================================
 
-// Hide "Search" text link from navigation on ALL pages - keep only magnifying glass
-.masthead .visible-links a[href*="/search/"] {
-  display: none !important;
-}
-
-// Style search toggle button - remove box, make it clean floating icon
-.masthead .search__toggle {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  padding: 0.5rem !important;
-  font-size: 1.2rem !important;
-  border-radius: 0 !important;
-  
-  &:hover {
-    transform: scale(1.1) !important;
-    background: transparent !important;
+// Hide "Search" text tab from navigation - keep only magnifying glass
+.masthead .masthead__menu-item {
+  a[href="/search/"] {
+    display: none !important; // Hide the "Search" text link
   }
 }
 
-// Fix mobile dropdown menu visibility on ALL pages
-.masthead .greedy-nav .hidden-links {
-  background: #fff !important;
-  border: 1px solid #ddd !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+// Style search toggle (magnifying glass) - remove border, make it floating
+.masthead .search__toggle {
+  color: inherit !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  border-radius: 4px !important;
   
-  a {
-    color: #000 !important;
-    background: #fff !important;
-    border-bottom: 1px solid #eee !important;
+  &:hover {
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+}
+
+// Fix mobile menu button visibility - dark theme
+@media (max-width: 768px) {
+  .masthead .greedy-nav__toggle {
+    background: #333 !important;
+    color: #fff !important;
+    border: 1px solid #555 !important;
     
     &:hover {
-      color: #000 !important;
-      background: #f5f5f5 !important;
+      background: #555 !important;
+      color: #fff !important;
     }
   }
-}
-
-.masthead .greedy-nav__toggle {
-  color: #000 !important;
-  background: #fff !important;
-  border: 1px solid #ddd !important;
   
-  &:hover {
-    color: #fff !important;
+  // Mobile menu dropdown styling
+  .masthead .hidden-links {
     background: #000 !important;
-  }
-}
-
-// ========================================
-// HOMEPAGE DARK THEME - EXACT SAME POSITIONING AS OTHER PAGES
-// ========================================
-
-// Force dark theme for homepage - ONLY change colors, keep exact same positioning
-html.homepage, 
-body.homepage, 
-.page.homepage,
-.homepage,
-body.layout--home {
-  background-color: #000 !important;
-  color: #fff !important;
-  
-  // Header/masthead dark theme - EXACT SAME POSITIONING AS OTHER PAGES
-  .masthead {
-    background-color: #000 !important;
-    border-bottom: 1px solid #333 !important;
-    // DO NOT OVERRIDE ANY POSITIONING - use theme defaults exactly like other pages
+    border: 1px solid #333 !important;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.1) !important;
     
-    .search__toggle {
+    a {
       color: #fff !important;
+      background: #000 !important;
+      border-bottom: 1px solid #333 !important;
       
       &:hover {
         color: #4fc3f7 !important;
-      }
-    }
-    
-    .masthead__inner-wrap {
-      background-color: #000 !important;
-      // Use theme default positioning - EXACT SAME AS OTHER PAGES
-      
-      .site-title {
-        color: #fff !important;
-        
-        &:hover {
-          color: #4fc3f7 !important;
-        }
-      }
-      
-      .masthead__menu {
-        background-color: #000 !important;
-        
-        .masthead__menu-item {
-          a {
-            color: #fff !important;
-            
-            &:hover {
-              color: #4fc3f7 !important;
-            }
-          }
-        }
-        
-        .greedy-nav {
-          background: #000 !important;
-          
-          a {
-            color: #fff !important;
-            
-            &:hover {
-              color: #4fc3f7 !important;
-            }
-          }
-          
-          .visible-links {
-            a {
-              color: #fff !important;
-              
-              &:hover {
-                color: #4fc3f7 !important;
-              }
-            }
-          }
-          
-          // Fix mobile dropdown for homepage
-          .hidden-links {
-            background: #000 !important;
-            border: 1px solid #333 !important;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
-            
-            a {
-              color: #fff !important;
-              background: #000 !important;
-              border-bottom: 1px solid #333 !important;
-              
-              &:hover {
-                color: #4fc3f7 !important;
-                background: #111 !important;
-              }
-            }
-          }
-          
-          .greedy-nav__toggle {
-            color: #fff !important;
-            background: #000 !important;
-            border: 1px solid #fff !important;
-            
-            &:hover {
-              color: #000 !important;
-              background: #fff !important;
-            }
-          }
-          
-          // Hide mobile menu button on desktop - prevent duplication
-          .greedy-nav__toggle {
-            @media (min-width: 769px) {
-              display: none !important;
-            }
-          }
-        }
+        background: #111 !important;
       }
     }
   }
-  
-  // Page content dark
-  .page {
-    background-color: #000 !important;
-  }
-  
-  .page__content {
-    background-color: #000 !important;
-    color: #fff !important;
-  }
-  
-  .initial-content {
-    background-color: #000 !important;
-  }
-  
-  // Footer dark
-  .page__footer {
-    background-color: #000 !important;
-    border-top: 1px solid #333 !important;
-    color: #fff !important;
-    
-    .page__footer-follow {
-      color: #fff !important;
-    }
-    
-    .page__footer-copyright {
-      color: #ccc !important;
-    }
-  }
-  
-  // Layout wrapper dark
-  .layout--single {
-    background-color: #000 !important;
-  }
-  
-  // Main content wrapper
-  #main {
-    background-color: #000 !important;
-  }
 }
-
-// Force masthead display - EXACT SAME AS OTHER PAGES
-.layout--home .masthead,
-.homepage .masthead,
-body.layout--home .masthead,
-.layout--single .masthead {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  // DO NOT OVERRIDE position, z-index, or other positioning - use theme defaults
-}
-
-// Hide unwanted sections on homepage
-.homepage {
-  .page__title,
-  .page__header,
-  .page__hero,
-  .page__hero--overlay,
-  .entries-list,
-  .archive,
-  .taxonomy__section,
-  .archive__subtitle {
-    display: none !important;
-  }
-}
-
-// Fix mobile spacing issues - remove extra gaps
-@media (max-width: 768px) {
-  .homepage {
-    .masthead {
-      // Keep exact same positioning as other pages
-      margin-bottom: 0 !important;
-    }
-    
-    .page__content {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-    
-    .initial-content {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-    
-    .homepage-container {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-    
-    .hero-section {
-      margin-top: 0 !important;
-      padding-top: 0.5rem !important;
-    }
-  }
-}
-
-// Custom CSS adjustments for other pages
-
-// Header navigation text size
-.masthead {
-  .site-title {
-    font-size: 1em; // Site title
-  }
-  
-  .masthead__menu {
-    .masthead__menu-item {
-      font-size:---
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
-@import "minimal-mistakes"; /* main partials */
-
-/* FORCE CACHE REFRESH - Homepage Dark Theme v4.0 - Jan 2025 */
 
 // ========================================
 // HOMEPAGE DARK THEME - EXACT SAME POSITIONING AS OTHER PAGES
@@ -304,11 +80,9 @@ body.layout--home {
   .masthead {
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
-    // DO NOT OVERRIDE ANY POSITIONING - use theme defaults exactly like other pages
     
     .masthead__inner-wrap {
       background-color: #000 !important;
-      // Use theme default positioning - EXACT SAME AS OTHER PAGES
       
       .site-title {
         color: #fff !important;
@@ -361,15 +135,15 @@ body.layout--home {
         }
       }
       
-      // Search toggle styling
+      // Search toggle styling for homepage
       .search__toggle {
         color: #fff !important;
         background-color: transparent !important;
-        border: 1px solid #fff !important;
+        border: none !important;
         
         &:hover {
-          color: #000 !important;
-          background-color: #fff !important;
+          color: #4fc3f7 !important;
+          background-color: rgba(255,255,255,0.1) !important;
         }
       }
     }
@@ -423,7 +197,6 @@ body.layout--home .masthead,
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  // DO NOT OVERRIDE position, z-index, or other positioning - use theme defaults
 }
 
 // Hide unwanted sections on homepage
@@ -444,7 +217,6 @@ body.layout--home .masthead,
 @media (max-width: 768px) {
   .homepage {
     .masthead {
-      // Keep exact same positioning as other pages
       margin-bottom: 0 !important;
     }
     
@@ -471,53 +243,47 @@ body.layout--home .masthead,
 }
 
 // Custom CSS adjustments for other pages
-
-// Header navigation text size
 .masthead {
   .site-title {
-    font-size: 1em; // Site title
+    font-size: 1em;
   }
   
   .masthead__menu {
     .masthead__menu-item {
-      font-size: 0.9em; // Navigation menu items
+      font-size: 0.9em;
     }
   }
 }
 
-// Decrease content text size for pages (not homepage)
 .page__content {
   p, li, ul, ol {
-    font-size: 0.85em; // Smaller content text
+    font-size: 0.85em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-size: 0.9em; // Smaller headings in content
+    font-size: 0.9em;
   }
 }
 
-// Page titles
 .page__title {
-  font-size: 1.6em; // Smaller page titles
+  font-size: 1.6em;
 }
 
 .archive__subtitle {
-  font-size: 0.85em; // Smaller subtitles
+  font-size: 0.85em;
 }
 
-// Search and toggle elements
 .search__toggle {
-  font-size: 1.1em; // Search toggle
+  font-size: 1.1em;
 }
 
-// Navigation items consistent
 .visible-links {
   a {
-    font-size: 0.9em; // Match navigation menu items
+    font-size: 0.9em;
   }
 }
 
-// Publication page styling - horizontal layout with proper alignment
+// Publication page styling
 .publication-item {
   display: flex;
   align-items: flex-start;
@@ -590,7 +356,6 @@ body.layout--home .masthead,
   }
 }
 
-// Mobile responsive for publications
 @media (max-width: 768px) {
   .publication-item {
     flex-direction: column;
@@ -614,7 +379,6 @@ body.layout--home .masthead,
   }
 }
 
-// Publications page specific adjustments
 .publications-page {
   .publication-item:last-child {
     border-bottom: none;
@@ -622,7 +386,7 @@ body.layout--home .masthead,
   }
 }
 
-// Make sidebar text smaller
+// Sidebar styling
 .sidebar .author__profile,
 .page__sidebar .author__profile {
   font-size: 0.9em !important;
@@ -656,7 +420,7 @@ body.layout--home .masthead,
 }
 
 // ========================================
-// HOMEPAGE SPECIFIC STYLES - DARK THEME
+// HOMEPAGE SPECIFIC STYLES - DARK THEME WITH PROPER ALIGNMENT
 // ========================================
 
 // Homepage container
@@ -670,7 +434,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - align with masthead site title, not page center
+// Hero section - dark theme with proper alignment
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -682,29 +446,12 @@ body.layout--home .masthead,
     display: flex !important;
     align-items: flex-start !important;
     gap: 3rem !important;
+    // Align with header logo, not navigation tabs
     max-width: none !important;
-    margin: 0 !important;
+    margin-left: 2rem !important; // Same as header logo position
+    margin-right: 2rem !important;
     padding: 0 !important;
     position: relative !important;
-    
-    // Align with masthead inner container
-    @media (min-width: 80em) {
-      margin-left: calc((100vw - 80em) / 2) !important;
-      padding-left: 1rem !important;
-      padding-right: 2rem !important;
-    }
-    
-    @media (min-width: 64em) and (max-width: 80em) {
-      margin-left: calc((100vw - 64em) / 2) !important;
-      padding-left: 1rem !important;
-      padding-right: 2rem !important;
-    }
-    
-    @media (max-width: 64em) {
-      margin-left: 1rem !important;
-      padding-left: 0 !important;
-      padding-right: 1rem !important;
-    }
   }
   
   .profile-photo {
@@ -946,614 +693,12 @@ body.layout--home .masthead,
     gap: 1.5rem !important;
     text-align: center !important;
     align-items: center !important;
-    margin-left: 0 !important;
-    padding: 0 1rem !important;
+    margin-left: 1rem !important; // Smaller margin on mobile
+    margin-right: 1rem !important;
   }
   
   .homepage-container .hero-section {
     padding: 0.5rem 0 !important;
-    
-    .profile-photo {
-      flex: none !important;
-      align-self: center !important;
-      
-      .author__avatar {
-        width: 300px !important;
-        height: 300px !important;
-        border: 2px solid #333 !important;
-        box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important;
-        display: block !important;
-        margin: 0 auto !important;
-      }
-    }
-    
-    .hero-text {
-      text-align: center !important;
-      width: 100% !important;
-      max-width: 600px !important;
-      margin: 0 auto !important;
-      
-      .hero-title {
-        font-size: 1.2rem !important;
-        text-align: center !important;
-        color: #fff !important;
-      }
-      
-      .contact-info {
-        text-align: center !important;
-        margin-bottom: 1.5rem !important;
-        
-        p {
-          color: #ccc !important;
-          
-          i {
-            color: #fff !important;
-          }
-          
-          a {
-            color: #4fc3f7 !important;
-            
-            &:hover {
-              color: #81d4fa !important;
-            }
-          }
-        }
-      }
-      
-      .about-title {
-        font-size: 1rem !important;
-        text-align: center !important;
-        color: #fff !important;
-      }
-      
-      .about-content {
-        p {
-          color: #ddd !important;
-          font-size: 0.8rem !important;
-        }
-        
-        .highlight-notice {
-          background: #1a1a1a !important;
-          border-left: 4px solid #4fc3f7 !important;
-          
-          p {
-            color: #4fc3f7 !important;
-            font-size: 0.8rem !important;
-          }
-        }
-      }
-      
-      .social-links {
-        justify-content: center !important;
-        gap: 0.3rem !important;
-        
-        .btn--social {
-          font-size: 0.65rem !important;
-          padding: 0.25rem 0.5rem !important;
-          background: transparent !important;
-          color: #fff !important;
-          border: 1px solid #fff !important;
-          
-          &:hover {
-            background: #fff !important;
-            color: #000 !important;
-          }
-        }
-      }
-    }
-  }
-  
-  .research-highlights {
-    margin: 0;
-    background: #111 !important;
-    
-    .research-grid {
-      padding: 0 1rem;
-      grid-template-columns: 1fr;
-    }
-    
-    .research-card {
-      background: #1a1a1a !important;
-      border: 1px solid #333 !important;
-      
-      &:hover {
-        border-color: #4fc3f7 !important;
-      }
-      
-      .research-icon {
-        color: #4fc3f7 !important;
-      }
-      
-      h3 {
-        color: #fff !important;
-      }
-      
-      p {
-        color: #ccc !important;
-      }
-    }
-  }
-  
-  .news-section-home {
-    background: #000 !important;
-    
-    h2 {
-      color: #fff !important;
-    }
-    
-    .news-item {
-      background: #1a1a1a !important;
-      border: 1px solid #333 !important;
-      
-      &:hover {
-        border-color: #4fc3f7 !important;
-      }
-      
-      .news-date {
-        color: #4fc3f7 !important;
-      }
-      
-      h3 {
-        color: #fff !important;
-      }
-      
-      p {
-        color: #ccc !important;
-      }
-    }
-  }
-}
-    }
-  }
-}
-
-// Decrease content text size for pages (not homepage)
-.page__content {
-  p, li, ul, ol {
-    font-size: 0.85em; // Smaller content text
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 0.9em; // Smaller headings in content
-  }
-}
-
-// Page titles
-.page__title {
-  font-size: 1.6em; // Smaller page titles
-}
-
-.archive__subtitle {
-  font-size: 0.85em; // Smaller subtitles
-}
-
-// Search and toggle elements
-.search__toggle {
-  font-size: 1.1em; // Search toggle
-}
-
-// Navigation items consistent
-.visible-links {
-  a {
-    font-size: 0.9em; // Match navigation menu items
-  }
-}
-
-// Publication page styling - horizontal layout with proper alignment
-.publication-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.8em;
-  padding: 1em 0;
-  border-bottom: 1px solid #e8e8e8;
-  
-  .publication-image {
-    flex: 0 0 210px;
-    margin-right: 1.2em;
-    height: 140px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 6px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-      border: 1px solid #f0f0f0;
-    }
-  }
-  
-  .publication-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 0.2em;
-    
-    h4 {
-      font-size: 0.85em !important;
-      margin: 0;
-      margin-bottom: 0.3em;
-      font-weight: 600;
-      line-height: 1.3;
-      color: #2c3e50;
-    }
-    
-    .journal-info {
-      font-size: 0.7em !important;
-      margin-bottom: 0.25em;
-      color: #666;
-      font-weight: 500;
-    }
-    
-    .authors {
-      font-size: 0.65em !important;
-      margin-bottom: 0.3em;
-      color: #555;
-      line-height: 1.3;
-    }
-    
-    .doi-link {
-      font-size: 0.6em !important;
-      
-      a {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: 500;
-        
-        &:hover {
-          text-decoration: underline;
-          color: #2980b9;
-        }
-      }
-    }
-  }
-}
-
-// Mobile responsive for publications
-@media (max-width: 768px) {
-  .publication-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-    .publication-image {
-      flex: none;
-      margin-right: 0;
-      margin-bottom: 1em;
-      margin-top: 0;
-      width: 240px;
-      height: 160px;
-      max-width: none;
-    }
-    
-    .publication-content {
-      text-align: left;
-      padding-top: 0;
-    }
-  }
-}
-
-// Publications page specific adjustments
-.publications-page {
-  .publication-item:last-child {
-    border-bottom: none;
-    margin-bottom: 1em;
-  }
-}
-
-// Make sidebar text smaller
-.sidebar .author__profile,
-.page__sidebar .author__profile {
-  font-size: 0.9em !important;
-}
-
-.sidebar .author__bio,
-.page__sidebar .author__bio {
-  font-size: 0.9em !important;
-  line-height: 1.3 !important;
-}
-
-.sidebar .author__urls,
-.page__sidebar .author__urls {
-  font-size: 0.9em !important;
-}
-
-.sidebar .author__urls a,
-.page__sidebar .author__urls a {
-  font-size: 0.9em !important;
-}
-
-.sidebar .author__name,
-.page__sidebar .author__name {
-  font-size: 1.1em !important;
-}
-
-.sidebar .author__avatar img,
-.page__sidebar .author__avatar img {
-  width: 110px !important;
-  height: 110px !important;
-}
-
-// ========================================
-// HOMEPAGE SPECIFIC STYLES - DARK THEME
-// ========================================
-
-// Homepage container
-.homepage-container {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: visible !important;
-  width: 100% !important;
-  background: #000 !important;
-  color: #fff !important;
-}
-
-// Hero section - dark theme
-.homepage-container .hero-section {
-  padding: 1rem 0 !important;
-  background: #000 !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  width: 100% !important;
-  
-  .hero-content {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 3rem !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
-    position: relative !important;
-  }
-  
-  .profile-photo {
-    flex: 0 0 400px !important;
-    
-    .author__avatar {
-      width: 400px !important;
-      height: 400px !important;
-      border-radius: 8px !important;
-      border: 2px solid #333 !important;
-      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important;
-      object-fit: cover !important;
-    }
-  }
-  
-  .hero-text {
-    flex: 1 !important;
-    max-width: none !important;
-    
-    .hero-title {
-      font-size: 1.4rem !important;
-      font-weight: 700 !important;
-      color: #fff !important;
-      margin: 0 0 0.5rem 0 !important;
-      line-height: 1.2 !important;
-    }
-    
-    .contact-info {
-      margin-bottom: 2rem !important;
-      
-      p {
-        margin: 0.5rem 0 !important;
-        font-size: 0.85rem !important;
-        color: #ccc !important;
-        
-        i {
-          width: 20px !important;
-          margin-right: 8px !important;
-          color: #fff !important;
-        }
-        
-        a {
-          color: #4fc3f7 !important;
-          text-decoration: none !important;
-          
-          &:hover {
-            text-decoration: underline !important;
-            color: #81d4fa !important;
-          }
-        }
-      }
-    }
-    
-    .about-title {
-      font-size: 1.2rem !important;
-      color: #fff !important;
-      margin: 0 0 1rem 0 !important;
-      font-weight: 600 !important;
-    }
-    
-    .about-content {
-      margin-bottom: 2rem !important;
-      
-      p {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 0.8rem !important;
-        color: #ddd !important;
-        text-align: justify !important;
-      }
-      
-      .highlight-notice {
-        background: #1a1a1a !important;
-        border-left: 4px solid #4fc3f7 !important;
-        padding: 1.2rem !important;
-        margin-top: 1.5rem !important;
-        border-radius: 0 6px 6px 0 !important;
-        
-        p {
-          margin: 0 !important;
-          font-size: 0.85rem !important;
-          color: #4fc3f7 !important;
-          font-weight: 500 !important;
-        }
-      }
-    }
-    
-    .social-links {
-      display: flex !important;
-      gap: 0.3rem !important;
-      flex-wrap: wrap !important;
-      justify-content: flex-start !important;
-      
-      .btn--social {
-        padding: 0.3rem 0.6rem !important;
-        background: transparent !important;
-        color: #fff !important;
-        border: 1px solid #fff !important;
-        border-radius: 3px !important;
-        text-decoration: none !important;
-        font-weight: 500 !important;
-        font-size: 0.7rem !important;
-        transition: all 0.3s ease !important;
-        white-space: nowrap !important;
-        
-        &:hover {
-          background: #fff !important;
-          color: #000 !important;
-        }
-      }
-    }
-  }
-}
-
-// Content sections
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-// Research highlights - dark theme
-.research-highlights {
-  padding: 2rem 0;
-  background: #111 !important;
-  margin: 0;
-  
-  h2 {
-    font-size: 1.4rem !important;
-    color: #fff !important;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 0 2rem;
-  }
-  
-  .research-card {
-    background: #1a1a1a !important;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #333 !important;
-    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-      border-color: #4fc3f7 !important;
-    }
-    
-    .research-icon {
-      font-size: 2rem;
-      color: #4fc3f7 !important;
-      margin-bottom: 0.8rem;
-    }
-    
-    h3 {
-      font-size: 1rem !important;
-      color: #fff !important;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-    }
-    
-    p {
-      font-size: 0.85rem !important;
-      color: #ccc !important;
-      line-height: 1.5;
-      margin: 0;
-    }
-  }
-}
-
-// News section - dark theme
-.news-section-home {
-  padding: 2rem 0;
-  background: #000 !important;
-  
-  h2 {
-    font-size: 1.2rem !important;
-    color: #fff !important;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .news-grid {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  .news-item {
-    padding: 1.2rem;
-    border: 1px solid #333 !important;
-    border-radius: 8px;
-    background: #1a1a1a !important;
-    transition: box-shadow 0.3s ease;
-    
-    &:hover {
-      box-shadow: 0 4px 16px rgba(255,255,255,0.1);
-      border-color: #4fc3f7 !important;
-    }
-    
-    .news-date {
-      font-size: 0.75rem;
-      color: #4fc3f7 !important;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.4rem;
-    }
-    
-    h3 {
-      font-size: 0.95rem !important;
-      color: #fff !important;
-      margin: 0 0 0.6rem 0;
-      font-weight: 600;
-    }
-    
-    p {
-      font-size: 0.85rem !important;
-      color: #ccc !important;
-      line-height: 1.5;
-      margin: 0;
-    }
-  }
-}
-
-// Mobile responsiveness for homepage - stack layout with proper centering
-@media (max-width: 768px) {
-  .homepage-container .hero-section .hero-content {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-    text-align: center !important;
-    align-items: center !important;
-    padding: 0 1rem !important;
-  }
-  
-  .homepage-container .hero-section {
-    padding: 0.5rem 0 !important; // Reduced padding to remove extra gap
     
     .profile-photo {
       flex: none !important;
