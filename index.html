@@ -17,63 +17,30 @@ document.addEventListener('DOMContentLoaded', function() {
     masthead.style.opacity = '1';
   }
   
-  // Remove search tab - keep only magnifying glass
-  const searchTabs = document.querySelectorAll('.masthead__menu-item a[href*="search"]');
-  searchTabs.forEach(tab => {
-    if (tab.textContent.toLowerCase().includes('search')) {
-      tab.parentElement.style.display = 'none';
+  // Hide mobile menu button on desktop
+  const hiddenBtn = document.querySelector('.greedy-nav__toggle');
+  if (hiddenBtn && window.innerWidth > 768) {
+    hiddenBtn.style.display = 'none';
+  }
+  
+  // Show/hide mobile menu button based on screen size
+  window.addEventListener('resize', function() {
+    const hiddenBtn = document.querySelector('.greedy-nav__toggle');
+    if (hiddenBtn) {
+      if (window.innerWidth > 768) {
+        hiddenBtn.style.display = 'none';
+      } else {
+        hiddenBtn.style.display = 'block';
+      }
     }
   });
-  
-  // Style search toggle as floating element
-  const searchToggle = document.querySelector('.search__toggle');
-  if (searchToggle) {
-    searchToggle.style.border = 'none';
-    searchToggle.style.background = 'transparent';
-    searchToggle.style.position = 'relative';
-  }
 });
 </script>
 
 <style>
-/* Hide search tab in navigation - keep only magnifying glass */
-.masthead .masthead__menu-item a[href*="search"] {
-  display: none !important;
-}
-
-/* Style search toggle - remove box, make it floating */
-.masthead .search__toggle {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0.5rem !important;
-}
-
-.masthead .search__toggle:hover {
-  background: rgba(255,255,255,0.1) !important;
-  border-radius: 4px !important;
-}
-
-/* Fix mobile menu dropdown - dark theme */
-.masthead .greedy-nav .hidden-links {
-  background: #000 !important;
-  border: 1px solid #333 !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
-}
-
-.masthead .greedy-nav .hidden-links a {
-  color: #fff !important;
-  background: #000 !important;
-  border-bottom: 1px solid #333 !important;
-}
-
-.masthead .greedy-nav .hidden-links a:hover {
-  color: #4fc3f7 !important;
-  background: #111 !important;
-}
-
 /* Force masthead to have EXACTLY same positioning as other pages - ONLY change colors */
 .homepage .masthead {
+  /* Use theme default positioning - DO NOT OVERRIDE */
   background-color: #000 !important;
   border-bottom: 1px solid #333 !important;
 }
@@ -142,26 +109,23 @@ html {
   color: #4fc3f7 !important;
 }
 
-/* Mobile menu button styling */
-.masthead .greedy-nav__toggle {
-  color: #fff !important;
-  background: transparent !important;
-  border: 1px solid #fff !important;
-}
-
-.masthead .greedy-nav__toggle:hover {
-  background: rgba(255,255,255,0.1) !important;
+/* Hide mobile menu button on desktop */
+@media (min-width: 769px) {
+  .masthead .greedy-nav__toggle {
+    display: none !important;
+  }
 }
 
 /* Search toggle button */
 .masthead .search__toggle {
   color: #fff !important;
   background-color: transparent !important;
+  border: 1px solid #fff !important;
 }
 
 .masthead .search__toggle:hover {
-  color: #4fc3f7 !important;
-  background: rgba(255,255,255,0.1) !important;
+  color: #000 !important;
+  background-color: #fff !important;
 }
 
 /* Page footer */
@@ -252,22 +216,6 @@ html {
   color: #fff !important;
   margin: 0 0 1rem 0 !important;
   line-height: 1.2 !important;
-}
-
-/* Fix hero section alignment - align with header left edge */
-.homepage-container .hero-section .hero-content {
-  max-width: none !important;
-  margin: 0 !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-  width: 100% !important;
-}
-
-@media (min-width: 769px) {
-  .homepage-container .hero-section .hero-content {
-    padding-left: calc((100vw - 1200px) / 2 + 2rem) !important;
-    padding-right: calc((100vw - 1200px) / 2 + 2rem) !important;
-  }
 }
 </style>
 
