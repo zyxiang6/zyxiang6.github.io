@@ -434,7 +434,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - dark theme with proper alignment
+// Hero section - dark theme with CENTERED alignment for PC only
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -446,12 +446,17 @@ body.layout--home .masthead,
     display: flex !important;
     align-items: flex-start !important;
     gap: 3rem !important;
-    // Align with header logo, not navigation tabs
-    max-width: none !important;
-    margin-left: 2rem !important; // Same as header logo position
-    margin-right: 2rem !important;
-    padding: 0 !important;
+    // CENTER on page for PC (not align with sections below)
+    max-width: 1200px !important;
+    margin: 0 auto !important; // Center the hero content on page
+    padding: 0 2rem !important;
     position: relative !important;
+    
+    // Override only for PC (769px and up)
+    @media (min-width: 769px) {
+      margin: 0 auto !important; // Ensure centering on PC
+      padding: 0 2rem !important;
+    }
   }
   
   .profile-photo {

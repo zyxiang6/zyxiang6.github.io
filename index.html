@@ -250,12 +250,13 @@ html {
   line-height: 1.2 !important;
 }
 
-/* Fix hero content alignment - align with header logo, not navigation tabs */
-.homepage-container .hero-section .hero-content {
-  max-width: none !important;
-  margin-left: 2rem !important; /* Align with header logo */
-  margin-right: 2rem !important;
-  padding: 0 !important;
+/* Fix hero content alignment - center on page for PC, keep mobile unchanged */
+@media (min-width: 769px) {
+  .homepage-container .hero-section .hero-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important; /* Center the entire hero content */
+    padding: 0 2rem !important;
+  }
 }
 
 @media (max-width: 768px) {

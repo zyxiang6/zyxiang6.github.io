@@ -3,7 +3,9 @@ permalink: /publications/
 title: "Publications"
 layout: single
 author_profile: true
-classes: publications-page
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
 ---
 
 ## Selected Publications
