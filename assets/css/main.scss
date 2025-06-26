@@ -360,10 +360,10 @@ body {
   position: relative !important;
 }
 
-// Hero section - image left, all content right - clean layout
+// Hero section - all black design with white text
 .homepage-container .hero-section {
   padding: 3rem 0 !important;
-  background: #fff !important;
+  background: #000 !important; // Black background
   margin: 0 !important;
   overflow: visible !important;
   width: 100% !important;
@@ -385,8 +385,8 @@ body {
       width: 400px !important;
       height: 400px !important;
       border-radius: 8px !important;
-      border: 2px solid #e0e0e0 !important;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
+      border: 2px solid #333 !important; // Dark border
+      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // Light glow
       object-fit: cover !important;
     }
   }
@@ -398,14 +398,14 @@ body {
     .hero-title {
       font-size: 2rem !important;
       font-weight: 700 !important;
-      color: #2c3e50 !important;
+      color: #fff !important; // White text
       margin: 0 0 0.5rem 0 !important;
       line-height: 1.2 !important;
     }
     
     .hero-subtitle {
       font-size: 1.1rem !important;
-      color: #666 !important;
+      color: #ccc !important; // Light gray text
       margin: 0 0 1.5rem 0 !important;
       font-weight: 500 !important;
     }
@@ -416,19 +416,20 @@ body {
       p {
         margin: 0.5rem 0 !important;
         font-size: 1rem !important;
-        color: #666 !important;
+        color: #bbb !important; // Light gray
         
         i {
           width: 20px !important;
           margin-right: 8px !important;
-          color: #2c3e50 !important;
+          color: #fff !important; // White icons
         }
         
         a {
-          color: #2c3e50 !important;
+          color: #fff !important; // White links
           text-decoration: none !important;
           
           &:hover {
+            color: #4a9eff !important; // Light blue on hover
             text-decoration: underline !important;
           }
         }
@@ -437,7 +438,7 @@ body {
     
     .about-title {
       font-size: 1.5rem !important;
-      color: #2c3e50 !important;
+      color: #fff !important; // White text
       margin: 0 0 1rem 0 !important;
       font-weight: 600 !important;
     }
@@ -449,13 +450,13 @@ body {
         font-size: 1rem !important;
         line-height: 1.6 !important;
         margin-bottom: 1rem !important;
-        color: #444 !important;
+        color: #ddd !important; // Light gray text
         text-align: justify !important;
       }
       
       .highlight-notice {
-        background: #f8f9fa !important;
-        border-left: 4px solid #2c3e50 !important;
+        background: #1a1a1a !important; // Dark gray background
+        border-left: 4px solid #4a9eff !important; // Blue accent
         padding: 1.2rem !important;
         margin-top: 1.5rem !important;
         border-radius: 0 6px 6px 0 !important;
@@ -463,7 +464,7 @@ body {
         p {
           margin: 0 !important;
           font-size: 1rem !important;
-          color: #2c3e50 !important;
+          color: #fff !important; // White text
           font-weight: 500 !important;
         }
       }
@@ -476,9 +477,9 @@ body {
       
       .btn--social {
         padding: 0.6rem 1.2rem !important;
-        background: #fff !important;
-        color: #2c3e50 !important;
-        border: 2px solid #2c3e50 !important;
+        background: transparent !important;
+        color: #fff !important; // White text
+        border: 2px solid #333 !important; // Dark border
         border-radius: 6px !important;
         text-decoration: none !important;
         font-weight: 500 !important;
@@ -486,8 +487,9 @@ body {
         transition: all 0.3s ease !important;
         
         &:hover {
-          background: #2c3e50 !important;
-          color: #fff !important;
+          background: #333 !important; // Dark gray on hover
+          border-color: #4a9eff !important; // Blue border on hover
+          color: #4a9eff !important; // Blue text on hover
         }
       }
     }
@@ -506,15 +508,15 @@ body {
   display: none !important; // Hide since about content is now in hero section
 }
 
-// Research highlights
+// Research highlights - black theme
 .research-highlights {
   padding: 2rem 0;
-  background: #f8f9fa;
+  background: #111 !important; // Dark background
   margin: 0 -1rem;
   
   h2 {
     font-size: 1.4rem !important;
-    color: #2c3e50;
+    color: #fff !important; // White text
     margin-bottom: 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -528,47 +530,50 @@ body {
   }
   
   .research-card {
-    background: #fff;
+    background: #1a1a1a !important; // Dark card background
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #333 !important; // Dark border
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05) !important; // Light shadow
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(74,158,255,0.2) !important; // Blue glow on hover
+      border-color: #4a9eff !important; // Blue border on hover
     }
     
     .research-icon {
       font-size: 2rem;
-      color: #2c3e50;
+      color: #4a9eff !important; // Blue icons
       margin-bottom: 0.8rem;
     }
     
     h3 {
       font-size: 1rem !important;
-      color: #2c3e50;
+      color: #fff !important; // White text
       margin-bottom: 0.8rem;
       font-weight: 600;
     }
     
     p {
       font-size: 0.85rem !important;
-      color: #666;
+      color: #ccc !important; // Light gray text
       line-height: 1.5;
       margin: 0;
     }
   }
 }
 
-// News section
+// News section - black theme
 .news-section-home {
   padding: 2rem 0;
+  background: #000 !important; // Black background
   
   h2 {
     font-size: 1.2rem !important;
-    color: #2c3e50;
+    color: #fff !important; // White text
     margin-bottom: 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -577,22 +582,26 @@ body {
   .news-grid {
     display: grid;
     gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
   
   .news-item {
     padding: 1.2rem;
-    border: 1px solid #e9ecef;
+    border: 1px solid #333 !important; // Dark border
     border-radius: 8px;
-    background: #fff;
+    background: #1a1a1a !important; // Dark background
     transition: box-shadow 0.3s ease;
     
     &:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(74,158,255,0.2) !important; // Blue glow
+      border-color: #4a9eff !important; // Blue border on hover
     }
     
     .news-date {
-      font-size: 0.75rem; // Smaller date text
-      color: #666;
+      font-size: 0.75rem;
+      color: #4a9eff !important; // Blue date text
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -600,15 +609,15 @@ body {
     }
     
     h3 {
-      font-size: 0.95rem !important; // Smaller title text
-      color: #2c3e50;
+      font-size: 0.95rem !important;
+      color: #fff !important; // White title
       margin: 0 0 0.6rem 0;
       font-weight: 600;
     }
     
     p {
-      font-size: 0.85rem !important; // Smaller description text
-      color: #5a6c7d;
+      font-size: 0.85rem !important;
+      color: #ccc !important; // Light gray text
       line-height: 1.5;
       margin: 0;
     }
@@ -646,7 +655,7 @@ body {
   }
 }
 
-// Mobile responsiveness for homepage - stack layout
+// Mobile responsiveness for homepage - black theme
 @media (max-width: 768px) {
   .homepage-container .hero-section {
     padding: 2rem 0 !important;
@@ -665,6 +674,7 @@ body {
       .author__avatar {
         width: 300px !important;
         height: 300px !important;
+        border-color: #444 !important; // Slightly lighter border on mobile
       }
     }
     
@@ -674,12 +684,14 @@ body {
       .hero-title {
         font-size: 1.6rem !important;
         text-align: center !important;
+        color: #fff !important;
       }
       
       .hero-subtitle {
         font-size: 1rem !important;
         text-align: center !important;
         margin-bottom: 1rem !important;
+        color: #ccc !important;
       }
       
       .contact-info {
@@ -690,6 +702,11 @@ body {
       .about-title {
         font-size: 1.3rem !important;
         text-align: center !important;
+        color: #fff !important;
+      }
+      
+      .about-content p {
+        color: #ddd !important;
       }
       
       .social-links {
@@ -699,6 +716,12 @@ body {
         .btn--social {
           font-size: 0.8rem !important;
           padding: 0.5rem 1rem !important;
+          border-color: #444 !important;
+          
+          &:hover {
+            border-color: #4a9eff !important;
+            color: #4a9eff !important;
+          }
         }
       }
     }
