@@ -447,12 +447,13 @@ body {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(3rem + 5vw) !important; // Dynamic gap that adjusts with viewport
+    gap: 2rem !important; // Fixed gap instead of dynamic
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
+    padding: 0 2rem 0 0 !important; // Reduced padding
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
+    justify-content: flex-start !important; // Align items to start
   }
   
   .profile-photo {
@@ -474,9 +475,10 @@ body {
   }
   
   .hero-text {
-    flex: 1 !important;
-    max-width: 70% !important; // Limit text width for better readability
-    padding-right: 6rem !important; // Maximum space on the right
+    flex: 0 1 600px !important; // Fixed max width instead of flex: 1
+    max-width: 600px !important; // Consistent width for About content
+    padding-right: 2rem !important; // Reduced padding
+    margin-left: auto !important; // Push content away from image
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -778,22 +780,31 @@ body {
   }
 }
 
-// Responsive alignment for different screen sizes
+// Responsive alignment for different screen sizes - adjusted for fixed content width
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-25vw) !important; // Larger screens
+    margin-left: calc(-20vw) !important; // Larger screens - less negative margin
+  }
+  .homepage-container .hero-section .hero-text {
+    max-width: 700px !important; // Slightly wider on large screens
   }
 }
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-28vw) !important; // Medium screens
+    margin-left: calc(-25vw) !important; // Medium screens
+  }
+  .homepage-container .hero-section .hero-text {
+    max-width: 550px !important; // Slightly narrower
   }
 }
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-32vw) !important; // Tablet landscape
+    margin-left: calc(-30vw) !important; // Tablet landscape
+  }
+  .homepage-container .hero-section .hero-text {
+    max-width: 500px !important; // Narrower for tablets
   }
 }
 
