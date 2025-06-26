@@ -1,10 +1,12 @@
 ---
-layout: splash
-title: "Ziyu Xiang"
-header:
-  overlay_color: "#000000"
-  overlay_filter: "0.0"
-excerpt: "PhD Student in Physics<br>UC Berkeley<br>Quantum Materials & Scanning Tunneling Microscopy<br><br>[View Research Publications](/publications/){: .btn .btn--primary .btn--large}"
+layout: single
+title: "Ziyu Xiang - PhD Student in Physics at UC Berkeley"
+description: "Ziyu Xiang is a PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
+keywords: "Ziyu Xiang, Physics PhD, UC Berkeley, quantum materials, 2D electron systems, scanning tunneling microscopy, Wigner crystals, moiré superlattices"
+author: "Ziyu Xiang"
+image: "/assets/images/ziyu-full.jpg"
+canonical_url: "https://zyxiang6.github.io/"
+classes: wide
 ---
 
 <script type="application/ld+json">
@@ -53,82 +55,27 @@ excerpt: "PhD Student in Physics<br>UC Berkeley<br>Quantum Materials & Scanning 
 </script>
 
 <style>
-/* Main hero section with black background */
-.page__hero {
-  background-color: #000000 !important;
+/* Black background for entire page */
+body, .initial-content, .page, .page__content, .archive {
+  background-color: #000 !important;
   color: white !important;
-  text-align: center !important;
-  padding: 8rem 1rem !important;
-  min-height: 100vh !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
 }
 
-.page__hero-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.page__title {
-  color: white !important;
-  font-size: 4rem !important;
-  font-weight: bold !important;
-  margin-bottom: 2rem !important;
-  text-shadow: none !important;
-}
-
-.page__lead {
-  color: white !important;
-  font-size: 1.5rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 3rem !important;
-}
-
-.btn--primary {
-  background-color: #fff !important;
-  color: #000 !important;
-  border: 2px solid #fff !important;
-  font-weight: bold !important;
-  padding: 1rem 2rem !important;
-  font-size: 1.2rem !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  border-radius: 4px !important;
-  transition: all 0.3s ease !important;
-}
-
-.btn--primary:hover {
-  background-color: transparent !important;
-  color: #fff !important;
-  border: 2px solid #fff !important;
-  text-decoration: none !important;
-}
-
-.btn--large {
-  padding: 1.2rem 2.5rem !important;
-  font-size: 1.3rem !important;
-}
-
-/* Hide all content below hero */
-.page__content {
-  display: none !important;
-}
-
-/* Navigation styling */
+/* Header styling */
 .masthead {
-  background-color: rgba(0,0,0,0.9) !important;
-  position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  z-index: 1000 !important;
+  background-color: #000 !important;
+  border-bottom: 1px solid #333 !important;
 }
 
-.site-title {
-  color: white !important;
+.masthead__inner-wrap {
+  background-color: transparent !important;
 }
 
-.greedy-nav a {
+.greedy-nav {
+  background-color: transparent !important;
+}
+
+.site-title, .greedy-nav a {
   color: white !important;
 }
 
@@ -136,41 +83,108 @@ excerpt: "PhD Student in Physics<br>UC Berkeley<br>Quantum Materials & Scanning 
   color: #ccc !important;
 }
 
-/* Footer styling */
-.page__footer {
-  background-color: #111 !important;
-  color: white !important;
-}
-
-.page__footer-copyright {
-  color: #ccc !important;
-}
-
-.page__footer a {
-  color: #ccc !important;
-}
-
-/* Hide any post/archive content */
-.archive {
+/* Main content styling */
+.page__title {
   display: none !important;
 }
 
-.list__item {
+.page__content {
+  text-align: center;
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homepage-hero {
+  text-align: center;
+}
+
+.homepage-hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.homepage-hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.homepage-hero .description {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #aaa;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.cta-button:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+.page__footer {
+  background-color: #111 !important;
+  color: white !important;
+  border-top: 1px solid #333 !important;
+}
+
+.page__footer-copyright, .page__footer a {
+  color: #ccc !important;
+}
+
+/* Hide any post listings */
+.list__item, .archive__item, .entries-list {
+  display: none !important;
+}
+
+.page__meta {
+  display: none !important;
+}
+
+.taxonomy__section {
   display: none !important;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .page__title {
-    font-size: 2.5rem !important;
+  .homepage-hero h1 {
+    font-size: 2.5rem;
   }
   
-  .page__lead {
-    font-size: 1.2rem !important;
+  .homepage-hero .subtitle {
+    font-size: 1.1rem;
   }
   
-  .page__hero {
-    padding: 4rem 1rem !important;
+  .homepage-hero .description {
+    font-size: 1rem;
+  }
+  
+  .page__content {
+    padding: 4rem 1rem;
   }
 }
 </style>
+
+<div class="homepage-hero">
+  <h1>Ziyu Xiang</h1>
+  <p class="subtitle">PhD Student in Physics</p>
+  <p class="subtitle">UC Berkeley</p>
+  <p class="description">Quantum Materials & Scanning Tunneling Microscopy</p>
+  <a href="/publications/" class="cta-button">View Research Publications</a>
+</div>

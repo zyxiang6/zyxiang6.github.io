@@ -13,7 +13,6 @@ url: "https://zyxiang6.github.io"
 baseurl: ""
 repository: "zyxiang6/zyxiang6.github.io"
 teaser: /assets/images/ziyu-headshot.jpg
-logo: 
 masthead_title: "Ziyu Xiang"
 breadcrumbs: false
 words_per_minute: 200
@@ -113,17 +112,12 @@ kramdown:
 permalink: /:categories/:title/
 timezone: America/Los_Angeles
 
-# Pagination
-paginate: 5
-paginate_path: /page:num/
-
-# Posts on homepage
-show_excerpts: false
-paginate_path: /posts/page:num/
+# Pagination (disabled for homepage)
+# paginate: 5
+# paginate_path: /page:num/
 
 # Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-include-cache
