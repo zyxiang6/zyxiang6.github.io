@@ -360,79 +360,68 @@ body {
   position: relative !important;
 }
 
-// Hero section - square image left, about content right - FORCED OVERRIDE
+// Hero section - image left, all content right - clean layout
 .homepage-container .hero-section {
-  padding: 2rem 0 !important;
+  padding: 3rem 0 !important;
   background: #fff !important;
-  margin: 0 !important; // Remove negative margins that can cause clipping
-  overflow: visible !important; // Allow image to extend beyond container
-  width: 100vw !important; // Full viewport width
-  position: relative !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  width: 100% !important;
   
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: 2rem !important; // Fixed gap between image and text
-    max-width: 1050px !important; // Container width to control positioning
-    margin: 0 auto !important; // Center the entire content block
-    padding: 0 2rem 0 0 !important; // Reduced padding
+    gap: 3rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
     position: relative !important;
-    overflow: visible !important; // Ensure image extends beyond container
-    justify-content: flex-start !important; // Align items to start
-    transform: translateX(-200px) !important; // Move entire unit left to align image with header
   }
   
   .profile-photo {
-    flex: 0 0 450px !important;
-    margin-left: 0 !important; // Remove dynamic positioning
-    position: relative !important;
-    z-index: 10 !important; // Ensure image appears above any background layers
+    flex: 0 0 400px !important;
     
     .author__avatar {
-      width: 450px !important;
-      height: 450px !important;
-      border-radius: 6px !important; // Square frame with minimal rounding
-      border: 3px solid #ddd !important;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+      width: 400px !important;
+      height: 400px !important;
+      border-radius: 8px !important;
+      border: 2px solid #e0e0e0 !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
       object-fit: cover !important;
-      position: relative !important;
-      z-index: 10 !important; // Ensure image is always visible
     }
   }
   
   .hero-text {
-    flex: 0 1 600px !important; // Fixed max width instead of flex: 1
-    max-width: 600px !important; // Consistent width for About content
-    padding-right: 2rem !important; // Reduced padding
-    margin-left: 0 !important; // Remove auto margin, let gap handle spacing
+    flex: 1 !important;
+    max-width: none !important;
     
     .hero-title {
-      font-size: 1.4rem !important;
-      font-weight: 600 !important;
+      font-size: 2rem !important;
+      font-weight: 700 !important;
       color: #2c3e50 !important;
-      margin: 0 0 0.2rem 0 !important;
+      margin: 0 0 0.5rem 0 !important;
       line-height: 1.2 !important;
     }
     
     .hero-subtitle {
-      font-size: 0.8rem !important;
-      color: #555 !important;
-      margin: 0 0 0.5rem 0 !important;
+      font-size: 1.1rem !important;
+      color: #666 !important;
+      margin: 0 0 1.5rem 0 !important;
       font-weight: 500 !important;
     }
     
     .contact-info {
-      margin-bottom: 0.8rem !important;
+      margin-bottom: 2rem !important;
       
       p {
-        margin: 0.15rem 0 !important;
-        font-size: 0.75rem !important;
+        margin: 0.5rem 0 !important;
+        font-size: 1rem !important;
         color: #666 !important;
         
         i {
-          width: 14px !important;
-          margin-right: 6px !important;
-          color: #555 !important;
+          width: 20px !important;
+          margin-right: 8px !important;
+          color: #2c3e50 !important;
         }
         
         a {
@@ -447,64 +436,58 @@ body {
     }
     
     .about-title {
-      font-size: 1.1rem !important;
+      font-size: 1.5rem !important;
       color: #2c3e50 !important;
-      margin: 0 0 0.5rem 0 !important;
+      margin: 0 0 1rem 0 !important;
       font-weight: 600 !important;
     }
     
     .about-content {
-      margin-bottom: 0.8rem !important;
+      margin-bottom: 2rem !important;
       
       p {
-        font-size: 0.75rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 0.6rem !important;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
         color: #444 !important;
         text-align: justify !important;
       }
       
       .highlight-notice {
         background: #f8f9fa !important;
-        border-left: 3px solid #2c3e50 !important;
-        padding: 0.8rem !important;
-        margin-top: 0.8rem !important;
-        border-radius: 0 4px 4px 0 !important;
+        border-left: 4px solid #2c3e50 !important;
+        padding: 1.2rem !important;
+        margin-top: 1.5rem !important;
+        border-radius: 0 6px 6px 0 !important;
         
         p {
           margin: 0 !important;
-          font-size: 0.75rem !important;
+          font-size: 1rem !important;
           color: #2c3e50 !important;
+          font-weight: 500 !important;
         }
       }
     }
     
     .social-links {
       display: flex !important;
-      gap: 0.3rem !important;
+      gap: 0.8rem !important;
       flex-wrap: wrap !important;
-      font-size: 0.7rem !important;
-      margin-top: 0.6rem !important;
       
       .btn--social {
-        padding: 0.25rem 0.5rem !important;
+        padding: 0.6rem 1.2rem !important;
         background: #fff !important;
         color: #2c3e50 !important;
-        border: 1px solid #ddd !important;
-        border-radius: 3px !important;
+        border: 2px solid #2c3e50 !important;
+        border-radius: 6px !important;
         text-decoration: none !important;
-        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        font-size: 0.9rem !important;
+        transition: all 0.3s ease !important;
         
         &:hover {
-          background: #f5f5f5 !important;
-          color: #000 !important;
-          border-color: #999 !important;
-        }
-        
-        &:not(:last-child)::after {
-          content: " | " !important;
-          color: #999 !important;
-          margin-left: 0.5rem !important;
+          background: #2c3e50 !important;
+          color: #fff !important;
         }
       }
     }
@@ -663,69 +646,66 @@ body {
   }
 }
 
-// Mobile responsiveness for homepage - square image layout
+// Mobile responsiveness for homepage - stack layout
 @media (max-width: 768px) {
-  .homepage-container {
-    padding: 0 0.5rem;
-  }
-  
-  .hero-section {
-    margin: -1rem -0.5rem 1.5rem -0.5rem !important;
-    padding: 1.5rem 0 !important;
+  .homepage-container .hero-section {
+    padding: 2rem 0 !important;
     
     .hero-content {
       flex-direction: column !important;
-      text-align: center !important;
+      gap: 2rem !important;
       padding: 0 1rem !important;
-      align-items: center !important;
-      gap: 1.5rem !important;
+      text-align: center !important;
     }
     
     .profile-photo {
       flex: none !important;
-      margin-bottom: 1rem !important;
+      align-self: center !important;
       
       .author__avatar {
-        width: 280px !important;
-        height: 280px !important;
-        border-radius: 4px !important; // Keep square on mobile too
+        width: 300px !important;
+        height: 300px !important;
       }
     }
     
     .hero-text {
-      text-align: center !important;
+      text-align: left !important;
       
       .hero-title {
-        font-size: 1.2rem !important;
-      }
-      
-      .hero-subtitle {
-        font-size: 0.8rem !important;
-      }
-      
-      .about-title {
-        font-size: 1rem !important;
+        font-size: 1.6rem !important;
         text-align: center !important;
       }
       
-      .about-content {
-        p {
-          text-align: left !important; // Keep text left-aligned for readability
-        }
+      .hero-subtitle {
+        font-size: 1rem !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .contact-info {
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+      }
+      
+      .about-title {
+        font-size: 1.3rem !important;
+        text-align: center !important;
       }
       
       .social-links {
         justify-content: center !important;
+        gap: 0.5rem !important;
         
-        .btn--social:not(:last-child)::after {
-          content: " | " !important;
+        .btn--social {
+          font-size: 0.8rem !important;
+          padding: 0.5rem 1rem !important;
         }
       }
     }
   }
   
   .research-highlights {
-    margin: 0 -0.5rem;
+    margin: 0 -1rem;
     
     .research-grid {
       padding: 0 1rem;
