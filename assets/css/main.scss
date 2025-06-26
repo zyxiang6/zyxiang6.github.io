@@ -5,7 +5,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
 @import "minimal-mistakes"; /* main partials */
 
-/* FORCE CACHE REFRESH - Homepage Dark Theme v7.0 - Jan 2025 */
+/* FORCE CACHE REFRESH - Homepage Dark Theme v8.0 - Jan 2025 */
 
 // ========================================
 // GLOBAL NAVIGATION FIXES - REMOVE SEARCH TAB, KEEP MAGNIFYING GLASS
@@ -420,10 +420,10 @@ body.layout--home .masthead,
 }
 
 // ========================================
-// HOMEPAGE SPECIFIC STYLES - DARK THEME WITH HEADER LOGO ALIGNMENT
+// HOMEPAGE SPECIFIC STYLES - HERO TRULY INDEPENDENT FROM LOWER SECTIONS
 // ========================================
 
-// Homepage container
+// Homepage container - force full width, no constraints
 .homepage-container {
   max-width: none !important;
   margin: 0 !important;
@@ -434,7 +434,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - ALIGNED WITH HEADER LOGO (not centered, not with lower sections)
+// Hero section - COMPLETELY INDEPENDENT positioning from lower sections
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -447,19 +447,21 @@ body.layout--home .masthead,
     align-items: flex-start !important;
     gap: 3rem !important;
     
-    // CRITICAL FIX: Align with header logo position, not centered or with lower sections
-    max-width: none !important; // Remove max-width constraint
-    margin: 0 !important; // Remove auto centering
-    padding-left: 1rem !important; // Align with header logo left edge
-    padding-right: 2rem !important;
+    // CRITICAL: Make hero completely independent - NO constraints, positioned from left edge
+    max-width: none !important; // No width limits
+    margin: 0 !important; // No auto centering
+    padding-left: 2rem !important; // Start from left edge (closer to header logo)
+    padding-right: 4rem !important; // Right padding for breathing room
     position: relative !important;
+    width: auto !important; // Let content determine width
     
-    // PC specific - align with header logo
+    // PC specific - force left positioning
     @media (min-width: 769px) {
-      max-width: none !important; // No width constraint
-      margin: 0 !important; // No centering
-      padding-left: 1rem !important; // Same as header logo padding
-      padding-right: 2rem !important;
+      max-width: none !important; // NO width constraint
+      margin: 0 !important; // NO centering
+      padding-left: 2rem !important; // Position from left edge
+      padding-right: 4rem !important; // Generous right padding
+      width: auto !important; // Content-based width
     }
     
     // Mobile specific - keep current behavior
@@ -489,7 +491,7 @@ body.layout--home .masthead,
   
   .hero-text {
     flex: 1 !important;
-    max-width: none !important;
+    max-width: 600px !important; // Limit text width for readability
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -586,14 +588,14 @@ body.layout--home .masthead,
   }
 }
 
-// Content sections - these remain aligned normally (different from hero)
+// Content sections - THESE STAY CENTERED (different from hero)
 .content-wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-// Research highlights - dark theme
+// Research highlights - dark theme (stays centered)
 .research-highlights {
   padding: 2rem 0;
   background: #111 !important;
@@ -651,7 +653,7 @@ body.layout--home .masthead,
   }
 }
 
-// News section - dark theme
+// News section - dark theme (stays centered)
 .news-section-home {
   padding: 2rem 0;
   background: #000 !important;
