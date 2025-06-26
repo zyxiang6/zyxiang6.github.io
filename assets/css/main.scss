@@ -347,20 +347,22 @@ body {
 }
 
 // ========================================
-// HOMEPAGE SPECIFIC STYLES - NEW DESIGN
+// HOMEPAGE SPECIFIC STYLES - DARK THEME
 // ========================================
 
-// Homepage container
+// Homepage container - full black theme
 .homepage-container {
-  max-width: none !important; // Remove width constraint
+  max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow: visible !important; // Ensure image is not clipped
-  width: 100vw !important; // Full viewport width
+  overflow: visible !important;
+  width: 100% !important;
   position: relative !important;
+  background: #000 !important; // Full black background
+  color: #fff !important; // White text
 }
 
-// Hero section - all black design with white text
+// Hero section - image left, all content right - dark theme
 .homepage-container .hero-section {
   padding: 3rem 0 !important;
   background: #000 !important; // Black background
@@ -386,7 +388,7 @@ body {
       height: 400px !important;
       border-radius: 8px !important;
       border: 2px solid #333 !important; // Dark border
-      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // Light glow
+      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // White glow
       object-fit: cover !important;
     }
   }
@@ -416,7 +418,7 @@ body {
       p {
         margin: 0.5rem 0 !important;
         font-size: 1rem !important;
-        color: #bbb !important; // Light gray
+        color: #ccc !important; // Light gray text
         
         i {
           width: 20px !important;
@@ -425,12 +427,12 @@ body {
         }
         
         a {
-          color: #fff !important; // White links
+          color: #4fc3f7 !important; // Light blue links
           text-decoration: none !important;
           
           &:hover {
-            color: #4a9eff !important; // Light blue on hover
             text-decoration: underline !important;
+            color: #81d4fa !important; // Lighter blue on hover
           }
         }
       }
@@ -456,7 +458,7 @@ body {
       
       .highlight-notice {
         background: #1a1a1a !important; // Dark gray background
-        border-left: 4px solid #4a9eff !important; // Blue accent
+        border-left: 4px solid #4fc3f7 !important; // Light blue accent
         padding: 1.2rem !important;
         margin-top: 1.5rem !important;
         border-radius: 0 6px 6px 0 !important;
@@ -464,7 +466,7 @@ body {
         p {
           margin: 0 !important;
           font-size: 1rem !important;
-          color: #fff !important; // White text
+          color: #4fc3f7 !important; // Light blue text
           font-weight: 500 !important;
         }
       }
@@ -479,7 +481,7 @@ body {
         padding: 0.6rem 1.2rem !important;
         background: transparent !important;
         color: #fff !important; // White text
-        border: 2px solid #333 !important; // Dark border
+        border: 2px solid #fff !important; // White border
         border-radius: 6px !important;
         text-decoration: none !important;
         font-weight: 500 !important;
@@ -487,32 +489,26 @@ body {
         transition: all 0.3s ease !important;
         
         &:hover {
-          background: #333 !important; // Dark gray on hover
-          border-color: #4a9eff !important; // Blue border on hover
-          color: #4a9eff !important; // Blue text on hover
+          background: #fff !important; // White background on hover
+          color: #000 !important; // Black text on hover
         }
       }
     }
   }
 }
 
-// Content sections
+// Content sections - dark theme
 .content-wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-// About section - now integrated into hero section, this can be removed or hidden
-.about-section {
-  display: none !important; // Hide since about content is now in hero section
-}
-
-// Research highlights - black theme
+// Research highlights - dark theme
 .research-highlights {
   padding: 2rem 0;
-  background: #111 !important; // Dark background
-  margin: 0 -1rem;
+  background: #111 !important; // Very dark gray
+  margin: 0;
   
   h2 {
     font-size: 1.4rem !important;
@@ -530,23 +526,23 @@ body {
   }
   
   .research-card {
-    background: #1a1a1a !important; // Dark card background
+    background: #1a1a1a !important; // Dark gray background
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #333 !important; // Dark border
-    box-shadow: 0 2px 8px rgba(255,255,255,0.05) !important; // Light shadow
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(74,158,255,0.2) !important; // Blue glow on hover
-      border-color: #4a9eff !important; // Blue border on hover
+      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+      border-color: #4fc3f7 !important; // Light blue border on hover
     }
     
     .research-icon {
       font-size: 2rem;
-      color: #4a9eff !important; // Blue icons
+      color: #4fc3f7 !important; // Light blue icons
       margin-bottom: 0.8rem;
     }
     
@@ -566,7 +562,7 @@ body {
   }
 }
 
-// News section - black theme
+// News section - dark theme
 .news-section-home {
   padding: 2rem 0;
   background: #000 !important; // Black background
@@ -582,26 +578,23 @@ body {
   .news-grid {
     display: grid;
     gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
   }
   
   .news-item {
     padding: 1.2rem;
     border: 1px solid #333 !important; // Dark border
     border-radius: 8px;
-    background: #1a1a1a !important; // Dark background
+    background: #1a1a1a !important; // Dark gray background
     transition: box-shadow 0.3s ease;
     
     &:hover {
-      box-shadow: 0 4px 16px rgba(74,158,255,0.2) !important; // Blue glow
-      border-color: #4a9eff !important; // Blue border on hover
+      box-shadow: 0 4px 16px rgba(255,255,255,0.1);
+      border-color: #4fc3f7 !important; // Light blue border on hover
     }
     
     .news-date {
       font-size: 0.75rem;
-      color: #4a9eff !important; // Blue date text
+      color: #4fc3f7 !important; // Light blue date
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -610,7 +603,7 @@ body {
     
     h3 {
       font-size: 0.95rem !important;
-      color: #fff !important; // White title
+      color: #fff !important; // White text
       margin: 0 0 0.6rem 0;
       font-weight: 600;
     }
@@ -655,10 +648,11 @@ body {
   }
 }
 
-// Mobile responsiveness for homepage - black theme
+// Mobile responsiveness for homepage - dark theme stack layout
 @media (max-width: 768px) {
   .homepage-container .hero-section {
     padding: 2rem 0 !important;
+    background: #000 !important; // Black background on mobile
     
     .hero-content {
       flex-direction: column !important;
@@ -674,7 +668,8 @@ body {
       .author__avatar {
         width: 300px !important;
         height: 300px !important;
-        border-color: #444 !important; // Slightly lighter border on mobile
+        border: 2px solid #333 !important; // Dark border on mobile
+        box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // White glow on mobile
       }
     }
     
@@ -684,29 +679,56 @@ body {
       .hero-title {
         font-size: 1.6rem !important;
         text-align: center !important;
-        color: #fff !important;
+        color: #fff !important; // White text on mobile
       }
       
       .hero-subtitle {
         font-size: 1rem !important;
         text-align: center !important;
         margin-bottom: 1rem !important;
-        color: #ccc !important;
+        color: #ccc !important; // Light gray on mobile
       }
       
       .contact-info {
         text-align: center !important;
         margin-bottom: 1.5rem !important;
+        
+        p {
+          color: #ccc !important; // Light gray on mobile
+          
+          i {
+            color: #fff !important; // White icons on mobile
+          }
+          
+          a {
+            color: #4fc3f7 !important; // Light blue links on mobile
+            
+            &:hover {
+              color: #81d4fa !important;
+            }
+          }
+        }
       }
       
       .about-title {
         font-size: 1.3rem !important;
         text-align: center !important;
-        color: #fff !important;
+        color: #fff !important; // White text on mobile
       }
       
-      .about-content p {
-        color: #ddd !important;
+      .about-content {
+        p {
+          color: #ddd !important; // Light gray text on mobile
+        }
+        
+        .highlight-notice {
+          background: #1a1a1a !important; // Dark background on mobile
+          border-left: 4px solid #4fc3f7 !important; // Light blue accent on mobile
+          
+          p {
+            color: #4fc3f7 !important; // Light blue text on mobile
+          }
+        }
       }
       
       .social-links {
@@ -716,11 +738,13 @@ body {
         .btn--social {
           font-size: 0.8rem !important;
           padding: 0.5rem 1rem !important;
-          border-color: #444 !important;
+          background: transparent !important;
+          color: #fff !important; // White text on mobile
+          border: 2px solid #fff !important; // White border on mobile
           
           &:hover {
-            border-color: #4a9eff !important;
-            color: #4a9eff !important;
+            background: #fff !important; // White background on hover
+            color: #000 !important; // Black text on hover
           }
         }
       }
@@ -728,11 +752,62 @@ body {
   }
   
   .research-highlights {
-    margin: 0 -1rem;
+    margin: 0;
+    background: #111 !important; // Dark background on mobile
     
     .research-grid {
       padding: 0 1rem;
       grid-template-columns: 1fr;
+    }
+    
+    .research-card {
+      background: #1a1a1a !important; // Dark card background on mobile
+      border: 1px solid #333 !important; // Dark border on mobile
+      
+      &:hover {
+        border-color: #4fc3f7 !important; // Light blue border on hover
+      }
+      
+      .research-icon {
+        color: #4fc3f7 !important; // Light blue icons on mobile
+      }
+      
+      h3 {
+        color: #fff !important; // White text on mobile
+      }
+      
+      p {
+        color: #ccc !important; // Light gray text on mobile
+      }
+    }
+  }
+  
+  .news-section-home {
+    background: #000 !important; // Black background on mobile
+    
+    h2 {
+      color: #fff !important; // White text on mobile
+    }
+    
+    .news-item {
+      background: #1a1a1a !important; // Dark background on mobile
+      border: 1px solid #333 !important; // Dark border on mobile
+      
+      &:hover {
+        border-color: #4fc3f7 !important; // Light blue border on hover
+      }
+      
+      .news-date {
+        color: #4fc3f7 !important; // Light blue date on mobile
+      }
+      
+      h3 {
+        color: #fff !important; // White text on mobile
+      }
+      
+      p {
+        color: #ccc !important; // Light gray text on mobile
+      }
     }
   }
 }

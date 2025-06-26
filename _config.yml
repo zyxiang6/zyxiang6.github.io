@@ -13,7 +13,6 @@ url: "https://zyxiang6.github.io"
 baseurl: ""
 repository: "zyxiang6/zyxiang6.github.io"
 teaser: /assets/images/ziyu-headshot.jpg
-# logo: /assets/images/ziyu-headshot.jpg  # Remove logo from header
 masthead_title: "Ziyu Xiang"
 breadcrumbs: false
 words_per_minute: 200
