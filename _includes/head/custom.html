@@ -1,10 +1,10 @@
 <!-- Custom SEO Meta Tags -->
 <meta name="author" content="Ziyu Xiang">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
 
 <!-- Additional Keywords -->
-<meta name="keywords" content="Ziyu Xiang, 向子钰, Physics PhD, UC Berkeley, quantum materials, condensed matter physics, scanning tunneling microscopy, STM, 2D electron systems, Wigner crystals, quantum melting, moiré superlattices, strongly correlated systems, Feng Wang lab, ultrafast nano-optics">
+<meta name="keywords" content="Ziyu Xiang, 向子钰, physics, quantum materials, 2D materials, scanning tunneling microscopy, UC Berkeley, condensed matter physics, strongly correlated electrons, moiré superlattices, Wigner crystals, quantum many-body">
 
 <!-- Academic/Research specific meta -->
 <meta name="citation_author" content="Ziyu Xiang">
@@ -13,35 +13,138 @@
 <meta name="DC.subject" content="Physics, Quantum Materials, Condensed Matter">
 
 <!-- Open Graph Meta Tags -->
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Ziyu Xiang">
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Ziyu Xiang - Physics Research" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ziyu Xiang - PhD Student in Physics at UC Berkeley" />
+<meta property="og:description" content="Ziyu Xiang - PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials." />
+<meta property="og:url" content="https://zyxiang6.github.io" />
+<meta property="og:image" content="https://zyxiang6.github.io/assets/images/ziyu-full.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="600" />
 
 <!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@zyxiang6">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ziyu Xiang - PhD Student in Physics at UC Berkeley" />
+<meta name="twitter:description" content="PhD student studying strongly correlated 2D electron systems with scanning tunneling microscopy at UC Berkeley." />
+<meta name="twitter:image" content="https://zyxiang6.github.io/assets/images/ziyu-full.jpg" />
 
 <!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="447df939a6ff470b" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+<link rel="canonical" href="https://zyxiang6.github.io{{ page.url }}">
 
 <!-- JSON-LD Structured Data for Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Ziyu Xiang",
-  "url": "https://zyxiang6.github.io",
-  "description": "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zyxiang6.github.io/#person",
+      "name": "Ziyu Xiang",
+      "alternateName": "向子钰",
+      "url": "https://zyxiang6.github.io",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://zyxiang6.github.io/assets/images/ziyu-full.jpg",
+        "width": 600,
+        "height": 600
+      },
+      "jobTitle": "PhD Student in Physics",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University of California, Berkeley",
+        "url": "https://www.berkeley.edu"
+      },
+      "alumniOf": "University of California, Berkeley",
+      "knowsAbout": [
+        "Condensed Matter Physics",
+        "Quantum Materials",
+        "2D Materials",
+        "Scanning Tunneling Microscopy",
+        "Strongly Correlated Electron Systems",
+        "Moiré Superlattices",
+        "Quantum Many-Body Systems"
+      ],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en",
+        "https://orcid.org/0000-0002-3954-7631",
+        "https://www.linkedin.com/in/ziyu-xiang-8481292b3/",
+        "https://github.com/zyxiang6"
+      ],
+      "email": "zyxiang@berkeley.edu",
+      "nationality": "China"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zyxiang6.github.io/#website",
+      "url": "https://zyxiang6.github.io",
+      "name": "Ziyu Xiang - Physics Research",
+      "description": "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials.",
+      "author": {
+        "@id": "https://zyxiang6.github.io/#person"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://zyxiang6.github.io/search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zyxiang6.github.io/#organization",
+      "name": "UC Berkeley Physics Department",
+      "url": "https://physics.berkeley.edu",
+      "member": {
+        "@id": "https://zyxiang6.github.io/#person"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Additional meta for better crawling -->
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Enhanced cache control -->
+<meta http-equiv="Cache-Control" content="public, max-age=31536000">
+
+<!-- Additional structured data for academic profile -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zyxiang6.github.io"
+  },
+  "headline": "Research on Strongly Correlated 2D Electron Systems",
+  "description": "PhD research on quantum many-body phenomena in 2D materials using scanning tunneling microscopy",
   "author": {
     "@type": "Person",
-    "name": "Ziyu Xiang"
+    "name": "Ziyu Xiang",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of California, Berkeley"
+    }
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://zyxiang6.github.io/search/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "UC Berkeley Physics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zyxiang6.github.io/assets/images/ziyu-headshot.jpg"
+    }
+  },
+  "datePublished": "2024-12-25",
+  "dateModified": "2024-12-25"
 }
 </script> 

@@ -1,29 +1,20 @@
 # Site Settings
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
 # Site Information
 locale: "en-US"
 title: "Ziyu Xiang"
 title_separator: "-"
-subtitle: "PhD Student in Physics"
-name: "Ziyu Xiang"
+subtitle: "PhD Student in Physics at UC Berkeley"
+name: "Ziyu Xiang (向子钰)"
 description: "Ziyu Xiang - PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
 url: "https://zyxiang6.github.io"
 baseurl: ""
 repository: "zyxiang6/zyxiang6.github.io"
-
-# SEO Settings
-logo: "/assets/images/ziyu-headshot.jpg"
-social:
-  type: Person
-  name: Ziyu Xiang
-  links:
-    - "https://zyxiang6.github.io"
-    - "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
-    - "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
-    - "https://github.com/zyxiang6"
-    - "https://orcid.org/0000-0002-3954-7631"
+teaser: /assets/images/ziyu-headshot.jpg
+logo: /assets/images/ziyu-headshot.jpg
+masthead_title: "Ziyu Xiang"
 breadcrumbs: false
 words_per_minute: 200
 enable_copy_code_button: true
@@ -36,30 +27,24 @@ search_provider: lunr
 # Site Author
 author:
   name: "Ziyu Xiang"
-  avatar: "/assets/images/ziyu-headshot.jpg"
-  bio: "PhD Student in Physics at UC Berkeley<br>Studying strongly correlated 2D electron systems"
+  avatar: "/assets/images/ziyu-full.jpg"
+  bio: "PhD Student in Physics at UC Berkeley"
   location: "Berkeley, CA"
   email: "zyxiang@berkeley.edu"
   uri: "https://zyxiang6.github.io"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:zyxiang@berkeley.edu"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/zyxiang6"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
-    - label: "ResearchGate"
-      icon: "fab fa-fw fa-researchgate"
-      url: "#"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0002-3954-7631"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zyxiang6"
 
 # Site Footer
 footer:
@@ -161,9 +146,42 @@ defaults:
       comments: false
       share: true
       related: true
+      toc: false
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      toc: false
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Google Search Console verification
+google_site_verification: "447df939a6ff470b"
+
+# SEO settings
+social:
+  type: Person
+  name: "Ziyu Xiang"
+  links:
+    - "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
+    - "https://orcid.org/0000-0002-3954-7631"
+    - "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
+    - "https://github.com/zyxiang6"
+
+# Additional SEO
+tagline: "PhD Student in Physics at UC Berkeley"
+keywords: "Ziyu Xiang, physics, quantum, 2D materials, scanning tunneling microscopy, UC Berkeley"
+
+# Feed settings
+feed:
+  posts_limit: 20
+  excerpt_only: true
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: # Add your Google Analytics ID here if you have one
