@@ -404,15 +404,15 @@
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: 2rem !important;
+    gap: 3rem !important;
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 3rem 0 0 !important; // More padding on right, none on left
+    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
   }
   
   .profile-photo {
     flex: 0 0 450px !important;
-    margin-left: -3rem !important; // Move image much further left
+    margin-left: -12rem !important; // Align with header logo position
     
     .author__avatar {
       width: 450px !important;
@@ -426,8 +426,8 @@
   
   .hero-text {
     flex: 1 !important;
-    max-width: none !important;
-    padding-right: 4rem !important; // Even more space on the right
+    max-width: 70% !important; // Limit text width for better readability
+    padding-right: 6rem !important; // Maximum space on the right
     
     .hero-title {
       font-size: 1.4rem !important;
