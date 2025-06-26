@@ -426,10 +426,10 @@ body, html {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(2.5rem + 4vw) !important; // Slightly smaller gap to bring text closer
+    gap: calc(3rem + 5vw) !important; // Dynamic gap that adjusts with viewport
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 3rem 0 0 !important; // Reduce right padding slightly
+    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
   }
@@ -455,8 +455,8 @@ body, html {
   
   .hero-text {
     flex: 1 !important;
-    max-width: 75% !important; // Slightly wider text area
-    padding-right: 4rem !important; // Reduce right padding to make text wider
+    max-width: 75% !important; // Increase width by about 5% for About content
+    padding-right: 5rem !important; // Slightly reduce right padding to allow more text width
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -758,7 +758,7 @@ body, html {
   }
 }
 
-// Responsive alignment for different screen sizes - adjusted to move image slightly right
+// Responsive alignment for different screen sizes - moved closer to text
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
     margin-left: calc(-23vw) !important; // Larger screens - closer to text
