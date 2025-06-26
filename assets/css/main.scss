@@ -11,6 +11,10 @@
 
 // Header navigation text size
 .masthead {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+  
   .site-title {
     font-size: 1em; // Site title
   }
@@ -400,19 +404,24 @@
   padding: 2rem 0 !important;
   background: #fff !important;
   margin: -1rem -1rem 2rem -1rem !important;
+  position: relative !important;
   
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
     gap: 3rem !important;
-    max-width: none !important;
-    margin: 0 !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
     padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
+    position: relative !important;
   }
   
   .profile-photo {
-    flex: 0 0 450px !important;
-    margin-left: -20rem !important; // Align with header logo position
+    position: absolute !important;
+    left: max(1rem, calc((100vw - 1200px) / 2 + 1rem)) !important; // Always align with header logo
+    top: 2rem !important;
+    width: 450px !important;
+    flex: none !important;
     
     .author__avatar {
       width: 450px !important;
@@ -428,6 +437,7 @@
     flex: 1 !important;
     max-width: 70% !important; // Limit text width for better readability
     padding-right: 6rem !important; // Maximum space on the right
+    margin-left: 480px !important; // Leave space for absolutely positioned image
     
     .hero-title {
       font-size: 1.4rem !important;
