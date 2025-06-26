@@ -3,7 +3,8 @@ layout: single
 classes: wide homepage
 author_profile: false
 title: ""
-excerpt: ""
+show_title: false
+excerpt: "PhD Student in Physics | UC Berkeley | Quantum Materials & Scanning Tunneling Microscopy"
 ---
 
 <script>
@@ -93,37 +94,15 @@ html {
   color: #4fc3f7 !important;
 }
 
-/* Hide page title and content that we don't want */
-.page__title,
-.page__content h1,
-.entries-list,
-.archive__subtitle,
-.taxonomy__section,
-.home .page__content > h1,
-.home .page__content > h2,
-.home .page__content > h3,
-.layout--home .page__content > *:not(.homepage-container),
-.page__content > .entries-list,
-.page__content > .archive,
-.recent-posts,
-.posts-section {
-  display: none !important;
-}
-
-/* Social links - smaller and fit on one line - FORCE OVERRIDE */
-.homepage-container .social-links,
-.hero-text .social-links {
+/* Social links - smaller and fit on one line */
+.social-links {
   display: flex !important;
   gap: 0.4rem !important;
   flex-wrap: wrap !important;
   justify-content: flex-start !important;
-  margin-top: 1rem !important;
 }
 
-.homepage-container .social-links .btn--social,
-.hero-text .social-links .btn--social,
-.homepage-container .social-links a,
-.hero-text .social-links a {
+.social-links .btn--social {
   padding: 0.4rem 0.8rem !important;
   background: transparent !important;
   color: #fff !important;
@@ -134,14 +113,9 @@ html {
   font-size: 0.75rem !important;
   transition: all 0.3s ease !important;
   white-space: nowrap !important;
-  min-width: auto !important;
-  width: auto !important;
 }
 
-.homepage-container .social-links .btn--social:hover,
-.hero-text .social-links .btn--social:hover,
-.homepage-container .social-links a:hover,
-.hero-text .social-links a:hover {
+.social-links .btn--social:hover {
   background: #fff !important;
   color: #000 !important;
 }
@@ -209,10 +183,44 @@ html {
   display: block !important;
 }
 
-/* Remove hero overlays */
+/* Remove hero overlays and page title */
 .page__hero,
 .page__hero--overlay {
   display: none !important;
+}
+
+.page__title {
+  display: none !important;
+}
+
+.page__header {
+  display: none !important;
+}
+
+/* Hide recent posts section */
+.entries-list,
+.archive,
+.taxonomy__section {
+  display: none !important;
+}
+
+/* Force social links to be smaller */
+.homepage-container .social-links .btn--social {
+  padding: 0.3rem 0.6rem !important;
+  font-size: 0.7rem !important;
+  border: 1px solid #fff !important;
+  border-radius: 3px !important;
+}
+
+/* Make masthead consistent with other pages */
+.masthead {
+  padding: 1rem 0 !important;
+}
+
+.masthead__inner-wrap {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
 }
 </style>
 

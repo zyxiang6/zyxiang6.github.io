@@ -31,9 +31,13 @@ body.layout--home {
     z-index: 100 !important;
     height: auto !important;
     min-height: 4rem !important;
+    padding: 1rem 0 !important;
     
     .masthead__inner-wrap {
       background-color: #000 !important;
+      max-width: 1280px !important;
+      margin: 0 auto !important;
+      padding: 0 1rem !important;
       
       .site-title {
         color: #fff !important;
@@ -136,7 +140,8 @@ body.layout--home {
 // Additional override for homepage masthead - force display
 .layout--home .masthead,
 .homepage .masthead,
-body.layout--home .masthead {
+body.layout--home .masthead,
+.layout--single .masthead {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -145,7 +150,7 @@ body.layout--home .masthead {
 }
 
 // Override any theme that might hide the masthead on home layout
-.layout--home {
+.layout--home, .layout--single {
   .masthead {
     display: block !important;
   }
@@ -153,6 +158,25 @@ body.layout--home .masthead {
   .page__hero,
   .page__hero--overlay {
     display: none !important;
+  }
+}
+
+// Hide unwanted sections on homepage
+.homepage {
+  .page__title,
+  .page__header,
+  .entries-list,
+  .archive,
+  .taxonomy__section,
+  .archive__subtitle {
+    display: none !important;
+  }
+  
+  // Force smaller social links
+  .social-links .btn--social {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.7rem !important;
+    gap: 0.3rem !important;
   }
 }
 
@@ -598,15 +622,6 @@ body.homepage, .homepage {
   overflow: visible !important;
   width: 100% !important;
   
-  // Hide any unwanted page titles or content
-  .page__title,
-  .page__content h1,
-  .entries-list,
-  .archive__subtitle,
-  .taxonomy__section {
-    display: none !important;
-  }
-  
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
@@ -711,25 +726,21 @@ body.homepage, .homepage {
     
           .social-links {
         display: flex !important;
-        gap: 0.4rem !important;
+        gap: 0.3rem !important;
         flex-wrap: wrap !important;
         justify-content: flex-start !important;
-        margin-top: 1rem !important;
         
-        .btn--social,
-        a {
-          padding: 0.4rem 0.8rem !important;
+        .btn--social {
+          padding: 0.3rem 0.6rem !important;
           background: transparent !important;
           color: #fff !important; // White text
           border: 1px solid #fff !important; // White border
-          border-radius: 4px !important;
+          border-radius: 3px !important;
           text-decoration: none !important;
           font-weight: 500 !important;
-          font-size: 0.75rem !important;
+          font-size: 0.7rem !important;
           transition: all 0.3s ease !important;
           white-space: nowrap !important;
-          min-width: auto !important;
-          width: auto !important;
           
           &:hover {
             background: #fff !important; // White background on hover
