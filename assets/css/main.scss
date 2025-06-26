@@ -426,10 +426,10 @@ body, html {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(3rem + 5vw) !important; // Dynamic gap that adjusts with viewport
+    gap: calc(2rem + 3vw) !important; // Reduce gap for better image visibility in smaller windows
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
+    padding: 0 3rem 0 0 !important; // Reduce padding for better space management
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
   }
@@ -453,10 +453,10 @@ body, html {
     }
   }
   
-  .hero-text {
-    flex: 1 !important;
-    max-width: 75% !important; // Increase width by about 5% for About content
-    padding-right: 5rem !important; // Slightly reduce right padding to allow more text width
+      .hero-text {
+      flex: 1 !important;
+      max-width: 68% !important; // Reduce text width to ensure image visibility in smaller windows
+      padding-right: 4rem !important; // Further reduce right padding for better balance
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -758,7 +758,7 @@ body, html {
   }
 }
 
-// Responsive alignment for different screen sizes - moved closer to text
+// Responsive alignment for different screen sizes - optimized for image visibility
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
     margin-left: calc(-23vw) !important; // Larger screens - closer to text
@@ -767,13 +767,21 @@ body, html {
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-26vw) !important; // Medium screens - closer to text
+    margin-left: calc(-24vw) !important; // Medium screens - bring image more to center
+  }
+  
+  .homepage-container .hero-section .hero-text {
+    max-width: 65% !important; // Reduce text width on medium screens
   }
 }
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-30vw) !important; // Tablet landscape - closer to text
+    margin-left: calc(-22vw) !important; // Tablet landscape - more visible
+  }
+  
+  .homepage-container .hero-section .hero-text {
+    max-width: 62% !important; // Further reduce text width on tablets
   }
 }
 
