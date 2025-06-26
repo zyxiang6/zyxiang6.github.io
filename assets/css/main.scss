@@ -426,17 +426,17 @@ body, html {
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: calc(2rem + 3vw) !important; // Reduce gap for better image visibility in smaller windows
+    gap: calc(2rem + 3vw) !important; // Reduced gap to bring image closer to text
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 3rem 0 0 !important; // Reduce padding for better space management
+    padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
   }
   
   .profile-photo {
     flex: 0 0 450px !important;
-    margin-left: calc(max(-28vw, -18rem)) !important; // Move image slightly right, closer to text
+    margin-left: calc(max(-25vw, -15rem)) !important; // Move image closer to text
     position: relative !important;
     z-index: 999 !important; // Very high z-index to ensure image appears above everything
     min-width: 450px !important; // Prevent shrinking
@@ -453,10 +453,10 @@ body, html {
     }
   }
   
-      .hero-text {
-      flex: 1 !important;
-      max-width: 68% !important; // Reduce text width to ensure image visibility in smaller windows
-      padding-right: 4rem !important; // Further reduce right padding for better balance
+  .hero-text {
+    flex: 1 !important;
+    max-width: 70% !important; // Limit text width for better readability
+    padding-right: 6rem !important; // Maximum space on the right
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -758,30 +758,22 @@ body, html {
   }
 }
 
-// Responsive alignment for different screen sizes - optimized for image visibility
+// Responsive alignment for different screen sizes - adjusted closer to text
 @media (min-width: 1400px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-23vw) !important; // Larger screens - closer to text
+    margin-left: calc(-20vw) !important; // Larger screens - closer to text
   }
 }
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-24vw) !important; // Medium screens - bring image more to center
-  }
-  
-  .homepage-container .hero-section .hero-text {
-    max-width: 65% !important; // Reduce text width on medium screens
+    margin-left: calc(-23vw) !important; // Medium screens - closer to text
   }
 }
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .profile-photo {
-    margin-left: calc(-22vw) !important; // Tablet landscape - more visible
-  }
-  
-  .homepage-container .hero-section .hero-text {
-    max-width: 62% !important; // Further reduce text width on tablets
+    margin-left: calc(-27vw) !important; // Tablet landscape - closer to text
   }
 }
 
