@@ -13,6 +13,7 @@ url: "https://zyxiang6.github.io"
 baseurl: ""
 repository: "zyxiang6/zyxiang6.github.io"
 teaser: /assets/images/ziyu-headshot.jpg
+logo: /assets/images/ziyu-headshot.jpg
 masthead_title: "Ziyu Xiang"
 breadcrumbs: false
 words_per_minute: 200
@@ -57,9 +58,6 @@ footer:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
-    - label: "ResearchGate"
-      icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Ziyu-Xiang-6"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
@@ -112,12 +110,13 @@ kramdown:
 permalink: /:categories/:title/
 timezone: America/Los_Angeles
 
-# Pagination (disabled for homepage)
-# paginate: 5
-# paginate_path: /page:num/
+# Pagination
+paginate: 5
+paginate_path: /page:num/
 
 # Plugins
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-include-cache
@@ -172,7 +171,6 @@ social:
   links:
     - "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
     - "https://orcid.org/0000-0002-3954-7631"
-    - "https://www.researchgate.net/profile/Ziyu-Xiang-6"
     - "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
     - "https://github.com/zyxiang6"
 
