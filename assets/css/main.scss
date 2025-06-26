@@ -390,9 +390,9 @@
 
 // Homepage container
 .homepage-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: none !important; // Remove width constraint
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 // Hero section - square image left, about content right - FORCED OVERRIDE
@@ -404,14 +404,15 @@
   .hero-content {
     display: flex !important;
     align-items: flex-start !important;
-    gap: 2.5rem !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
+    gap: 1.5rem !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 1rem 0 0.5rem !important;
   }
   
   .profile-photo {
     flex: 0 0 600px !important;
+    margin-left: -1rem !important; // Move image further left
     
     .author__avatar {
       width: 600px !important;
@@ -425,6 +426,8 @@
   
   .hero-text {
     flex: 1 !important;
+    max-width: none !important;
+    padding-right: 2rem !important; // Add more space on the right
     
     .hero-title {
       font-size: 1.4rem !important;
