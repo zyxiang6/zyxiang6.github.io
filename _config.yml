@@ -57,6 +57,9 @@ footer:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Ziyu-Xiang-6"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
@@ -170,6 +173,7 @@ social:
   links:
     - "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
     - "https://orcid.org/0000-0002-3954-7631"
+    - "https://www.researchgate.net/profile/Ziyu-Xiang-6"
     - "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
     - "https://github.com/zyxiang6"
 
@@ -187,3 +191,4 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: # Add your Google Analytics ID here if you have one
+    

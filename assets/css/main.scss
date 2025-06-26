@@ -5,7 +5,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
 @import "minimal-mistakes"; /* main partials */
 
-/* FORCE CACHE REFRESH - Homepage Dark Theme v6.0 - Jan 2025 */
+/* FORCE CACHE REFRESH - Homepage Dark Theme v7.0 - Jan 2025 */
 
 // ========================================
 // GLOBAL NAVIGATION FIXES - REMOVE SEARCH TAB, KEEP MAGNIFYING GLASS
@@ -420,7 +420,7 @@ body.layout--home .masthead,
 }
 
 // ========================================
-// HOMEPAGE SPECIFIC STYLES - DARK THEME WITH PROPER ALIGNMENT
+// HOMEPAGE SPECIFIC STYLES - DARK THEME WITH HEADER LOGO ALIGNMENT
 // ========================================
 
 // Homepage container
@@ -434,7 +434,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - CENTERED on page, independent from sections below
+// Hero section - ALIGNED WITH HEADER LOGO (not centered, not with lower sections)
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -447,17 +447,19 @@ body.layout--home .masthead,
     align-items: flex-start !important;
     gap: 3rem !important;
     
-    // FIXED: Center hero content independently, not aligned with sections below
-    max-width: 1200px !important;
-    margin: 0 auto !important; // This centers the hero content on the page
-    padding: 0 2rem !important;
+    // CRITICAL FIX: Align with header logo position, not centered or with lower sections
+    max-width: none !important; // Remove max-width constraint
+    margin: 0 !important; // Remove auto centering
+    padding-left: 1rem !important; // Align with header logo left edge
+    padding-right: 2rem !important;
     position: relative !important;
     
-    // PC specific - ensure centering
+    // PC specific - align with header logo
     @media (min-width: 769px) {
-      max-width: 1200px !important;
-      margin: 0 auto !important; // Center on page, independent from other sections
-      padding: 0 2rem !important;
+      max-width: none !important; // No width constraint
+      margin: 0 !important; // No centering
+      padding-left: 1rem !important; // Same as header logo padding
+      padding-right: 2rem !important;
     }
     
     // Mobile specific - keep current behavior
@@ -936,6 +938,94 @@ body.layout--home .masthead,
           &:hover {
             color: #2c3e50 !important; // No hover effect on mobile
           }
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// FOOTER STYLING - SMALLER TEXT SIZE
+// ========================================
+
+// Make footer text smaller across all pages
+.page__footer {
+  font-size: 0.8rem !important; // Smaller base footer text
+  
+  .page__footer-follow {
+    font-size: 0.75rem !important; // Smaller "Follow:" text
+    
+    .social-icons {
+      .social-icon {
+        font-size: 0.9rem !important; // Slightly smaller social icons
+      }
+    }
+  }
+  
+  .page__footer-copyright {
+    font-size: 0.7rem !important; // Smaller copyright text
+    color: #ccc !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  // Footer links styling
+  ul {
+    li {
+      font-size: 0.75rem !important; // Smaller footer link text
+      
+      a {
+        font-size: 0.75rem !important;
+        
+        i {
+          font-size: 0.8rem !important; // Smaller icons
+        }
+      }
+    }
+  }
+}
+
+// Homepage specific footer styling (dark theme)
+.homepage .page__footer {
+  background-color: #000 !important;
+  border-top: 1px solid #333 !important;
+  color: #fff !important;
+  font-size: 0.8rem !important;
+  
+  .page__footer-follow {
+    color: #fff !important;
+    font-size: 0.75rem !important;
+    
+    .social-icons {
+      .social-icon {
+        color: #fff !important;
+        font-size: 0.9rem !important;
+        
+        &:hover {
+          color: #4fc3f7 !important;
+        }
+      }
+    }
+  }
+  
+  .page__footer-copyright {
+    color: #ccc !important;
+    font-size: 0.7rem !important;
+  }
+  
+  // Footer links for homepage
+  ul {
+    li {
+      a {
+        color: #fff !important;
+        font-size: 0.75rem !important;
+        
+        &:hover {
+          color: #4fc3f7 !important;
+        }
+        
+        i {
+          color: #fff !important;
+          font-size: 0.8rem !important;
         }
       }
     }
