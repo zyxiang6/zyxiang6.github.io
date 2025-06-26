@@ -1,11 +1,23 @@
 ---
-layout: home
+layout: splash
 title: "Ziyu Xiang - PhD Student in Physics at UC Berkeley"
 description: "Ziyu Xiang is a PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
 keywords: "Ziyu Xiang, Physics PhD, UC Berkeley, quantum materials, 2D electron systems, scanning tunneling microscopy, Wigner crystals, moiré superlattices"
 author: "Ziyu Xiang"
 image: "/assets/images/ziyu-full.jpg"
 canonical_url: "https://zyxiang6.github.io/"
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+excerpt: "PhD Student in Physics • UC Berkeley • Quantum Materials & Scanning Tunneling Microscopy"
+intro: 
+  - excerpt: "PhD Student in Physics • UC Berkeley • Quantum Materials & Scanning Tunneling Microscopy"
+feature_row:
+  - title: "View Research Publications"
+    excerpt: "Explore my publications in Nature, Science, and other top-tier journals"
+    url: "/publications/"
+    btn_label: "Publications"
+    btn_class: "btn--primary"
 ---
 
 <script type="application/ld+json">
@@ -53,99 +65,116 @@ canonical_url: "https://zyxiang6.github.io/"
 }
 </script>
 
-<div class="homepage-container">
-  
-  <!-- Main Hero Section with Square Image and About Content -->
-  <div class="hero-section">
-    <div class="hero-content">
-      <div class="profile-photo">
-        <img src="/assets/images/ziyu-full.jpg" alt="Ziyu Xiang" class="author__avatar">
-      </div>
-      <div class="hero-text">
-        <h1 class="hero-title">Ziyu Xiang (向子钰)</h1>
-        <p class="hero-subtitle">PhD Student in Physics at UC Berkeley</p>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> <a href="mailto:zyxiang@berkeley.edu">zyxiang@berkeley.edu</a></p>
-        </div>
-        
-        <h2 class="about-title">About</h2>
-        <div class="about-content">
-          <p>I am a fourth-year Ph.D. student in Physics at UC Berkeley, supervised by Prof. Feng Wang and also a member of the Ultrafast Nano-Optics Group. I earned my B.Sc. (2020) in Physics from the University of Chinese Academy of Sciences (UCAS) advised by Prof. Wu Zhou. I also served as a research assistant at UC Berkeley with Prof. Feng Wang during my undergraduate studies.</p>
-          
-          <p>I bring advanced experimental techniques to quantum materials research and condensed matter physics, broadly including four key research themes. (1) <strong>Quantum many-body phenomena</strong> leverages scanning tunneling microscopy for studying Wigner crystals, quantum melting, and strongly correlated electron systems across large-scale 2D materials. (2) <strong>Moiré superlattices</strong> focuses on artificial atoms and excited states, ensuring reliable characterization of van der Waals heterostructures in real-world measurements. (3) <strong>Advanced microscopy</strong> addresses photocurrent tunneling microscopy, spatial resolution enhancement, and single-electron sensitivity, promoting precise quantum state imaging. (4) <strong>2D material fabrication</strong> integrates various techniques—from exfoliation to lithography—to enhance device performance and experimental capability in quantum material systems.</p>
+<style>
+.page__hero {
+  background-color: #000 !important;
+  color: white !important;
+  text-align: center;
+  padding: 8rem 0;
+}
 
-          <div class="highlight-notice">
-            <p><strong>Note:</strong> I will be on the academic job market 2026. Feel free to contact me if you know of a position for which I could be a fit.</p>
-          </div>
-        </div>
-        
-        <div class="social-links">
-          <a href="/cv/" class="btn btn--social">CV</a>
-          <a href="https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en" class="btn btn--social">Google Scholar</a>
-          <a href="https://www.researchgate.net/profile/Ziyu-Xiang-6" class="btn btn--social">ResearchGate</a>
-          <a href="https://www.linkedin.com/in/ziyu-xiang-8481292b3/" class="btn btn--social">LinkedIn</a>
-          <a href="https://github.com/zyxiang6" class="btn btn--social">Github</a>
-          <a href="https://orcid.org/0000-0002-3954-7631" class="btn btn--social">ORCID</a>
-        </div>
-      </div>
-    </div>
-  </div>
+.page__hero .page__hero-caption {
+  color: white !important;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
 
-  <!-- Research Highlights -->
-  <section class="research-highlights">
-    <div class="content-wrapper">
-      <h2>Research Highlights</h2>
-      <div class="research-grid">
-        <div class="research-card">
-          <div class="research-icon">
-            <i class="fas fa-atom"></i>
-          </div>
-          <h3>Quantum Many-Body Systems</h3>
-          <p>Investigating Wigner crystals, quantum melting, and strongly correlated electron phenomena using advanced scanning tunneling microscopy.</p>
-        </div>
-        <div class="research-card">
-          <div class="research-icon">
-            <i class="fas fa-layer-group"></i>
-          </div>
-          <h3>Moiré Superlattices</h3>
-          <p>Characterizing artificial atoms and excited states in van der Waals heterostructures with nanoscale precision.</p>
-        </div>
-        <div class="research-card">
-          <div class="research-icon">
-            <i class="fas fa-microscope"></i>
-          </div>
-          <h3>Advanced Microscopy</h3>
-          <p>Developing photocurrent tunneling microscopy techniques for single-electron sensitivity and quantum state imaging.</p>
-        </div>
-        <div class="research-card">
-          <div class="research-icon">
-            <i class="fas fa-microchip"></i>
-          </div>
-          <h3>2D Material Fabrication</h3>
-          <p>Integrating fabrication techniques from exfoliation to lithography for enhanced quantum material device performance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.page__title {
+  color: white !important;
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  margin-bottom: 1rem !important;
+}
 
-  <!-- Latest News -->
-  <section class="news-section-home">
-    <div class="content-wrapper">
-      <h2>Latest News</h2>
-      <div class="news-grid">
-        <div class="news-item">
-          <div class="news-date">January 2025</div>
-          <h3>Science Publication</h3>
-          <p>Our paper on quantum melting in disordered 2D Wigner solids was published in <em>Science</em>.</p>
-        </div>
-        
-        <div class="news-item">
-          <div class="news-date">September 2024</div>
-          <h3>Kavli Fellowship</h3>
-          <p>Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.archive__item-excerpt {
+  color: #ccc !important;
+  font-size: 1.2rem !important;
+}
 
-</div>
+.btn--primary {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+  font-weight: bold !important;
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn--primary:hover {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+.feature__wrapper {
+  margin-top: 3rem;
+}
+
+.feature__item {
+  text-align: center;
+}
+
+.feature__item .archive__item-title {
+  color: white !important;
+  font-size: 1.5rem !important;
+}
+
+.feature__item .archive__item-excerpt {
+  color: #ccc !important;
+}
+
+/* Hide recent posts section */
+.list__item {
+  display: none !important;
+}
+
+.archive {
+  background-color: #000 !important;
+}
+
+.page__content {
+  background-color: #000 !important;
+}
+
+body {
+  background-color: #000 !important;
+}
+
+.masthead {
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+.masthead__inner-wrap {
+  background-color: transparent !important;
+}
+
+.greedy-nav {
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+.site-title {
+  color: white !important;
+}
+
+.greedy-nav a {
+  color: white !important;
+}
+
+.page__footer {
+  background-color: #111 !important;
+  color: white !important;
+}
+
+.page__footer-copyright {
+  color: #ccc !important;
+}
+
+.page__footer a {
+  color: #ccc !important;
+}
+</style>
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}

@@ -117,6 +117,10 @@ timezone: America/Los_Angeles
 paginate: 5
 paginate_path: /page:num/
 
+# Posts on homepage
+show_excerpts: false
+paginate_path: /posts/page:num/
+
 # Plugins
 plugins:
   - jekyll-paginate
