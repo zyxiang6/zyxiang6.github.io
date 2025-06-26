@@ -8,6 +8,46 @@
 /* FORCE CACHE REFRESH - Homepage Dark Theme v4.0 - Jan 2025 */
 
 // ========================================
+// GLOBAL NAVIGATION FIXES - ALL PAGES
+// ========================================
+
+// Hide search tab in navigation - keep only magnifying glass icon
+.masthead .masthead__menu-item a[href*="search"] {
+  display: none !important;
+}
+
+// Style search toggle - remove box, make it clean floating element
+.masthead .search__toggle {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.5rem !important;
+  
+  &:hover {
+    background: rgba(0,0,0,0.1) !important;
+    border-radius: 4px !important;
+  }
+}
+
+// Fix mobile menu dropdown styling for all pages
+.masthead .greedy-nav .hidden-links {
+  background: #fff !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  
+  a {
+    color: #333 !important;
+    background: #fff !important;
+    border-bottom: 1px solid #eee !important;
+    
+    &:hover {
+      color: #2c3e50 !important;
+      background: #f8f9fa !important;
+    }
+  }
+}
+
+// ========================================
 // HOMEPAGE DARK THEME - EXACT SAME POSITIONING AS OTHER PAGES
 // ========================================
 
@@ -72,24 +112,47 @@ body.layout--home {
             }
           }
           
-          // Hide mobile menu button on desktop - prevent duplication
+          // Mobile menu button styling for homepage
           .greedy-nav__toggle {
-            @media (min-width: 769px) {
-              display: none !important;
+            color: #fff !important;
+            background: transparent !important;
+            border: 1px solid #fff !important;
+            
+            &:hover {
+              background: rgba(255,255,255,0.1) !important;
+            }
+          }
+          
+          // Fix mobile dropdown for homepage
+          .hidden-links {
+            background: #000 !important;
+            border: 1px solid #333 !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+            
+            a {
+              color: #fff !important;
+              background: #000 !important;
+              border-bottom: 1px solid #333 !important;
+              
+              &:hover {
+                color: #4fc3f7 !important;
+                background: #111 !important;
+              }
             }
           }
         }
       }
       
-      // Search toggle styling
+      // Search toggle styling for homepage
       .search__toggle {
         color: #fff !important;
         background-color: transparent !important;
-        border: 1px solid #fff !important;
+        border: none !important;
         
         &:hover {
-          color: #000 !important;
-          background-color: #fff !important;
+          color: #4fc3f7 !important;
+          background: rgba(255,255,255,0.1) !important;
+          border-radius: 4px !important;
         }
       }
     }
@@ -390,7 +453,7 @@ body.layout--home .masthead,
   color: #fff !important;
 }
 
-// Hero section - dark theme
+// Hero section - dark theme with proper alignment
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
   background: #000 !important;
@@ -402,10 +465,21 @@ body.layout--home .masthead,
     display: flex !important;
     align-items: flex-start !important;
     gap: 3rem !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
+    max-width: none !important; // Remove max-width constraint
+    margin: 0 !important;
+    padding: 0 2rem !important; // Base padding
     position: relative !important;
+    width: 100% !important;
+    
+    // Align with header left edge - responsive padding
+    @media (min-width: 769px) {
+      padding-left: calc((100vw - 1200px) / 2 + 2rem) !important;
+      padding-right: calc((100vw - 1200px) / 2 + 2rem) !important;
+    }
+    
+    @media (max-width: 768px) {
+      padding: 0 1rem !important;
+    }
   }
   
   .profile-photo {
