@@ -5,13 +5,13 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; /* skin */
 @import "minimal-mistakes"; /* main partials */
 
-/* FORCE CACHE REFRESH - Homepage Dark Theme v3.1 - Jan 2025 */
+/* FORCE CACHE REFRESH - Homepage Dark Theme v4.0 - Jan 2025 */
 
 // ========================================
-// HOMEPAGE DARK THEME - CRITICAL OVERRIDES
+// HOMEPAGE DARK THEME - EXACT SAME POSITIONING AS OTHER PAGES
 // ========================================
 
-// Force dark theme for homepage - highest specificity
+// Force dark theme for homepage - ONLY change colors, keep exact same positioning
 html.homepage, 
 body.homepage, 
 .page.homepage,
@@ -20,15 +20,15 @@ body.layout--home {
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme - ONLY COLORS, SAME POSITIONING AS OTHER PAGES
+  // Header/masthead dark theme - EXACT SAME POSITIONING AS OTHER PAGES
   .masthead {
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
-    // Do not override any positioning - use theme defaults
+    // DO NOT OVERRIDE ANY POSITIONING - use theme defaults exactly like other pages
     
     .masthead__inner-wrap {
       background-color: #000 !important;
-      // Use theme default positioning
+      // Use theme default positioning - EXACT SAME AS OTHER PAGES
       
       .site-title {
         color: #fff !important;
@@ -71,6 +71,25 @@ body.layout--home {
               }
             }
           }
+          
+          // Hide mobile menu button on desktop - prevent duplication
+          .greedy-nav__toggle {
+            @media (min-width: 769px) {
+              display: none !important;
+            }
+          }
+        }
+      }
+      
+      // Search toggle styling
+      .search__toggle {
+        color: #fff !important;
+        background-color: transparent !important;
+        border: 1px solid #fff !important;
+        
+        &:hover {
+          color: #000 !important;
+          background-color: #fff !important;
         }
       }
     }
@@ -114,21 +133,9 @@ body.layout--home {
   #main {
     background-color: #000 !important;
   }
-  
-  // Skip links
-  .skip-links {
-    ul {
-      li {
-        a {
-          color: #fff !important;
-          background: #000 !important;
-        }
-      }
-    }
-  }
 }
 
-// Additional override for homepage masthead - force display
+// Force masthead display - EXACT SAME AS OTHER PAGES
 .layout--home .masthead,
 .homepage .masthead,
 body.layout--home .masthead,
@@ -136,90 +143,54 @@ body.layout--home .masthead,
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  position: relative !important;
-  z-index: 999 !important;
-}
-
-// Override any theme that might hide the masthead on home layout
-.layout--home, .layout--single {
-  .masthead {
-    display: block !important;
-  }
-  
-  .page__hero,
-  .page__hero--overlay {
-    display: none !important;
-  }
+  // DO NOT OVERRIDE position, z-index, or other positioning - use theme defaults
 }
 
 // Hide unwanted sections on homepage
 .homepage {
   .page__title,
   .page__header,
+  .page__hero,
+  .page__hero--overlay,
   .entries-list,
   .archive,
   .taxonomy__section,
   .archive__subtitle {
     display: none !important;
   }
-  
-  // Force smaller social links
-  .social-links .btn--social {
-    padding: 0.3rem 0.6rem !important;
-    font-size: 0.7rem !important;
-    gap: 0.3rem !important;
-  }
-  
-  // Remove any custom spacing between header and content
-  .homepage-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  
-  .homepage-container .hero-section {
-    margin-top: 0 !important;
-    padding-top: 1rem !important;
-  }
 }
 
-// Global container overrides to prevent image clipping
-body {
-  overflow-x: visible !important;
-}
-
-.page {
-  overflow: visible !important;
-}
-
-.page__content {
-  overflow: visible !important;
-}
-
-.layout--home {
-  overflow: visible !important;
-  
-  .page {
-    overflow: visible !important;
-  }
-  
-  .page__content {
-    overflow: visible !important;
-    max-width: none !important;
+// Fix mobile spacing issues - remove extra gaps
+@media (max-width: 768px) {
+  .homepage {
+    .masthead {
+      // Keep exact same positioning as other pages
+      margin-bottom: 0 !important;
+    }
+    
+    .page__content {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    .initial-content {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    .homepage-container {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    .hero-section {
+      margin-top: 0 !important;
+      padding-top: 0.5rem !important;
+    }
   }
 }
 
-// Main content wrapper fixes
-#main {
-  overflow: visible !important;
-  max-width: none !important;
-}
-
-.page__inner-wrap {
-  overflow: visible !important;
-  max-width: none !important;
-}
-
-// Custom CSS adjustments
+// Custom CSS adjustments for other pages
 
 // Header navigation text size
 .masthead {
@@ -234,8 +205,6 @@ body {
   }
 }
 
-// Sidebar text sizing moved to bottom of file for better organization
-
 // Decrease content text size for pages (not homepage)
 .page__content {
   p, li, ul, ol {
@@ -244,120 +213,6 @@ body {
   
   h1, h2, h3, h4, h5, h6 {
     font-size: 0.9em; // Smaller headings in content
-  }
-}
-
-// Homepage specific styling - IMPORTANT: Force these styles
-.layout--home {
-  // Make intro section 100% width and left-aligned like content below
-  .feature__wrapper {
-    max-width: 100% !important;
-    margin: 0 !important;
-    text-align: left !important;
-    
-    .feature__item {
-      text-align: left !important;
-      width: 100% !important;
-      
-      .archive__item-excerpt {
-        font-size: 100% !important; // 100% size for intro text
-        text-align: left !important;
-        margin: 0 !important;
-      }
-    }
-  }
-  
-  .page__content {
-    // Keep homepage intro text at 100% size
-    p, li {
-      font-size: 100% !important; // 100% size for homepage intro
-    }
-    
-    // Latest News section - match intro size
-    h2 {
-      font-size: 100% !important; // Latest News heading
-    }
-  }
-  
-  // Latest News section same size as intro
-  .news-section {
-    font-size: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    
-    .news-item {
-      h3 {
-        font-size: 100% !important; // Same size as intro
-      }
-      
-      p {
-        font-size: 100% !important; // Same size as intro
-      }
-    }
-  }
-  
-  // Recent posts section - match intro size
-  .entries-list {
-    font-size: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    
-    .list__item {
-      .archive__item-title {
-        font-size: 100% !important; // Post titles same size
-      }
-      
-      .archive__item-excerpt {
-        font-size: 100% !important; // Post excerpts same size
-      }
-      
-      .page__meta {
-        font-size: 100% !important; // Post meta same size
-      }
-    }
-  }
-  
-  // Any other content sections
-  .archive__subtitle {
-    font-size: 100% !important;
-  }
-  
-  // All homepage content left-aligned
-  * {
-    text-align: left !important;
-  }
-}
-
-// Additional homepage layout fixes
-.home .page__content {
-  max-width: none !important;
-}
-
-.home .feature__item--left {
-  .archive__item-excerpt {
-    text-align: left !important;
-    margin-left: 0 !important;
-  }
-}
-
-// Force all homepage text to be consistent size and left-aligned
-.layout--home {
-  .page__content {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: 100% !important;
-      text-align: left !important;
-    }
-    
-    p, li, ul, ol {
-      font-size: 100% !important;
-      text-align: left !important;
-    }
-  }
-  
-  // Specific targeting for news and posts sections
-  h2, h3 {
-    font-size: 100% !important;
-    text-align: left !important;
   }
 }
 
@@ -385,24 +240,23 @@ body {
 // Publication page styling - horizontal layout with proper alignment
 .publication-item {
   display: flex;
-  align-items: flex-start; // Keep flex-start for top alignment
+  align-items: flex-start;
   margin-bottom: 1.8em;
   padding: 1em 0;
   border-bottom: 1px solid #e8e8e8;
   
   .publication-image {
-    flex: 0 0 210px; // Fixed width for images
+    flex: 0 0 210px;
     margin-right: 1.2em;
-    height: 140px; // 3:2 aspect ratio (210:140)
+    height: 140px;
     overflow: hidden;
-    // REMOVED: margin-top: -0.1em; - This was causing the upward shift
-    display: flex; // Add flex to center image in container
-    align-items: center; // Center image vertically in its container
+    display: flex;
+    align-items: center;
     
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; // Crop images to fit frame while maintaining aspect ratio
+      object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.12);
       border: 1px solid #f0f0f0;
@@ -414,11 +268,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 0.2em; // Add small padding to better align with image center
+    padding-top: 0.2em;
     
     h4 {
-      font-size: 0.85em !important; // Smaller title size
-      margin: 0; // Reset all margins
+      font-size: 0.85em !important;
+      margin: 0;
       margin-bottom: 0.3em;
       font-weight: 600;
       line-height: 1.3;
@@ -426,21 +280,21 @@ body {
     }
     
     .journal-info {
-      font-size: 0.7em !important; // Smaller journal info
+      font-size: 0.7em !important;
       margin-bottom: 0.25em;
       color: #666;
       font-weight: 500;
     }
     
     .authors {
-      font-size: 0.65em !important; // Smaller author text
+      font-size: 0.65em !important;
       margin-bottom: 0.3em;
       color: #555;
       line-height: 1.3;
     }
     
     .doi-link {
-      font-size: 0.6em !important; // Smaller DOI link
+      font-size: 0.6em !important;
       
       a {
         color: #3498db;
@@ -467,15 +321,15 @@ body {
       flex: none;
       margin-right: 0;
       margin-bottom: 1em;
-      margin-top: 0; // Reset margin on mobile
-      width: 240px; // Bigger on mobile maintaining 3:2 ratio
-      height: 160px; // 3:2 aspect ratio
+      margin-top: 0;
+      width: 240px;
+      height: 160px;
       max-width: none;
     }
     
     .publication-content {
       text-align: left;
-      padding-top: 0; // Remove padding on mobile
+      padding-top: 0;
     }
   }
 }
@@ -488,36 +342,36 @@ body {
   }
 }
 
-// Make sidebar text smaller - use specific selectors to override theme
+// Make sidebar text smaller
 .sidebar .author__profile,
 .page__sidebar .author__profile {
-  font-size: 0.9em !important; // Base smaller sidebar text
+  font-size: 0.9em !important;
 }
 
 .sidebar .author__bio,
 .page__sidebar .author__bio {
-  font-size: 0.9em !important; // Just a bit smaller bio text
+  font-size: 0.9em !important;
   line-height: 1.3 !important;
 }
 
 .sidebar .author__urls,
 .page__sidebar .author__urls {
-  font-size: 0.9em !important; // Just a bit smaller social links
+  font-size: 0.9em !important;
 }
 
 .sidebar .author__urls a,
 .page__sidebar .author__urls a {
-  font-size: 0.9em !important; // Ensure link text is also smaller
+  font-size: 0.9em !important;
 }
 
 .sidebar .author__name,
 .page__sidebar .author__name {
-  font-size: 1.1em !important; // Keep name size reasonable
+  font-size: 1.1em !important;
 }
 
 .sidebar .author__avatar img,
 .page__sidebar .author__avatar img {
-  width: 110px !important; // Keep avatar size
+  width: 110px !important;
   height: 110px !important;
 }
 
@@ -525,101 +379,21 @@ body {
 // HOMEPAGE SPECIFIC STYLES - DARK THEME
 // ========================================
 
-// Homepage-only full dark theme - header and everything
-.page__content .homepage-container {
+// Homepage container
+.homepage-container {
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow: visible !important;
   width: 100% !important;
-  position: relative !important;
-  background: #000 !important; // Full black background
-  color: #fff !important; // White text
-}
-
-// Dark header bar for homepage only
-body.homepage, .homepage {
-  background: #000 !important; // Full page black background
-  
-  .masthead {
-    background: #000 !important; // Black header
-    border-bottom: 1px solid #333 !important; // Dark border
-    
-    .masthead__inner-wrap {
-      background: #000 !important;
-      
-      .masthead__menu {
-        background: #000 !important;
-        
-        .masthead__menu-item {
-          a {
-            color: #fff !important; // White navigation links
-            
-            &:hover {
-              color: #4fc3f7 !important; // Light blue on hover
-            }
-          }
-        }
-      }
-      
-      .site-title {
-        color: #fff !important; // White site title
-        
-        &:hover {
-          color: #4fc3f7 !important; // Light blue on hover
-        }
-      }
-    }
-  }
-  
-  .page {
-    background: #000 !important; // Black page background
-  }
-  
-  .page__content {
-    background: #000 !important; // Black content area
-  }
-  
-  .initial-content {
-    background: #000 !important; // Black initial content
-  }
-  
-  .page__footer {
-    background: #000 !important; // Black footer
-    border-top: 1px solid #333 !important; // Dark border
-    
-    .page__footer-follow {
-      color: #fff !important;
-      
-      .social-icons {
-        .social-icon {
-          color: #fff !important;
-          
-          &:hover {
-            color: #4fc3f7 !important;
-          }
-        }
-      }
-    }
-    
-    .page__footer-copyright {
-      color: #ccc !important; // Light gray copyright
-    }
-  }
-}
-
-// Ensure all homepage elements are dark
-.homepage .homepage-container,
-.homepage .hero-section,
-.homepage .research-highlights,
-.homepage .news-section-home {
   background: #000 !important;
+  color: #fff !important;
 }
 
-// Hero section - image left, all content right - dark theme
+// Hero section - dark theme
 .homepage-container .hero-section {
   padding: 1rem 0 !important;
-  background: #000 !important; // Black background
+  background: #000 !important;
   margin: 0 !important;
   overflow: visible !important;
   width: 100% !important;
@@ -641,8 +415,8 @@ body.homepage, .homepage {
       width: 400px !important;
       height: 400px !important;
       border-radius: 8px !important;
-      border: 2px solid #333 !important; // Dark border
-      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // White glow
+      border: 2px solid #333 !important;
+      box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important;
       object-fit: cover !important;
     }
   }
@@ -654,106 +428,99 @@ body.homepage, .homepage {
     .hero-title {
       font-size: 1.4rem !important;
       font-weight: 700 !important;
-      color: #fff !important; // White text
+      color: #fff !important;
       margin: 0 0 0.5rem 0 !important;
       line-height: 1.2 !important;
-    }
-    
-    .hero-subtitle {
-      font-size: 0.95rem !important;
-      color: #ccc !important; // Light gray text
-      margin: 0 0 1.5rem 0 !important;
-      font-weight: 500 !important;
     }
     
     .contact-info {
       margin-bottom: 2rem !important;
       
-              p {
-          margin: 0.5rem 0 !important;
-          font-size: 0.85rem !important;
-          color: #ccc !important; // Light gray text
-          
-          i {
-            width: 20px !important;
-            margin-right: 8px !important;
-            color: #fff !important; // White icons
-          }
-          
-          a {
-            color: #4fc3f7 !important; // Light blue links
-            text-decoration: none !important;
-            
-            &:hover {
-              text-decoration: underline !important;
-              color: #81d4fa !important; // Lighter blue on hover
-            }
-          }
-        }
-    }
-    
-          .about-title {
-        font-size: 1.2rem !important;
-        color: #fff !important; // White text
-        margin: 0 0 1rem 0 !important;
-        font-weight: 600 !important;
-      }
-      
-      .about-content {
-        margin-bottom: 2rem !important;
+      p {
+        margin: 0.5rem 0 !important;
+        font-size: 0.85rem !important;
+        color: #ccc !important;
         
-        p {
-          font-size: 0.85rem !important;
-          line-height: 1.4 !important;
-          margin-bottom: 0.8rem !important;
-          color: #ddd !important; // Light gray text
-          text-align: justify !important;
+        i {
+          width: 20px !important;
+          margin-right: 8px !important;
+          color: #fff !important;
         }
-      
-              .highlight-notice {
-          background: #1a1a1a !important; // Dark gray background
-          border-left: 4px solid #4fc3f7 !important; // Light blue accent
-          padding: 1.2rem !important;
-          margin-top: 1.5rem !important;
-          border-radius: 0 6px 6px 0 !important;
-          
-          p {
-            margin: 0 !important;
-            font-size: 0.85rem !important;
-            color: #4fc3f7 !important; // Light blue text
-            font-weight: 500 !important;
-          }
-        }
-    }
-    
-          .social-links {
-        display: flex !important;
-        gap: 0.3rem !important;
-        flex-wrap: wrap !important;
-        justify-content: flex-start !important;
         
-        .btn--social {
-          padding: 0.3rem 0.6rem !important;
-          background: transparent !important;
-          color: #fff !important; // White text
-          border: 1px solid #fff !important; // White border
-          border-radius: 3px !important;
+        a {
+          color: #4fc3f7 !important;
           text-decoration: none !important;
-          font-weight: 500 !important;
-          font-size: 0.7rem !important;
-          transition: all 0.3s ease !important;
-          white-space: nowrap !important;
           
           &:hover {
-            background: #fff !important; // White background on hover
-            color: #000 !important; // Black text on hover
+            text-decoration: underline !important;
+            color: #81d4fa !important;
           }
         }
       }
+    }
+    
+    .about-title {
+      font-size: 1.2rem !important;
+      color: #fff !important;
+      margin: 0 0 1rem 0 !important;
+      font-weight: 600 !important;
+    }
+    
+    .about-content {
+      margin-bottom: 2rem !important;
+      
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.8rem !important;
+        color: #ddd !important;
+        text-align: justify !important;
+      }
+      
+      .highlight-notice {
+        background: #1a1a1a !important;
+        border-left: 4px solid #4fc3f7 !important;
+        padding: 1.2rem !important;
+        margin-top: 1.5rem !important;
+        border-radius: 0 6px 6px 0 !important;
+        
+        p {
+          margin: 0 !important;
+          font-size: 0.85rem !important;
+          color: #4fc3f7 !important;
+          font-weight: 500 !important;
+        }
+      }
+    }
+    
+    .social-links {
+      display: flex !important;
+      gap: 0.3rem !important;
+      flex-wrap: wrap !important;
+      justify-content: flex-start !important;
+      
+      .btn--social {
+        padding: 0.3rem 0.6rem !important;
+        background: transparent !important;
+        color: #fff !important;
+        border: 1px solid #fff !important;
+        border-radius: 3px !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+        font-size: 0.7rem !important;
+        transition: all 0.3s ease !important;
+        white-space: nowrap !important;
+        
+        &:hover {
+          background: #fff !important;
+          color: #000 !important;
+        }
+      }
+    }
   }
 }
 
-// Content sections - dark theme
+// Content sections
 .content-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -763,12 +530,12 @@ body.homepage, .homepage {
 // Research highlights - dark theme
 .research-highlights {
   padding: 2rem 0;
-  background: #111 !important; // Very dark gray
+  background: #111 !important;
   margin: 0;
   
   h2 {
     font-size: 1.4rem !important;
-    color: #fff !important; // White text
+    color: #fff !important;
     margin-bottom: 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -782,10 +549,10 @@ body.homepage, .homepage {
   }
   
   .research-card {
-    background: #1a1a1a !important; // Dark gray background
+    background: #1a1a1a !important;
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #333 !important; // Dark border
+    border: 1px solid #333 !important;
     box-shadow: 0 2px 8px rgba(255,255,255,0.05);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -793,25 +560,25 @@ body.homepage, .homepage {
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-      border-color: #4fc3f7 !important; // Light blue border on hover
+      border-color: #4fc3f7 !important;
     }
     
     .research-icon {
       font-size: 2rem;
-      color: #4fc3f7 !important; // Light blue icons
+      color: #4fc3f7 !important;
       margin-bottom: 0.8rem;
     }
     
     h3 {
       font-size: 1rem !important;
-      color: #fff !important; // White text
+      color: #fff !important;
       margin-bottom: 0.8rem;
       font-weight: 600;
     }
     
     p {
       font-size: 0.85rem !important;
-      color: #ccc !important; // Light gray text
+      color: #ccc !important;
       line-height: 1.5;
       margin: 0;
     }
@@ -821,11 +588,11 @@ body.homepage, .homepage {
 // News section - dark theme
 .news-section-home {
   padding: 2rem 0;
-  background: #000 !important; // Black background
+  background: #000 !important;
   
   h2 {
     font-size: 1.2rem !important;
-    color: #fff !important; // White text
+    color: #fff !important;
     margin-bottom: 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -838,19 +605,19 @@ body.homepage, .homepage {
   
   .news-item {
     padding: 1.2rem;
-    border: 1px solid #333 !important; // Dark border
+    border: 1px solid #333 !important;
     border-radius: 8px;
-    background: #1a1a1a !important; // Dark gray background
+    background: #1a1a1a !important;
     transition: box-shadow 0.3s ease;
     
     &:hover {
       box-shadow: 0 4px 16px rgba(255,255,255,0.1);
-      border-color: #4fc3f7 !important; // Light blue border on hover
+      border-color: #4fc3f7 !important;
     }
     
     .news-date {
       font-size: 0.75rem;
-      color: #4fc3f7 !important; // Light blue date
+      color: #4fc3f7 !important;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -859,68 +626,32 @@ body.homepage, .homepage {
     
     h3 {
       font-size: 0.95rem !important;
-      color: #fff !important; // White text
+      color: #fff !important;
       margin: 0 0 0.6rem 0;
       font-weight: 600;
     }
     
     p {
       font-size: 0.85rem !important;
-      color: #ccc !important; // Light gray text
+      color: #ccc !important;
       line-height: 1.5;
       margin: 0;
     }
   }
 }
 
-// Responsive positioning for different screen sizes - move entire unit together
-@media (min-width: 1400px) {
-  .homepage-container .hero-section .hero-content {
-    transform: translateX(-150px) !important; // Less shift on larger screens
-    max-width: 1200px !important;
-  }
-  .homepage-container .hero-section .hero-text {
-    max-width: 700px !important; // Slightly wider on large screens
-  }
-}
-
-@media (max-width: 1200px) {
-  .homepage-container .hero-section .hero-content {
-    transform: translateX(-180px) !important; // Medium shift
-    max-width: 1000px !important;
-  }
-  .homepage-container .hero-section .hero-text {
-    max-width: 550px !important; // Slightly narrower
-  }
-}
-
-@media (max-width: 1024px) {
-  .homepage-container .hero-section .hero-content {
-    transform: translateX(-220px) !important; // More shift for tablets
-    max-width: 900px !important;
-  }
-  .homepage-container .hero-section .hero-text {
-    max-width: 500px !important; // Narrower for tablets
-  }
-}
-
-// Mobile responsiveness for homepage - dark theme stack layout with proper centering
+// Mobile responsiveness for homepage - stack layout with proper centering
 @media (max-width: 768px) {
-  // Override any transforms on mobile - reset positioning
   .homepage-container .hero-section .hero-content {
-    transform: none !important;
-    max-width: none !important;
-    margin: 0 auto !important;
-    padding: 0 1rem !important;
     flex-direction: column !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     text-align: center !important;
     align-items: center !important;
+    padding: 0 1rem !important;
   }
   
   .homepage-container .hero-section {
-    padding: 1rem 0 !important;
-    background: #000 !important; // Black background on mobile
+    padding: 0.5rem 0 !important; // Reduced padding to remove extra gap
     
     .profile-photo {
       flex: none !important;
@@ -929,8 +660,8 @@ body.homepage, .homepage {
       .author__avatar {
         width: 300px !important;
         height: 300px !important;
-        border: 2px solid #333 !important; // Dark border on mobile
-        box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important; // White glow on mobile
+        border: 2px solid #333 !important;
+        box-shadow: 0 8px 24px rgba(255,255,255,0.1) !important;
         display: block !important;
         margin: 0 auto !important;
       }
@@ -945,14 +676,7 @@ body.homepage, .homepage {
       .hero-title {
         font-size: 1.2rem !important;
         text-align: center !important;
-        color: #fff !important; // White text on mobile
-      }
-      
-      .hero-subtitle {
-        font-size: 0.85rem !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
-        color: #ccc !important; // Light gray on mobile
+        color: #fff !important;
       }
       
       .contact-info {
@@ -960,14 +684,14 @@ body.homepage, .homepage {
         margin-bottom: 1.5rem !important;
         
         p {
-          color: #ccc !important; // Light gray on mobile
+          color: #ccc !important;
           
           i {
-            color: #fff !important; // White icons on mobile
+            color: #fff !important;
           }
           
           a {
-            color: #4fc3f7 !important; // Light blue links on mobile
+            color: #4fc3f7 !important;
             
             &:hover {
               color: #81d4fa !important;
@@ -976,50 +700,52 @@ body.homepage, .homepage {
         }
       }
       
-              .about-title {
-          font-size: 1rem !important;
-          text-align: center !important;
-          color: #fff !important; // White text on mobile
-        }
+      .about-title {
+        font-size: 1rem !important;
+        text-align: center !important;
+        color: #fff !important;
+      }
       
       .about-content {
         p {
-          color: #ddd !important; // Light gray text on mobile
+          color: #ddd !important;
+          font-size: 0.8rem !important;
         }
         
         .highlight-notice {
-          background: #1a1a1a !important; // Dark background on mobile
-          border-left: 4px solid #4fc3f7 !important; // Light blue accent on mobile
+          background: #1a1a1a !important;
+          border-left: 4px solid #4fc3f7 !important;
           
           p {
-            color: #4fc3f7 !important; // Light blue text on mobile
+            color: #4fc3f7 !important;
+            font-size: 0.8rem !important;
           }
         }
       }
       
-              .social-links {
-          justify-content: center !important;
-          gap: 0.3rem !important;
+      .social-links {
+        justify-content: center !important;
+        gap: 0.3rem !important;
+        
+        .btn--social {
+          font-size: 0.65rem !important;
+          padding: 0.25rem 0.5rem !important;
+          background: transparent !important;
+          color: #fff !important;
+          border: 1px solid #fff !important;
           
-          .btn--social {
-            font-size: 0.7rem !important;
-            padding: 0.3rem 0.6rem !important;
-            background: transparent !important;
-            color: #fff !important; // White text on mobile
-            border: 1px solid #fff !important; // White border on mobile
-            
-            &:hover {
-              background: #fff !important; // White background on hover
-              color: #000 !important; // Black text on hover
-            }
+          &:hover {
+            background: #fff !important;
+            color: #000 !important;
           }
         }
+      }
     }
   }
   
   .research-highlights {
     margin: 0;
-    background: #111 !important; // Dark background on mobile
+    background: #111 !important;
     
     .research-grid {
       padding: 0 1rem;
@@ -1027,52 +753,52 @@ body.homepage, .homepage {
     }
     
     .research-card {
-      background: #1a1a1a !important; // Dark card background on mobile
-      border: 1px solid #333 !important; // Dark border on mobile
+      background: #1a1a1a !important;
+      border: 1px solid #333 !important;
       
       &:hover {
-        border-color: #4fc3f7 !important; // Light blue border on hover
+        border-color: #4fc3f7 !important;
       }
       
       .research-icon {
-        color: #4fc3f7 !important; // Light blue icons on mobile
+        color: #4fc3f7 !important;
       }
       
       h3 {
-        color: #fff !important; // White text on mobile
+        color: #fff !important;
       }
       
       p {
-        color: #ccc !important; // Light gray text on mobile
+        color: #ccc !important;
       }
     }
   }
   
   .news-section-home {
-    background: #000 !important; // Black background on mobile
+    background: #000 !important;
     
     h2 {
-      color: #fff !important; // White text on mobile
+      color: #fff !important;
     }
     
     .news-item {
-      background: #1a1a1a !important; // Dark background on mobile
-      border: 1px solid #333 !important; // Dark border on mobile
+      background: #1a1a1a !important;
+      border: 1px solid #333 !important;
       
       &:hover {
-        border-color: #4fc3f7 !important; // Light blue border on hover
+        border-color: #4fc3f7 !important;
       }
       
       .news-date {
-        color: #4fc3f7 !important; // Light blue date on mobile
+        color: #4fc3f7 !important;
       }
       
       h3 {
-        color: #fff !important; // White text on mobile
+        color: #fff !important;
       }
       
       p {
-        color: #ccc !important; // Light gray text on mobile
+        color: #ccc !important;
       }
     }
   }

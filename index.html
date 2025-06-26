@@ -8,7 +8,7 @@ excerpt: "PhD Student in Physics | UC Berkeley | Quantum Materials & Scanning Tu
 ---
 
 <script>
-// Force show masthead on page load
+// Force show masthead on page load with same positioning as other pages
 document.addEventListener('DOMContentLoaded', function() {
   const masthead = document.querySelector('.masthead');
   if (masthead) {
@@ -16,23 +16,36 @@ document.addEventListener('DOMContentLoaded', function() {
     masthead.style.visibility = 'visible';
     masthead.style.opacity = '1';
   }
+  
+  // Hide mobile menu button on desktop
+  const hiddenBtn = document.querySelector('.greedy-nav__toggle');
+  if (hiddenBtn && window.innerWidth > 768) {
+    hiddenBtn.style.display = 'none';
+  }
+  
+  // Show/hide mobile menu button based on screen size
+  window.addEventListener('resize', function() {
+    const hiddenBtn = document.querySelector('.greedy-nav__toggle');
+    if (hiddenBtn) {
+      if (window.innerWidth > 768) {
+        hiddenBtn.style.display = 'none';
+      } else {
+        hiddenBtn.style.display = 'block';
+      }
+    }
+  });
 });
 </script>
 
 <style>
-/* CRITICAL: Force masthead visibility with EXACT same positioning as other pages */
-body.homepage .masthead,
-.homepage .masthead,
-.masthead {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+/* Force masthead to have EXACTLY same positioning as other pages - ONLY change colors */
+.homepage .masthead {
+  /* Use theme default positioning - DO NOT OVERRIDE */
   background-color: #000 !important;
   border-bottom: 1px solid #333 !important;
-  /* Remove all custom positioning - use theme defaults */
 }
 
-/* Force dark theme for entire page */
+/* Dark theme for entire homepage */
 body.homepage,
 .homepage,
 html {
@@ -43,88 +56,41 @@ html {
 .homepage .page,
 .homepage .page__content,
 .homepage .initial-content,
-.homepage #main,
-.homepage .layout--home {
+.homepage #main {
   background-color: #000 !important;
   color: #fff !important;
 }
 
-/* Masthead inner elements - only change colors */
+/* Masthead styling - ONLY colors, same positioning as other pages */
 .masthead__inner-wrap {
   background-color: #000 !important;
-  /* Keep all other positioning same as theme default */
 }
 
-/* Site title styling */
 .masthead .site-title {
   color: #fff !important;
   text-decoration: none !important;
   font-weight: bold !important;
-  display: block !important;
 }
 
 .masthead .site-title:hover {
   color: #4fc3f7 !important;
 }
 
-/* Navigation menu styling */
 .masthead .masthead__menu {
   background-color: #000 !important;
-  display: block !important;
-}
-
-.masthead .masthead__menu-item {
-  display: inline-block !important;
 }
 
 .masthead .masthead__menu-item a {
   color: #fff !important;
   text-decoration: none !important;
-  padding: 0.5rem 1rem !important;
-  display: inline-block !important;
 }
 
 .masthead .masthead__menu-item a:hover {
   color: #4fc3f7 !important;
 }
 
-/* Social links - smaller and fit on one line */
-.social-links {
-  display: flex !important;
-  gap: 0.4rem !important;
-  flex-wrap: wrap !important;
-  justify-content: flex-start !important;
-}
-
-.social-links .btn--social {
-  padding: 0.4rem 0.8rem !important;
-  background: transparent !important;
-  color: #fff !important;
-  border: 1px solid #fff !important;
-  border-radius: 4px !important;
-  text-decoration: none !important;
-  font-weight: 500 !important;
-  font-size: 0.75rem !important;
-  transition: all 0.3s ease !important;
-  white-space: nowrap !important;
-}
-
-.social-links .btn--social:hover {
-  background: #fff !important;
-  color: #000 !important;
-}
-
-/* About content - reduced line spacing */
-.about-content p {
-  line-height: 1.4 !important;
-  margin-bottom: 0.8rem !important;
-}
-
-/* Greedy nav styling */
 .masthead .greedy-nav {
   background: #000 !important;
-  display: flex !important;
-  align-items: center !important;
 }
 
 .masthead .greedy-nav a {
@@ -135,17 +101,19 @@ html {
   color: #4fc3f7 !important;
 }
 
-.masthead .greedy-nav .visible-links {
-  display: flex !important;
-}
-
 .masthead .greedy-nav .visible-links a {
   color: #fff !important;
-  padding: 0.5rem 1rem !important;
 }
 
 .masthead .greedy-nav .visible-links a:hover {
   color: #4fc3f7 !important;
+}
+
+/* Hide mobile menu button on desktop */
+@media (min-width: 769px) {
+  .masthead .greedy-nav__toggle {
+    display: none !important;
+  }
 }
 
 /* Search toggle button */
@@ -171,12 +139,6 @@ html {
   color: #ccc !important;
 }
 
-/* Override any layout that might hide masthead */
-.layout--home .masthead,
-.layout--single .masthead {
-  display: block !important;
-}
-
 /* Remove hero overlays and page title */
 .page__hero,
 .page__hero--overlay {
@@ -191,39 +153,69 @@ html {
   display: none !important;
 }
 
-/* Hide recent posts section */
-.entries-list,
-.archive,
-.taxonomy__section {
-  display: none !important;
+/* Fix mobile spacing - remove extra gaps */
+@media (max-width: 768px) {
+  .homepage-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .homepage-container .hero-section {
+    margin-top: 0 !important;
+    padding-top: 0.5rem !important;
+  }
+  
+  /* Remove any extra margin/padding from page content */
+  .homepage .page__content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .homepage .initial-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 }
 
-/* Force social links to be smaller */
-.homepage-container .social-links .btn--social {
-  padding: 0.3rem 0.6rem !important;
-  font-size: 0.7rem !important;
+/* Social links styling */
+.social-links {
+  display: flex !important;
+  gap: 0.4rem !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+.social-links .btn--social {
+  padding: 0.4rem 0.8rem !important;
+  background: transparent !important;
+  color: #fff !important;
   border: 1px solid #fff !important;
-  border-radius: 3px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
 }
 
-/* Style the hero title (not page title) */
+.social-links .btn--social:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* About content spacing */
+.about-content p {
+  line-height: 1.4 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+/* Hero title styling */
 .homepage-container .hero-title {
   font-size: 1.4rem !important;
   font-weight: 700 !important;
   color: #fff !important;
   margin: 0 0 1rem 0 !important;
   line-height: 1.2 !important;
-}
-
-/* Fix spacing - 1rem space between header and content */
-.homepage-container {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.homepage-container .hero-section {
-  margin-top: 0 !important;
-  padding-top: 1rem !important;
 }
 </style>
 
@@ -353,19 +345,19 @@ html {
     <div class="content-wrapper">
       <h2>Latest News</h2>
       <div class="news-grid">
-  <div class="news-item">
+        <div class="news-item">
           <div class="news-date">January 2025</div>
           <h3>Science Publication</h3>
           <p>Our paper on quantum melting in disordered 2D Wigner solids was published in <em>Science</em>.</p>
-  </div>
+        </div>
 
-  <div class="news-item">
+        <div class="news-item">
           <div class="news-date">September 2024</div>
           <h3>Kavli Fellowship</h3>
           <p>Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).</p>
         </div>
       </div>
-  </div>
+    </div>
   </section>
 
 </div>
