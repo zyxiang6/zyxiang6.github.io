@@ -393,6 +393,7 @@
   max-width: none !important; // Remove width constraint
   margin: 0 !important;
   padding: 0 !important;
+  overflow: visible !important; // Ensure image is not clipped
 }
 
 // Hero section - square image left, about content right - FORCED OVERRIDE
@@ -400,7 +401,7 @@
   padding: 2rem 0 !important;
   background: #fff !important;
   margin: -1rem -1rem 2rem -1rem !important;
-  overflow-x: hidden !important; // Prevent horizontal scroll from negative margins
+  overflow: visible !important; // Allow image to extend beyond container
   
   .hero-content {
     display: flex !important;
@@ -410,12 +411,14 @@
     margin: 0 !important;
     padding: 0 4rem 0 0 !important; // Maximum padding on right for content space
     position: relative !important;
+    overflow: visible !important; // Ensure image extends beyond container
   }
   
   .profile-photo {
     flex: 0 0 450px !important;
     margin-left: calc(max(-30vw, -20rem)) !important; // Dynamic alignment with header logo
     position: relative !important;
+    z-index: 10 !important; // Ensure image appears above any background layers
     
     .author__avatar {
       width: 450px !important;
@@ -424,6 +427,8 @@
       border: 3px solid #ddd !important;
       box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
       object-fit: cover !important;
+      position: relative !important;
+      z-index: 10 !important; // Ensure image is always visible
     }
   }
   
