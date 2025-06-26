@@ -7,6 +7,23 @@
 
 /* FORCE CACHE REFRESH - Homepage Redesign v2.2 - Square Image Layout - Jan 2025 */
 
+// Ensure image is never clipped by any container
+body, html {
+  overflow-x: visible !important;
+}
+
+.page {
+  overflow: visible !important;
+}
+
+.page__content {
+  overflow: visible !important;
+}
+
+.main {
+  overflow: visible !important;
+}
+
 // Custom CSS adjustments
 
 // Header navigation text size
@@ -394,6 +411,9 @@
   margin: 0 !important;
   padding: 0 !important;
   overflow: visible !important; // Ensure image is not clipped
+  position: relative !important;
+  width: 100vw !important; // Full viewport width to prevent clipping
+  margin-left: calc(50% - 50vw) !important; // Center the full-width container
 }
 
 // Hero section - square image left, about content right - FORCED OVERRIDE
@@ -418,7 +438,8 @@
     flex: 0 0 450px !important;
     margin-left: calc(max(-30vw, -20rem)) !important; // Dynamic alignment with header logo
     position: relative !important;
-    z-index: 10 !important; // Ensure image appears above any background layers
+    z-index: 999 !important; // Very high z-index to ensure image appears above everything
+    min-width: 450px !important; // Prevent shrinking
     
     .author__avatar {
       width: 450px !important;
