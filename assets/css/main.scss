@@ -20,13 +20,15 @@ body.layout--home {
   background-color: #000 !important;
   color: #fff !important;
   
-  // Header/masthead dark theme - ONLY CHANGE COLORS, NOT POSITIONING
+  // Header/masthead dark theme - ONLY COLORS, SAME POSITIONING AS OTHER PAGES
   .masthead {
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
+    // Do not override any positioning - use theme defaults
     
     .masthead__inner-wrap {
       background-color: #000 !important;
+      // Use theme default positioning
       
       .site-title {
         color: #fff !important;
@@ -66,43 +68,6 @@ body.layout--home {
               
               &:hover {
                 color: #4fc3f7 !important;
-              }
-            }
-          }
-          
-          // Mobile menu button
-          .greedy-nav__toggle {
-            color: #fff !important;
-            background: #000 !important;
-            border: 1px solid #fff !important;
-            
-            &:hover {
-              color: #000 !important;
-              background: #fff !important;
-            }
-            
-            .navicon {
-              background: #fff !important;
-              
-              &:before, &:after {
-                background: #fff !important;
-              }
-            }
-          }
-          
-          // Mobile dropdown menu
-          .hidden-links {
-            background: #000 !important;
-            border: 1px solid #333 !important;
-            box-shadow: 0 2px 4px rgba(255,255,255,0.1) !important;
-            
-            a {
-              color: #fff !important;
-              background: #000 !important;
-              
-              &:hover {
-                color: #4fc3f7 !important;
-                background: #111 !important;
               }
             }
           }
@@ -163,8 +128,24 @@ body.layout--home {
   }
 }
 
-// Only hide hero overlays, don't change masthead positioning
+// Additional override for homepage masthead - force display
+.layout--home .masthead,
+.homepage .masthead,
+body.layout--home .masthead,
+.layout--single .masthead {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+// Override any theme that might hide the masthead on home layout
 .layout--home, .layout--single {
+  .masthead {
+    display: block !important;
+  }
+  
   .page__hero,
   .page__hero--overlay {
     display: none !important;
@@ -189,27 +170,15 @@ body.layout--home {
     gap: 0.3rem !important;
   }
   
-  // Override any positioning differences - use exact theme defaults
-  .masthead {
-    // Remove ALL custom positioning/sizing
-    padding: inherit !important;
-    height: inherit !important;
-    min-height: inherit !important;
-    position: inherit !important;
-    z-index: inherit !important;
-    display: inherit !important;
-    visibility: inherit !important;
-    opacity: inherit !important;
+  // Remove any custom spacing between header and content
+  .homepage-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
   
-  .masthead__inner-wrap {
-    // Use exact theme defaults
-    max-width: inherit !important;
-    margin: inherit !important;
-    padding: inherit !important;
-    display: inherit !important;
-    align-items: inherit !important;
-    justify-content: inherit !important;
+  .homepage-container .hero-section {
+    margin-top: 0 !important;
+    padding-top: 0.5rem !important;
   }
 }
 
@@ -649,7 +618,7 @@ body.homepage, .homepage {
 
 // Hero section - image left, all content right - dark theme
 .homepage-container .hero-section {
-  padding: 3rem 0 !important;
+  padding: 0.5rem 0 !important;
   background: #000 !important; // Black background
   margin: 0 !important;
   overflow: visible !important;

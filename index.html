@@ -20,10 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
-/* ONLY change masthead colors, keep all positioning same as other pages */
+/* CRITICAL: Force masthead visibility with EXACT same positioning as other pages */
+body.homepage .masthead,
+.homepage .masthead,
 .masthead {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   background-color: #000 !important;
   border-bottom: 1px solid #333 !important;
+  /* Remove all custom positioning - use theme defaults */
 }
 
 /* Force dark theme for entire page */
@@ -43,9 +49,10 @@ html {
   color: #fff !important;
 }
 
-/* Masthead inner elements */
+/* Masthead inner elements - only change colors */
 .masthead__inner-wrap {
   background-color: #000 !important;
+  /* Keep all other positioning same as theme default */
 }
 
 /* Site title styling */
@@ -153,44 +160,6 @@ html {
   background-color: #fff !important;
 }
 
-/* Mobile navigation menu */
-.masthead .greedy-nav__toggle {
-  color: #fff !important;
-  background: #000 !important;
-  border: 1px solid #fff !important;
-}
-
-.masthead .greedy-nav__toggle:hover {
-  color: #000 !important;
-  background: #fff !important;
-}
-
-.masthead .greedy-nav__toggle .navicon {
-  background: #fff !important;
-}
-
-.masthead .greedy-nav__toggle .navicon:before,
-.masthead .greedy-nav__toggle .navicon:after {
-  background: #fff !important;
-}
-
-/* Mobile dropdown menu */
-.masthead .greedy-nav .hidden-links {
-  background: #000 !important;
-  border: 1px solid #333 !important;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.1) !important;
-}
-
-.masthead .greedy-nav .hidden-links a {
-  color: #fff !important;
-  background: #000 !important;
-}
-
-.masthead .greedy-nav .hidden-links a:hover {
-  color: #4fc3f7 !important;
-  background: #111 !important;
-}
-
 /* Page footer */
 .page__footer {
   background-color: #000 !important;
@@ -237,8 +206,6 @@ html {
   border-radius: 3px !important;
 }
 
-/* Ensure masthead uses exact same positioning as other pages */
-
 /* Style the hero title (not page title) */
 .homepage-container .hero-title {
   font-size: 1.4rem !important;
@@ -246,6 +213,17 @@ html {
   color: #fff !important;
   margin: 0 0 1rem 0 !important;
   line-height: 1.2 !important;
+}
+
+/* Fix spacing - minimal space between header and content */
+.homepage-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.homepage-container .hero-section {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
 }
 </style>
 
