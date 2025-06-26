@@ -288,23 +288,23 @@ body.homepage .layout--single {
   overflow: visible !important;
 }
 
-/* Hero content alignment - align with header logo left position, never go beyond it */
+/* CRITICAL FIX: Hero content alignment - align with header logo left position using CSS variables and careful positioning */
 @media (min-width: 769px) {
   .homepage-container .hero-section .hero-content {
     max-width: none !important;
-    margin: 0 !important; /* NO centering - position from left edge */
-    margin-left: 0 !important; /* Explicit left margin reset */
-    padding-left: 1.5rem !important; /* Match header logo's left positioning */
+    margin: 0 !important;
+    /* Use the same left positioning as the masthead inner content */
+    padding-left: max(1rem, calc((100vw - 1280px) / 2 + 1rem)) !important;
     padding-right: 4rem !important;
     width: auto !important;
     position: relative !important;
     left: 0 !important;
-    transform: translateX(0) !important; /* Reset any transforms */
+    transform: translateX(0) !important;
   }
 
-  /* CRITICAL: Make sure the image itself also aligns with header logo, not viewport edge */
+  /* Ensure the profile photo aligns properly with the hero content padding */
   .homepage-container .hero-section .profile-photo {
-    margin-left: 0 !important; /* No additional left margin - rely on parent padding */
+    margin-left: 0 !important;
     position: relative !important;
     left: 0 !important;
   }
@@ -444,19 +444,19 @@ body.homepage .layout--single {
     <div class="content-wrapper">
       <h2>Latest News</h2>
       <div class="news-grid">
-        <div class="news-item">
+  <div class="news-item">
           <div class="news-date">January 2025</div>
           <h3>Science Publication</h3>
           <p>Our paper on quantum melting in disordered 2D Wigner solids was published in <em>Science</em>.</p>
-        </div>
+  </div>
 
-        <div class="news-item">
+  <div class="news-item">
           <div class="news-date">September 2024</div>
           <h3>Kavli Fellowship</h3>
           <p>Awarded the Kavli Fellowship at the Kavli Energy NanoScience Institute, UC Berkeley (2024-2025).</p>
         </div>
       </div>
-    </div>
+  </div>
   </section>
 
 </div>
