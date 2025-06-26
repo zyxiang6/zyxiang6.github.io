@@ -301,6 +301,13 @@ body.homepage .layout--single {
     left: 0 !important;
     transform: translateX(0) !important; /* Reset any transforms */
   }
+
+  /* CRITICAL: Make sure the image itself also aligns with header logo, not viewport edge */
+  .homepage-container .hero-section .profile-photo {
+    margin-left: 0 !important; /* No additional left margin - rely on parent padding */
+    position: relative !important;
+    left: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {

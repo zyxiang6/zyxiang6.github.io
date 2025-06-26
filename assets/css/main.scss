@@ -478,6 +478,9 @@ body.layout--home .masthead,
   
   .profile-photo {
     flex: 0 0 400px !important;
+    margin-left: 0 !important; // No additional left margin - image aligns with hero content padding
+    position: relative !important;
+    left: 0 !important;
     
     .author__avatar {
       width: 400px !important;
