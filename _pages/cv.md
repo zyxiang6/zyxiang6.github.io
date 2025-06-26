@@ -5,10 +5,6 @@ layout: single
 author_profile: true
 ---
 
-## Contact Information
-
-**Ziyu Xiang**  
-
 ## Education
 
 ### University of California, Berkeley
@@ -74,23 +70,6 @@ author_profile: true
 
 ### Peer-Reviewed Publications (2021)
 6. Stansbury, C., M Iqbal Bakti Utama, Fatuzzo, C., Regan, E., Wang, D., **Xiang, Z.** et al. Visualizing electron localization of WS₂/WSe₂ moiré superlattices in momentum space. *Science Advances* **7**(37), eabf4387 (2021). [DOI: 10.1126/sciadv.abf4387](https://www.science.org/doi/full/10.1126/sciadv.abf4387)
-
-## Technical Skills
-
-### Experimental Techniques
-- **Scanning Probe Microscopy**: STM, AFM, SNOM, PFM, TFM
-- **Optical Spectroscopy**: Absorption, photoluminescence, Raman
-- **Materials Characterization**: Electronic transport, magnetic properties
-
-### Materials & Fabrication
-- **2D Materials**: Exfoliation, transfer, characterization
-- **Device Fabrication**: Van der Waals heterostructures, polymer stacking
-- **Lithography**: AFM, photo, e-beam lithography
-- **Clean Room Techniques**: Plasma etching, wire bonding
-
-### Computational & Analysis
-- **Data Analysis**: Advanced statistical analysis, machine learning
-- **Programming**: Python, MATLAB, data visualization
 
 ---
 
