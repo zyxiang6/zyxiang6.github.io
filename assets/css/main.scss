@@ -350,8 +350,8 @@ body {
 // HOMEPAGE SPECIFIC STYLES - DARK THEME
 // ========================================
 
-// Homepage container - full black theme
-.homepage-container {
+// Homepage-only full dark theme - header and everything
+.page__content .homepage-container {
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -360,6 +360,85 @@ body {
   position: relative !important;
   background: #000 !important; // Full black background
   color: #fff !important; // White text
+}
+
+// Dark header bar for homepage only
+body.homepage, .homepage {
+  background: #000 !important; // Full page black background
+  
+  .masthead {
+    background: #000 !important; // Black header
+    border-bottom: 1px solid #333 !important; // Dark border
+    
+    .masthead__inner-wrap {
+      background: #000 !important;
+      
+      .masthead__menu {
+        background: #000 !important;
+        
+        .masthead__menu-item {
+          a {
+            color: #fff !important; // White navigation links
+            
+            &:hover {
+              color: #4fc3f7 !important; // Light blue on hover
+            }
+          }
+        }
+      }
+      
+      .site-title {
+        color: #fff !important; // White site title
+        
+        &:hover {
+          color: #4fc3f7 !important; // Light blue on hover
+        }
+      }
+    }
+  }
+  
+  .page {
+    background: #000 !important; // Black page background
+  }
+  
+  .page__content {
+    background: #000 !important; // Black content area
+  }
+  
+  .initial-content {
+    background: #000 !important; // Black initial content
+  }
+  
+  .page__footer {
+    background: #000 !important; // Black footer
+    border-top: 1px solid #333 !important; // Dark border
+    
+    .page__footer-follow {
+      color: #fff !important;
+      
+      .social-icons {
+        .social-icon {
+          color: #fff !important;
+          
+          &:hover {
+            color: #4fc3f7 !important;
+          }
+        }
+      }
+    }
+    
+    .page__footer-copyright {
+      color: #ccc !important; // Light gray copyright
+    }
+  }
+}
+
+// Ensure all homepage elements are dark
+.homepage .homepage-container,
+.homepage .hero-section,
+.homepage .research-highlights,
+.homepage .news-section-home {
+  background: #000 !important;
 }
 
 // Hero section - image left, all content right - dark theme
@@ -398,7 +477,7 @@ body {
     max-width: none !important;
     
     .hero-title {
-      font-size: 2rem !important;
+      font-size: 1.4rem !important;
       font-weight: 700 !important;
       color: #fff !important; // White text
       margin: 0 0 0.5rem 0 !important;
@@ -406,7 +485,7 @@ body {
     }
     
     .hero-subtitle {
-      font-size: 1.1rem !important;
+      font-size: 0.95rem !important;
       color: #ccc !important; // Light gray text
       margin: 0 0 1.5rem 0 !important;
       font-weight: 500 !important;
@@ -415,61 +494,61 @@ body {
     .contact-info {
       margin-bottom: 2rem !important;
       
-      p {
-        margin: 0.5rem 0 !important;
-        font-size: 1rem !important;
-        color: #ccc !important; // Light gray text
-        
-        i {
-          width: 20px !important;
-          margin-right: 8px !important;
-          color: #fff !important; // White icons
-        }
-        
-        a {
-          color: #4fc3f7 !important; // Light blue links
-          text-decoration: none !important;
+              p {
+          margin: 0.5rem 0 !important;
+          font-size: 0.85rem !important;
+          color: #ccc !important; // Light gray text
           
-          &:hover {
-            text-decoration: underline !important;
-            color: #81d4fa !important; // Lighter blue on hover
+          i {
+            width: 20px !important;
+            margin-right: 8px !important;
+            color: #fff !important; // White icons
+          }
+          
+          a {
+            color: #4fc3f7 !important; // Light blue links
+            text-decoration: none !important;
+            
+            &:hover {
+              text-decoration: underline !important;
+              color: #81d4fa !important; // Lighter blue on hover
+            }
           }
         }
-      }
     }
     
-    .about-title {
-      font-size: 1.5rem !important;
-      color: #fff !important; // White text
-      margin: 0 0 1rem 0 !important;
-      font-weight: 600 !important;
-    }
-    
-    .about-content {
-      margin-bottom: 2rem !important;
-      
-      p {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 1rem !important;
-        color: #ddd !important; // Light gray text
-        text-align: justify !important;
+          .about-title {
+        font-size: 1.2rem !important;
+        color: #fff !important; // White text
+        margin: 0 0 1rem 0 !important;
+        font-weight: 600 !important;
       }
       
-      .highlight-notice {
-        background: #1a1a1a !important; // Dark gray background
-        border-left: 4px solid #4fc3f7 !important; // Light blue accent
-        padding: 1.2rem !important;
-        margin-top: 1.5rem !important;
-        border-radius: 0 6px 6px 0 !important;
+      .about-content {
+        margin-bottom: 2rem !important;
         
         p {
-          margin: 0 !important;
-          font-size: 1rem !important;
-          color: #4fc3f7 !important; // Light blue text
-          font-weight: 500 !important;
+          font-size: 0.85rem !important;
+          line-height: 1.6 !important;
+          margin-bottom: 1rem !important;
+          color: #ddd !important; // Light gray text
+          text-align: justify !important;
         }
-      }
+      
+              .highlight-notice {
+          background: #1a1a1a !important; // Dark gray background
+          border-left: 4px solid #4fc3f7 !important; // Light blue accent
+          padding: 1.2rem !important;
+          margin-top: 1.5rem !important;
+          border-radius: 0 6px 6px 0 !important;
+          
+          p {
+            margin: 0 !important;
+            font-size: 0.85rem !important;
+            color: #4fc3f7 !important; // Light blue text
+            font-weight: 500 !important;
+          }
+        }
     }
     
     .social-links {
@@ -676,18 +755,18 @@ body {
     .hero-text {
       text-align: left !important;
       
-      .hero-title {
-        font-size: 1.6rem !important;
-        text-align: center !important;
-        color: #fff !important; // White text on mobile
-      }
-      
-      .hero-subtitle {
-        font-size: 1rem !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
-        color: #ccc !important; // Light gray on mobile
-      }
+              .hero-title {
+          font-size: 1.2rem !important;
+          text-align: center !important;
+          color: #fff !important; // White text on mobile
+        }
+        
+        .hero-subtitle {
+          font-size: 0.85rem !important;
+          text-align: center !important;
+          margin-bottom: 1rem !important;
+          color: #ccc !important; // Light gray on mobile
+        }
       
       .contact-info {
         text-align: center !important;
@@ -710,11 +789,11 @@ body {
         }
       }
       
-      .about-title {
-        font-size: 1.3rem !important;
-        text-align: center !important;
-        color: #fff !important; // White text on mobile
-      }
+              .about-title {
+          font-size: 1rem !important;
+          text-align: center !important;
+          color: #fff !important; // White text on mobile
+        }
       
       .about-content {
         p {
