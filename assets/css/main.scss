@@ -678,8 +678,8 @@ body.homepage, .homepage {
         
         p {
           font-size: 0.85rem !important;
-          line-height: 1.6 !important;
-          margin-bottom: 1rem !important;
+          line-height: 1.4 !important;
+          margin-bottom: 0.8rem !important;
           color: #ddd !important; // Light gray text
           text-align: justify !important;
         }
@@ -700,28 +700,30 @@ body.homepage, .homepage {
         }
     }
     
-    .social-links {
-      display: flex !important;
-      gap: 0.8rem !important;
-      flex-wrap: wrap !important;
-      
-      .btn--social {
-        padding: 0.6rem 1.2rem !important;
-        background: transparent !important;
-        color: #fff !important; // White text
-        border: 2px solid #fff !important; // White border
-        border-radius: 6px !important;
-        text-decoration: none !important;
-        font-weight: 500 !important;
-        font-size: 0.9rem !important;
-        transition: all 0.3s ease !important;
+          .social-links {
+        display: flex !important;
+        gap: 0.4rem !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
         
-        &:hover {
-          background: #fff !important; // White background on hover
-          color: #000 !important; // Black text on hover
+        .btn--social {
+          padding: 0.4rem 0.8rem !important;
+          background: transparent !important;
+          color: #fff !important; // White text
+          border: 1px solid #fff !important; // White border
+          border-radius: 4px !important;
+          text-decoration: none !important;
+          font-weight: 500 !important;
+          font-size: 0.75rem !important;
+          transition: all 0.3s ease !important;
+          white-space: nowrap !important;
+          
+          &:hover {
+            background: #fff !important; // White background on hover
+            color: #000 !important; // Black text on hover
+          }
         }
       }
-    }
   }
 }
 
@@ -969,23 +971,23 @@ body.homepage, .homepage {
         }
       }
       
-      .social-links {
-        justify-content: center !important;
-        gap: 0.5rem !important;
-        
-        .btn--social {
-          font-size: 0.8rem !important;
-          padding: 0.5rem 1rem !important;
-          background: transparent !important;
-          color: #fff !important; // White text on mobile
-          border: 2px solid #fff !important; // White border on mobile
+              .social-links {
+          justify-content: center !important;
+          gap: 0.3rem !important;
           
-          &:hover {
-            background: #fff !important; // White background on hover
-            color: #000 !important; // Black text on hover
+          .btn--social {
+            font-size: 0.7rem !important;
+            padding: 0.3rem 0.6rem !important;
+            background: transparent !important;
+            color: #fff !important; // White text on mobile
+            border: 1px solid #fff !important; // White border on mobile
+            
+            &:hover {
+              background: #fff !important; // White background on hover
+              color: #000 !important; // Black text on hover
+            }
           }
         }
-      }
     }
   }
   

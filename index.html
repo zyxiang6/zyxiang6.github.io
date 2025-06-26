@@ -93,6 +93,38 @@ html {
   color: #4fc3f7 !important;
 }
 
+/* Social links - smaller and fit on one line */
+.social-links {
+  display: flex !important;
+  gap: 0.4rem !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+.social-links .btn--social {
+  padding: 0.4rem 0.8rem !important;
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.social-links .btn--social:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* About content - reduced line spacing */
+.about-content p {
+  line-height: 1.4 !important;
+  margin-bottom: 0.8rem !important;
+}
+
 /* Greedy nav styling */
 .masthead .greedy-nav {
   background: #000 !important;
@@ -211,8 +243,6 @@ html {
         <img src="/assets/images/ziyu-full.jpg" alt="Ziyu Xiang" class="author__avatar">
       </div>
       <div class="hero-text">
-        <h1 class="hero-title">Ziyu Xiang (向子钰)</h1>
-        <p class="hero-subtitle">PhD Student in Physics at UC Berkeley</p>
         <div class="contact-info">
           <p><i class="fas fa-envelope"></i> <a href="mailto:zyxiang@berkeley.edu">zyxiang@berkeley.edu</a></p>
         </div>
@@ -232,7 +262,7 @@ html {
         
         <div class="social-links">
           <a href="/cv/" class="btn btn--social">CV</a>
-          <a href="https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en" class="btn btn--social">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en" class="btn btn--social">Scholar</a>
           <a href="https://www.researchgate.net/profile/Ziyu-Xiang-6" class="btn btn--social">ResearchGate</a>
           <a href="https://www.linkedin.com/in/ziyu-xiang-8481292b3/" class="btn btn--social">LinkedIn</a>
           <a href="https://github.com/zyxiang6" class="btn btn--social">Github</a>
