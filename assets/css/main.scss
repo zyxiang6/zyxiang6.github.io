@@ -448,13 +448,13 @@ body {
     display: flex !important;
     align-items: flex-start !important;
     gap: 2rem !important; // Fixed gap between image and text
-    max-width: 1200px !important; // Container max-width
+    max-width: 1050px !important; // Container width to control positioning
     margin: 0 auto !important; // Center the entire content block
-    padding: 0 2rem 0 0 !important; // Padding for right edge
+    padding: 0 2rem 0 0 !important; // Reduced padding
     position: relative !important;
     overflow: visible !important; // Ensure image extends beyond container
     justify-content: flex-start !important; // Align items to start
-    transform: translateX(calc(-200px)) !important; // Shift entire block left to align image with header
+    transform: translateX(-200px) !important; // Move entire unit left to align image with header
   }
   
   .profile-photo {
@@ -479,7 +479,7 @@ body {
     flex: 0 1 600px !important; // Fixed max width instead of flex: 1
     max-width: 600px !important; // Consistent width for About content
     padding-right: 2rem !important; // Reduced padding
-    margin-left: 0 !important; // Remove auto margin to keep distance consistent
+    margin-left: 0 !important; // Remove auto margin, let gap handle spacing
     
     .hero-title {
       font-size: 1.4rem !important;
@@ -781,11 +781,11 @@ body {
   }
 }
 
-// Responsive alignment for different screen sizes - move entire content block
+// Responsive positioning for different screen sizes - move entire unit together
 @media (min-width: 1400px) {
   .homepage-container .hero-section .hero-content {
-    transform: translateX(calc(-150px)) !important; // Less shift on larger screens
-    max-width: 1400px !important;
+    transform: translateX(-150px) !important; // Less shift on larger screens
+    max-width: 1200px !important;
   }
   .homepage-container .hero-section .hero-text {
     max-width: 700px !important; // Slightly wider on large screens
@@ -794,7 +794,7 @@ body {
 
 @media (max-width: 1200px) {
   .homepage-container .hero-section .hero-content {
-    transform: translateX(calc(-180px)) !important; // Medium shift
+    transform: translateX(-180px) !important; // Medium shift
     max-width: 1000px !important;
   }
   .homepage-container .hero-section .hero-text {
@@ -804,7 +804,7 @@ body {
 
 @media (max-width: 1024px) {
   .homepage-container .hero-section .hero-content {
-    transform: translateX(calc(-120px)) !important; // Smaller shift for tablets
+    transform: translateX(-220px) !important; // More shift for tablets
     max-width: 900px !important;
   }
   .homepage-container .hero-section .hero-text {
