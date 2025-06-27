@@ -199,6 +199,43 @@ body.layout--home .masthead,
   opacity: 1 !important;
 }
 
+/* ======================================== */
+/* FLOATING HEADER FOR ALL PAGES */
+/* ======================================== */
+
+/* Make masthead fixed and floating for all pages */
+.masthead {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* Hide header when scrolling down */
+.masthead.header-hidden {
+  transform: translateY(-100%) !important;
+}
+
+/* Add padding to body to compensate for fixed header */
+body {
+  padding-top: 56px !important; /* Default masthead height */
+}
+
+/* Adjust for different masthead heights on different screen sizes */
+@media (min-width: 80em) {
+  body {
+    padding-top: 64px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 52px !important;
+  }
+}
+
 // Hide unwanted sections on homepage
 .homepage {
   .page__title,
