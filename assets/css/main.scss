@@ -80,6 +80,7 @@ body.layout--home {
   .masthead {
     background-color: #000 !important;
     border-bottom: 1px solid #333 !important;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1) !important;
     
     .masthead__inner-wrap {
       background-color: #000 !important;
@@ -211,6 +212,13 @@ body.layout--home .masthead,
   right: 0 !important;
   z-index: 1000 !important;
   transition: transform 0.3s ease-in-out !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  
+  .masthead__inner-wrap {
+    background-color: #fff !important;
+  }
 }
 
 /* Hide header when scrolling down */
