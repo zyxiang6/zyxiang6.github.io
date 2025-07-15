@@ -8,6 +8,50 @@ header:
   overlay_filter: "0.5"
 ---
 
+<style>
+/* Make all links on publications page use blue color without underline */
+.publications-page a,
+.page__content a {
+  color: #3498db !important;
+  text-decoration: none !important;
+}
+
+.publications-page a:hover,
+.page__content a:hover {
+  color: #2980b9 !important;
+  text-decoration: none !important;
+}
+
+.publications-page a:visited,
+.page__content a:visited {
+  color: #3498db !important;
+}
+
+/* Ensure publication title links maintain proper styling */
+.publication-content h4 a {
+  color: #3498db !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+.publication-content h4 a:hover {
+  color: #2980b9 !important;
+  text-decoration: none !important;
+}
+
+/* DOI links styling */
+.doi-link a {
+  color: #3498db !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+.doi-link a:hover {
+  color: #2980b9 !important;
+  text-decoration: none !important;
+}
+</style>
+
 ## Selected Publications
 
 *Publications marked with asterisk (*) indicate equal contribution*
