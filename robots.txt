@@ -1,20 +1,25 @@
 User-agent: *
 Allow: /
 
-# Important pages to crawl
-Allow: /about/
-Allow: /cv/
-Allow: /publications/
-Allow: /research/
-Allow: /posts/
-
-# Disallow unnecessary files
-Disallow: /assets/css/
-Disallow: /vendor/
-Disallow: /.git/
-
 # Sitemap location
 Sitemap: https://zyxiang6.github.io/sitemap.xml
 
-# Crawl delay (be respectful to the server)
-Crawl-delay: 1 
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow certain paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional)
+Crawl-delay: 1

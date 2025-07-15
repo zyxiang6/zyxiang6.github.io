@@ -8,7 +8,7 @@ title: "Ziyu Xiang"
 title_separator: "-"
 subtitle: "PhD Student in Physics at UC Berkeley"
 name: "Ziyu Xiang (向子钰)"
-description: "PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
+description: "Ziyu Xiang - PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
 url: "https://zyxiang6.github.io"
 baseurl: ""
 repository: "zyxiang6/zyxiang6.github.io"
@@ -75,6 +75,8 @@ include:
   - .htaccess
   - _pages
   - google447df939a6ff470b.html
+  - sitemap.xml
+  - robots.txt
 exclude:
   - vendor
   - .asset-cache
@@ -159,6 +161,12 @@ defaults:
       layout: single
       author_profile: false
       toc: false
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
@@ -191,4 +199,21 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: # Add your Google Analytics ID here if you have one
-    
+
+# SEO Plugin Settings
+seo:
+  type: Person
+  name: "Ziyu Xiang"
+  links:
+    - "https://zyxiang6.github.io"
+    - "https://scholar.google.com/citations?user=-bXvJDMAAAAJ&hl=en"
+    - "https://orcid.org/0000-0002-3954-7631"
+    - "https://www.researchgate.net/profile/Ziyu-Xiang-6"
+    - "https://www.linkedin.com/in/ziyu-xiang-8481292b3/"
+    - "https://github.com/zyxiang6"
+
+# Sitemap settings
+sitemap:
+  priority: 1.0
+  changefreq: 'monthly'
+  lastmod: 2025-01-14
