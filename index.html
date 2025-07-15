@@ -328,25 +328,35 @@ body.homepage {
   overflow: visible !important;
 }
 
-/* CRITICAL FIX: Hero content alignment - align with header logo left position using CSS variables and careful positioning */
+/* CRITICAL FIX: Hero content alignment - PC: text left, image right; Mobile: unchanged */
 @media (min-width: 769px) {
   .homepage-container .hero-section .hero-content {
     max-width: none !important;
     margin: 0 !important;
-    /* Use the same left positioning as the masthead inner content */
+    /* Align text with header logo left boundary */
     padding-left: max(1rem, calc((100vw - 1280px) / 2 + 1rem)) !important;
     padding-right: 4rem !important;
     width: auto !important;
     position: relative !important;
     left: 0 !important;
     transform: translateX(0) !important;
+    /* CHANGE: Reverse order - text first, then image */
+    flex-direction: row-reverse !important;
   }
 
-  /* Ensure the profile photo aligns properly with the hero content padding */
+  /* Ensure the profile photo is on the right side */
   .homepage-container .hero-section .profile-photo {
-    margin-left: 0 !important;
+    margin-left: 3rem !important; /* Space between text and image */
+    margin-right: 0 !important;
     position: relative !important;
     left: 0 !important;
+  }
+
+  /* Text content takes available space on the left */
+  .homepage-container .hero-section .hero-text {
+    flex: 1 !important;
+    max-width: 600px !important; /* Limit text width for readability */
+    margin-right: 0 !important;
   }
 }
 
