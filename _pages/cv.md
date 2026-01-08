@@ -31,7 +31,7 @@ header:
 ## Education
 
 ### University of California, Berkeley
-**PhD in Physics** | *Jan 2021 - Dec 2025 (Expected)*  
+**PhD in Physics** | *Jan 2021 - Dec 2025*  
 **Advisor**: Prof. Feng Wang  
 **Research Focus**: Strongly correlated 2D electron systems, quantum many-body phenomena
 
@@ -41,8 +41,16 @@ header:
 
 ## Research Experience
 
+### Postdoctoral Researcher
+**UC Berkeley & Lawrence Berkeley National Laboratory** | *Jan 2025 - Present*  
+**Feng Wang Group** | Berkeley, CA
+
+- Conducting advanced scanning tunneling microscopy studies on strongly correlated 2D electron systems
+- Investigating quantum many-body phenomena in van der Waals heterostructures
+- Developing novel experimental techniques for quantum materials research
+
 ### Graduate Research Assistant
-**UC Berkeley & Lawrence Berkeley National Laboratory** | *Jan 2021 - Present*  
+**UC Berkeley & Lawrence Berkeley National Laboratory** | *Jan 2021 - Dec 2025*  
 **Feng Wang Group** | Berkeley, CA
 
 - Applied STM to study strongly correlated 2D interacting electrons with sub-nanometer spatial resolution

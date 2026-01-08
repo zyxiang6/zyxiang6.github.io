@@ -12,26 +12,37 @@ header:
 
 My research focuses on understanding quantum many-body phenomena in strongly correlated two-dimensional electron systems using advanced scanning probe techniques.
 
-## Current Projects
+## Recent Projects
 
-### Quantum Melting of Disordered Wigner Solids
-**Duration**: 2021 - Present  
+### Anisotropic interacting 2D electrons
+**Duration**: 2024 - Present  
 **Role**: Lead researcher  
 **Advisor**: Prof. Feng Wang  
+**Collaborators**: Jianghan Xiao
+
+Studying anisotropic interacting 2D electrons with tunable charge density: from Anisotropic WC to nematic liquid crystal phase...
+
+### STM Luminescense on TMD
+**Duration**: 2024 - Present  
+**Advisor**: Prof. Feng Wang  
+**Collaborators**: Batyr Ilyas
+
+Investigating atomically exciton or trion physics by STM luminescence in tunable 2D heterostructures.
+
+### Quantum Melting of Disordered Wigner Solids
+**Duration**: 2024 - 2025  
+**Role**: Lead researcher  
+**Advisor**: Prof. Feng Wang  
+**Collaborators**: Hongyuan Li, Jianghan Xiao
 
 Investigating quantum melting transitions in Wigner crystals using STM with single-electron sensitivity.
 
-### Luttinger Liquid Systems
-**Duration**: 2022 - Present  
+### Luttinger Liquid, Wigner Molecular Crystals
+**Duration**: 2022 - 2024  
+**Advisor**: Prof. Feng Wang  
 **Collaborators**: Hongyuan Li
 
-Studying one-dimensional physics in van der Waals heterostructures using photocurrent tunneling microscopy.
-
-### Wigner Molecular Crystals
-**Duration**: 2021 - 2024  
-**Collaborators**: Hongyuan Li
-
-Exploring novel crystal phases in multielectron moiré artificial atoms.
+Studying one-dimensional physics in van der Waals heterostructures using photocurrent tunneling microscopy. And exploring novel crystal phases in multielectron moiré artificial atoms.
 
 ## Research Experience
 

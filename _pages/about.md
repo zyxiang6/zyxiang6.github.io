@@ -10,7 +10,7 @@ header:
 
 ## About Ziyu Xiang
 
-I am a PhD student in Physics at the University of California, Berkeley, working in Prof. Feng Wang's group. My research focuses on studying strongly correlated two-dimensional electron systems using advanced scanning probe techniques, particularly scanning tunneling microscopy (STM) and atomic force microscopy (AFM).
+I am a Postdoctoral researcher in Physics at the University of California, Berkeley, working in Prof. Feng Wang's group. I earned my PhD (2025) in Physics from UC Berkeley. My research focuses on studying strongly correlated two-dimensional electron systems using advanced scanning probe techniques, particularly scanning tunneling microscopy (STM) and atomic force microscopy (AFM).
 
 ### Research Focus
 
@@ -43,6 +43,26 @@ My research involves applying cutting-edge experimental techniques to study:
 - Machine learning for graphene image identification
 - Advanced data analysis and modeling
 - Clean room fabrication techniques
+
+### Education
+
+**PhD in Physics**  
+University of California, Berkeley | 2021 - 2025  
+Advisor: Prof. Feng Wang
+
+**Bachelor of Science in Physics**  
+University of Chinese Academy of Sciences (UCAS) | 2016 - 2020  
+Advisor: Prof. Wu Zhou
+
+### Experience
+
+**Postdoctoral Researcher**  
+University of California, Berkeley | 2025 - Present  
+Feng Wang Group
+
+**Graduate Research Assistant**  
+University of California, Berkeley | 2021 - 2025  
+Feng Wang Group
 
 ---
 
