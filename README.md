@@ -4,7 +4,7 @@ This is the source code for my personal website hosted at [zyxiang6.github.io](h
 
 ## About
 
-I am a PhD student in Physics at UC Berkeley working in Prof. Feng Wang's group. This website showcases my research on strongly correlated 2D electron systems, publications, and academic achievements.
+I am a PhD in Physics at UC Berkeley working in Prof. Feng Wang's group. This website showcases my research on strongly correlated 2D electron systems, publications, and academic achievements.
 
 ## Website Structure
 

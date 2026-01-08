@@ -11,7 +11,7 @@ tags:
 excerpt: "Introduction to my research on strongly correlated 2D electron systems and quantum many-body phenomena at UC Berkeley."
 ---
 
-Welcome to my research website! I'm Ziyu Xiang (向子钰), a PhD student in Physics at UC Berkeley working under the guidance of Prof. Feng Wang. 
+Welcome to my research website! I'm Ziyu Xiang (向子钰), a PhD in Physics at UC Berkeley working under the guidance of Prof. Feng Wang. 
 
 ## My Research Focus
 
