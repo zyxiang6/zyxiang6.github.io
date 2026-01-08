@@ -6,7 +6,7 @@ minimal_mistakes_skin: "default"
 locale: "en-US"
 title: "Ziyu Xiang"
 title_separator: "-"
-subtitle: "PhD Student in Physics at UC Berkeley"
+subtitle: "PhD in Physics at UC Berkeley"
 name: "Ziyu Xiang (向子钰)"
 description: "Ziyu Xiang - PhD student in Physics at UC Berkeley studying strongly correlated 2D electron systems with scanning tunneling microscopy. Research in quantum many-body phenomena, moiré superlattices, and 2D materials."
 url: "https://zyxiang6.github.io"
@@ -27,7 +27,7 @@ search_provider: lunr
 author:
   name: "Ziyu Xiang"
   avatar: "/assets/images/ziyu-full.jpg"
-  bio: "PhD Student in Physics at UC Berkeley"
+  bio: "PhD in Physics at UC Berkeley"
   location: "Berkeley, CA"
   email: "zyxiang@berkeley.edu"
   uri: "https://zyxiang6.github.io"
@@ -186,7 +186,7 @@ social:
     - "https://github.com/zyxiang6"
 
 # Additional SEO
-tagline: "PhD Student in Physics at UC Berkeley"
+tagline: "PhD in Physics at UC Berkeley"
 keywords: "Ziyu Xiang, physics, quantum, 2D materials, scanning tunneling microscopy, UC Berkeley"
 
 # Feed settings
